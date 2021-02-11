@@ -1,0 +1,2 @@
+class Sagaseru < ApplicationRecord
+end

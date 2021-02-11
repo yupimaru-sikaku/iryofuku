@@ -1,0 +1,45 @@
+.sagaseru-container{
+  padding: 50px 200px;
+  
+  .sagaseru-description{
+    display: flex;
+    justify-content: space-evenly;
+    
+    .sagaseru-description-text{
+
+      span{
+        display: block;
+        text-align: center;
+        font-size: 28px;
+        color: rgb(0, 255, 42);
+        border-bottom: 1px solid rgb(0, 255, 42);
+        width: 265px;
+        padding-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      p{
+        font-size: 18px;
+      }
+
+    }
+
+    .sagaseru-description-img{
+      img{
+        width: 500px;
+      }
+    }
+
+  }
+  
+  .sageseru-contact-form{
+    
+    p{
+      font-size: 28px;
+      text-align: center;
+      margin: 0 auto;
+      border-bottom: 1px solid rgb(73, 69, 69);
+      width: 300px;
+    }
+  }
+}

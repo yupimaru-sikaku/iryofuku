@@ -1,0 +1,2 @@
+class Kuraseru < ApplicationRecord
+end

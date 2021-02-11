@@ -1,0 +1,57 @@
+<%#ヘッダー%>
+<%= render partial: 'shared/header' %>
+<%#//ヘッダー%>
+
+
+<%#大枠%>
+<section class="service-container">
+
+  <%#サービスの選択（クラセル or サガセル）%>
+  <main class="select-service">
+    <div class="service-kuraseru">
+      <%= link_to contact_kuraserus_path do %>
+      <div class="service-kuraseru-img">
+        <%= image_tag "kuraseru.svg", :width => "400", :height => "400"  %>
+      </div>
+      <div class="service-kuraseru-text">
+        <span>病院・相談所</span>
+        <span>の方はこちら</span>
+        <span><br>障がい福祉事業所の<span style='color: blue'>ご紹介・ご入居</span>のお手続きをサポートします</span>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="service-sagaseru">
+      <%= link_to contact_sagaserus_path do %>
+      <div class="service-sagaseru-img">
+        <%= image_tag "sagaseru.svg", :width => "400", :height => "400"  %>
+      </div>
+      <div class="service-sagaseru-text">
+        <span>障害福祉事業所の経営者向け</span>
+        <span>の方はこちら</span>
+        <span><br>利用者を集客できます。こちらも利益が入り、正直winwinです（汗）</span>
+      </div>
+      <% end %>
+    </div>
+  </main>
+  <%#//サービスの選択（クラセル or サガセル）%>
+
+  <%#イリョフクについて%>
+  <aside class="about-us">
+    <h2 class="about-us-title">About Us</h2>
+    <div class="about-us-main">
+      <%= image_tag "5 SCENE.svg" %>
+      <p>医療者、障がい福祉事業所の皆さん。<br><br>イリョフクは、入院している利用者（患者）、<br>障害福祉サービスを利用したい方が求めている<br>障害福祉事業所が見つかる場所です。<br><br>イリョフクなら利用者（患者）にピッタリの<br>事業所が見つかります。<br>イリョフクはすべての素敵な出会いを応援しています。<br><br>さあ、医療と福祉の垣根を飛び越えよう！</p>
+    </div>
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="triangle"></div>
+  </aside>
+  <%#//イリョフクについて%>
+
+</section>
+<%#//大枠%>
+
+<%# フッター%>
+<%= render partial: 'shared/footer' %>
+<%#// フッター%>

@@ -1,0 +1,40 @@
+.kuraseru-container {
+  padding: 50px 200px;
+}
+
+.kuraseru-container .kuraseru-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.kuraseru-container .kuraseru-description .kuraseru-description-text span {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: blue;
+  border-bottom: 1px solid blue;
+  width: 265px;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+
+.kuraseru-container .kuraseru-description .kuraseru-description-text p {
+  font-size: 18px;
+}
+
+.kuraseru-container .kuraseru-description .kuraseru-description-img img {
+  width: 500px;
+}
+
+.kuraseru-container .sageseru-contact-form p {
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #494545;
+  width: 300px;
+}
+/*# sourceMappingURL=contact.css.map */

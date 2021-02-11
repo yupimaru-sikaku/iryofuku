@@ -1,0 +1,9 @@
+.module-spacer--small {
+  height: 12px
+}
+.module-spacer--medium {
+  height: 20px
+}
+.module-spacer--large {
+  height: 32px
+}

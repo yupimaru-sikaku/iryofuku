@@ -1,0 +1,36 @@
+.header-main {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-bottom: 1px solid #eee;
+}
+
+.header-main .header-main-logo {
+  display: block;
+  width: 300px;
+  height: 100px;
+}
+
+.header-main .contact-form a {
+  display: block;
+  background-color: #f898ff;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 20px #caa6c4;
+          box-shadow: 1px 1px 20px #caa6c4;
+}
+
+.header-main .contact-form a:hover {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=header.css.map */

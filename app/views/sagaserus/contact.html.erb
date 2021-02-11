@@ -1,0 +1,32 @@
+<%#ヘッダー%>
+<%= render partial: 'shared/header' %>
+<%#//ヘッダー%>
+
+<%#大枠%>
+<section class="sagaseru-container">
+
+  <%#サガセルの説明%>
+  <div class="sagaseru-description">
+    <div class="sagaseru-description-text">
+      <span>利用者紹介サービス</span>
+      <p>障害福祉サービスを利用したい方をご紹介致します。<br><br>まずは下記のGoogle申請フォームから<br>必要事項をご記入の上、送信ボタンを押して下さい。<br><br>追って、ご連絡致します。</p>
+    </div>
+    <div class="sagaseru-description-img">
+      <%= image_tag "5 - RECRUITING.svg" %>
+    </div>
+  </div>
+  <%#//サガセルの説明%>
+
+  <div class="module-spacer--large"></div>
+  <div class="module-spacer--large"></div>
+
+  <%# コンタクトフォーム %>
+  <nav class="sageseru-contact-form">
+    <p>お問い合わせフォーム</p>
+    <div class="module-spacer--large"></div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTEHyDiAnREzFFeGqcVgHLB35LJ3FEcMvhaKL-dFYF_k_KVw/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  </nav>
+  <%#// コンタクトフォーム %>
+
+</section>
+<%#//大枠%>

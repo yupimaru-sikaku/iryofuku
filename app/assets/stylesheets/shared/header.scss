@@ -1,0 +1,35 @@
+$fbutton: white;
+$bbutton: rgba(140, 243, 140, 0.651);
+
+
+.header-main{
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #eee;
+  
+  .header-main-logo{
+    display: block;
+    width: 300px;
+    height: 100px;
+  }
+
+  .contact-form{
+    a{
+      display: block;
+      background-color: rgb(248, 152, 255);
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 15px;
+      box-shadow: 1px 1px 20px rgb(202, 166, 196);
+  
+      &:hover{
+        opacity: 0.5;
+      }
+  
+    }
+  }
+}

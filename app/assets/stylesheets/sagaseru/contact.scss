@@ -1,0 +1,45 @@
+.kuraseru-container{
+  padding: 50px 200px;
+  
+  .kuraseru-description{
+    display: flex;
+    justify-content: space-evenly;
+    
+    .kuraseru-description-text{
+
+      span{
+        display: block;
+        text-align: center;
+        font-size: 28px;
+        color: blue;
+        border-bottom: 1px solid blue;
+        width: 265px;
+        padding-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      p{
+        font-size: 18px;
+      }
+
+    }
+
+    .kuraseru-description-img{
+      img{
+        width: 500px;
+      }
+    }
+
+  }
+  
+  .sageseru-contact-form{
+    
+    p{
+      font-size: 28px;
+      text-align: center;
+      margin: 0 auto;
+      border-bottom: 1px solid rgb(73, 69, 69);
+      width: 300px;
+    }
+  }
+}
