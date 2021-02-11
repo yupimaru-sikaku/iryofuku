@@ -1,18 +1,18 @@
-.sagaseru-container{
+.kuraseru-container{
   padding: 50px 200px;
   
-  .sagaseru-description{
+  .kuraseru-description{
     display: flex;
     justify-content: space-evenly;
     
-    .sagaseru-description-text{
+    .kuraseru-description-text{
 
       span{
         display: block;
         text-align: center;
         font-size: 28px;
-        color: rgb(0, 255, 42);
-        border-bottom: 1px solid rgb(0, 255, 42);
+        color: blue;
+        border-bottom: 1px solid blue;
         width: 265px;
         padding-top: 50px;
         margin-bottom: 10px;
@@ -24,7 +24,7 @@
 
     }
 
-    .sagaseru-description-img{
+    .kuraseru-description-img{
       img{
         width: 500px;
       }
@@ -140,3 +140,41 @@
     }
 
   }
+  
+  .contact-forms{
+  
+    display: flex;
+    justify-content: space-around;
+  
+  
+    .contact-form{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
+  
+      a{
+        display: block;
+        text-decoration: none;
+        color: rgb(94, 94, 94);
+  
+        span{
+          display: block;
+        }
+        
+        img{
+          display: block;
+          width: 200px;
+          height: 200px;
+          margin: 0 auto;
+        }
+      }
+  
+      
+    }
+}

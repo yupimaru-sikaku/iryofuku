@@ -65,6 +65,23 @@
   </nav>
   <%#// コンタクトフォーム %>
 
+  <%# コンタクトフォーム %>
+  <nav class="contact-forms">
+    <div class="contact-form">
+      <%= link_to do%>
+      <span>電話でのお問い合わせ</span>
+      <%= image_tag "calling.svg" %>
+      <% end %>
+    </div>
+    <div class="contact-form">
+      <%= link_to do%>
+      <span>メールでのお問い合わせ</span>
+      <%= image_tag "message.svg" %>
+      <% end %>
+    </div>
+  </nav>
+  <%#// コンタクトフォーム %>
+
 </section>
 <%#//大枠%>
 <%= javascript_pack_tag 'kuraseru/contact' %>

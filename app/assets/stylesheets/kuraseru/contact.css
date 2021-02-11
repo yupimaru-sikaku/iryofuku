@@ -1,8 +1,8 @@
-.sagaseru-container {
+.kuraseru-container {
   padding: 50px 200px;
 }
 
-.sagaseru-container .sagaseru-description {
+.kuraseru-container .kuraseru-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,26 +11,26 @@
           justify-content: space-evenly;
 }
 
-.sagaseru-container .sagaseru-description .sagaseru-description-text span {
+.kuraseru-container .kuraseru-description .kuraseru-description-text span {
   display: block;
   text-align: center;
   font-size: 28px;
-  color: #00ff2a;
-  border-bottom: 1px solid #00ff2a;
+  color: blue;
+  border-bottom: 1px solid blue;
   width: 265px;
   padding-top: 50px;
   margin-bottom: 10px;
 }
 
-.sagaseru-container .sagaseru-description .sagaseru-description-text p {
+.kuraseru-container .kuraseru-description .kuraseru-description-text p {
   font-size: 18px;
 }
 
-.sagaseru-container .sagaseru-description .sagaseru-description-img img {
+.kuraseru-container .kuraseru-description .kuraseru-description-img img {
   width: 500px;
 }
 
-.sagaseru-container .sageseru-contact-form p {
+.kuraseru-container .sageseru-contact-form p {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
@@ -135,5 +135,51 @@
   border-radius: 20px;
   position: relative;
   z-index: 100;
+}
+
+.contact-forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact-forms .contact-form {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-forms .contact-form a {
+  display: block;
+  text-decoration: none;
+  color: #5e5e5e;
+}
+
+.contact-forms .contact-form a span {
+  display: block;
+}
+
+.contact-forms .contact-form a img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=contact.css.map */

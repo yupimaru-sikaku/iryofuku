@@ -1,8 +1,8 @@
-.kuraseru-container {
+.sagaseru-container {
   padding: 50px 200px;
 }
 
-.kuraseru-container .kuraseru-description {
+.sagaseru-container .sagaseru-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,30 +11,76 @@
           justify-content: space-evenly;
 }
 
-.kuraseru-container .kuraseru-description .kuraseru-description-text span {
+.sagaseru-container .sagaseru-description .sagaseru-description-text span {
   display: block;
   text-align: center;
   font-size: 28px;
-  color: blue;
-  border-bottom: 1px solid blue;
+  color: #00ff2a;
+  border-bottom: 1px solid #00ff2a;
   width: 265px;
   padding-top: 50px;
   margin-bottom: 10px;
 }
 
-.kuraseru-container .kuraseru-description .kuraseru-description-text p {
+.sagaseru-container .sagaseru-description .sagaseru-description-text p {
   font-size: 18px;
 }
 
-.kuraseru-container .kuraseru-description .kuraseru-description-img img {
+.sagaseru-container .sagaseru-description .sagaseru-description-img img {
   width: 500px;
 }
 
-.kuraseru-container .sageseru-contact-form p {
+.sagaseru-container .sageseru-contact-form p {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
   border-bottom: 1px solid #494545;
   width: 300px;
+}
+
+.sagaseru-container .contact-forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sagaseru-container .contact-forms .contact-form {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sagaseru-container .contact-forms .contact-form a {
+  display: block;
+  text-decoration: none;
+  color: #5e5e5e;
+}
+
+.sagaseru-container .contact-forms .contact-form a span {
+  display: block;
+}
+
+.sagaseru-container .contact-forms .contact-form a img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=contact.css.map */
