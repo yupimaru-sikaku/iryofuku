@@ -16,6 +16,10 @@ $bbutton: rgba(140, 243, 140, 0.651);
   }
 
   .contact-form{
+
+    display: flex;
+    justify-content: space-between;
+
     a{
       display: block;
       background-color: rgb(248, 152, 255);
@@ -24,12 +28,28 @@ $bbutton: rgba(140, 243, 140, 0.651);
       text-align: center;
       text-decoration: none;
       border-radius: 15px;
-      box-shadow: 1px 1px 20px rgb(202, 166, 196);
+      box-shadow: 1px 1px 1px rgb(202, 166, 196);
   
       &:hover{
         opacity: 0.5;
       }
   
     }
+
+    .contact-form-tel{
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin-left: 15px;
+      border-radius: 10px;
+      border: 1px solid;
+      box-shadow: 1px 1px 1px;
+
+
+      span{
+        padding-left: 10px;
+      }
+    }
+
   }
 }

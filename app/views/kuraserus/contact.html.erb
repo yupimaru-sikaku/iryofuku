@@ -9,7 +9,7 @@
   <div class="kuraseru-description">
     <div class="kuraseru-description-text">
       <span>事業所紹介サービス</span>
-      <p>ご希望に沿った障害福祉サービスをご紹介致します。<br><br>まずはお問い合わせフォームから<br>必要事項をご記入の上、送信ボタンを押して下さい。<br><br>追って、ご連絡致します。</p>
+      <p>ご希望に沿った障害福祉サービスをご紹介致します。<br><br>まずは下記のお問い合わせフォームから<br>必要事項をご記入の上、送信ボタンを押して下さい。<br><br>追って、ご連絡致します。</p>
     </div>
     <div class="kuraseru-description-img">
       <%= image_tag "Group therapy-amico.svg" %>
@@ -18,12 +18,49 @@
   <%#//サガセルの説明%>
 
   <div class="module-spacer--large"></div>
+
+  <%#サービスの流れ%>
+  <nav class="service-flow">
+    <h2 class="about-us-title">ご入居までの流れ</h2>
+    <div class="module-spacer--medium"></div>
+    <ul class="flow">
+      <li>
+        <dl>
+          <dt><span class="icon">STEP.01</span>ヒアリング</dt>
+          <dd>イリョフクの相談員よりご利用者様のご要望を確認させていただきます。</dd>
+        </dl>
+      </li>
+
+      <li>
+        <dl>
+          <dt><span class="icon">STEP.02</span>ご紹介先の見学</dt>
+          <dd>ご利用者様にぴったりな介護施設をご紹介。見学や送迎の手配もお任せください。</dd>
+        </dl>
+      </li>
+
+      <li>
+        <dl>
+          <dt><span class="icon">STEP.03</span>ご入居の手続き</dt>
+          <dd>ご入居先が決まりましたら、病院や担当ケアマネジャーと連携し、必要書類のご用意もお手伝いします。</dd>
+        </dl>
+      </li>
+
+      <li>
+        <dl>
+          <dt><span class="icon">STEP.04</span>ご入居開始</dt>
+          <dd>ご入居後も介護施設・病院・担当ケアマネジャーと情報を共有し、常にフォロー致します。</dd>
+        </dl>
+      </li>
+    </ul>
+  </nav>
+  <%#//サービスの流れ%>
+
   <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
   <nav class="sageseru-contact-form">
     <p>お問い合わせフォーム</p>
-    <div class="module-spacer--large"></div>
+    <div class="module-spacer--medium"></div>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeO2_aeiMppb3uvlnEQuML3Nj_kh0zQ3dsScrBFE5lXlDoYyg/viewform?embedded=true" width="100%" height="2000" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
   </nav>
   <%#// コンタクトフォーム %>
@@ -31,3 +68,7 @@
 </section>
 <%#//大枠%>
 <%= javascript_pack_tag 'kuraseru/contact' %>
+
+<%# フッター%>
+<%= render partial: 'shared/footer' %>
+<%#// フッター%>

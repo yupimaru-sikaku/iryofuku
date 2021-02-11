@@ -29,4 +29,18 @@ $bbutton: rgba(140, 243, 140, 0.651);
     }
 
   }
+  .contact-form-tel{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px;
+
+
+    span{
+      padding-left: 10px;
+    }
+  }
 }

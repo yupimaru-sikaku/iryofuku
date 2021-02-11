@@ -32,4 +32,23 @@
 .footer-main a:hover {
   opacity: 0.5;
 }
+
+.footer-main .contact-form-tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+  border: 1px solid;
+  -webkit-box-shadow: 1px 1px 1px;
+          box-shadow: 1px 1px 1px;
+}
+
+.footer-main .contact-form-tel span {
+  padding-left: 10px;
+}
 /*# sourceMappingURL=footer.css.map */
