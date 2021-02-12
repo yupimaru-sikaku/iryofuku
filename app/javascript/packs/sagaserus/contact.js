@@ -1,0 +1,16 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+  ScrollReveal().reveal('.sagaseru-description', {
+    duration: 1600, 
+    origin: 'top', 
+    distance: '50px',
+    reset: true   
+  });
+
+  ScrollReveal().reveal('.contact', {
+    duration: 1600, 
+    origin: 'right', 
+    distance: '50px',
+    reset: true   
+  });
+});
