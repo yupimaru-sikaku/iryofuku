@@ -1,0 +1,151 @@
+<%#ヘッダー%>
+<%= render partial: 'shared/header' %>
+<%#//ヘッダー%>
+
+<div class="module-spacer--medium"></div>
+
+<%#メールお問い合わせフォーム%>
+<main class="contact-message-content">
+
+
+  <%#お問い合わせフォームタイトル%>
+  <div class="contact-message-title">
+    <p>メールでのお問合わせ</p>
+  </div>
+  <%#//お問い合わせフォームタイトル%>
+
+  <div class="module-spacer--large"></div>
+
+  <%#お問い合わせフォーム各項目%>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeO2_aeiMppb3uvlnEQuML3Nj_kh0zQ3dsScrBFE5lXlDoYyg/formResponse" target="hidden_iframe" onsubmit="submitted=true;" method="POST" class='contact-message-fields'>
+
+    <div class="contact-message-field">
+      <label for="hospital">病院名または事業所名<span>（必須）</span></label>
+      <input id='hospital' name='entry.852747937' type='text' required placeholder='病院名または事業所名を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="office">ご担当者名<span>（必須）</span></label>
+      <input id='office' name='entry.1276028436' type='text' required placeholder='ご担当者名を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="phone-number">電話番号<span>（必須）</span></label>
+      <input id='phone-number' name='entry.1484369825' type='number' required placeholder='電話番号を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="email">メールアドレス<span>（必須）</span></label>
+      <input id='email' name='entry.2028700104' type='email' required placeholder='ご担当者のメールアドレスを入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label class='association'>ご利用者様との関係</label>
+      <div class="contact-message-field-checkbox">
+        <input id='association-1' type="checkbox" name="entry.682656226" value="病院" />
+        <label for='association-1'>病院</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='association-2' type="checkbox" name="entry.682656226" value="相談員" />
+        <label for='association-2'>相談員</label for=''>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='association-3' type="checkbox" name="entry.682656226" value="本人" />
+        <label for='association-3'>本人</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='asscociation-4' type="checkbox" name="entry.682656226" value="ご家族" />
+        <label for='asscociation-4'>ご家族</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='asscociation-5' type="checkbox" name="entry.682656226" value="その他" />
+        <label for='asscociation-5'>その他</label>
+      </div>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label class='timing'>事業所ご利用希望の時期</label>
+      <div class="contact-message-field-checkbox">
+        <input id='timing-1' type="checkbox" name="entry.760954747" value="すぐにでも" />
+        <label for='timing-1'>すぐにでも</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='timing-2' type="checkbox" name="entry.760954747" value="1ヶ月以内" />
+        <label for='timing-2'>1ヶ月以内</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='timing-3' type="checkbox" name="entry.760954747" value="3ヶ月以内" />
+        <label for='timing-3'>3ヶ月以内</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='timing-4' type="checkbox" name="entry.760954747" value="6ヶ月以内" />
+        <label for='timing-4'>6ヶ月以内</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='timing-5' type="checkbox" name="entry.760954747" value="1年以内" />
+        <label for='timing-5'>1年以内</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='timing-6' type="checkbox" name="entry.760954747" value="未定" />
+        <label for='timing-6'>未定</label>
+      </div>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label class="condition">現在のご利用者様の状況</label>
+      <div class="contact-message-field-checkbox">
+        <input id='condition-1' type="checkbox" name="entry.534076687" value="入院中" />
+        <label for='condition-1'>入院中</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='condition-2' type="checkbox" name="entry.534076687" value="在宅" />
+        <label for='condition-2'>在宅</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='condition-3' type="checkbox" name="entry.534076687" value="施設" />
+        <label for='condition-3'>施設</label>
+      </div>
+      <div class="contact-message-field-checkbox">
+        <input id='condition-4' type="checkbox" name="entry.534076687" value="その他" />
+        <label for='condition-4'>その他</label>
+      </div>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="remarks">備考</label>
+      <textarea id=' remarks' name="entry.1889195752" placeholder="備考" rows='10'></textarea>
+    </div>
+
+    <div class="module-spacer--medium"></div>
+
+    <button type="submit" class="contact-message-button">問い合わせをする</button>
+
+  </form>
+  <script type="text/javascript">
+    var submitted = false;
+  </script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/services/contact_done';}"></iframe>
+  <%#//お問い合わせフォーム各項目%>
+</main>
+<%#//メールお問い合わせフォーム%>
+<iframe name="dummyIframe" style="display:none;"></iframe>
+
+<div class="module-spacer--large"></div>
+
+<%# フッター%>
+<%= render partial: 'shared/footer' %>
+<%#// フッター%>

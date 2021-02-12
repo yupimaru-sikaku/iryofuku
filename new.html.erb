@@ -1,0 +1,82 @@
+<%#ヘッダー%>
+<div class="registration-header">
+  <div class="registration-header-main">
+    <div class="back-to-home">
+      <%= link_to root_path do %>
+      <i class="fas fa-arrow-circle-left"></i>
+      <% end %>
+    </div>
+    <div class="registration-header-title">
+      <p>ユーザー新規登録</p>
+    </div>
+    <div class="create-room">
+    </div>
+  </div>
+</div>
+<%#//ヘッダー%>
+
+<%#新規登録画面%>
+<div class="registration-new-content">
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-new-fields', local: true do |f| %>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :nickname, "ニックネーム" %>
+      <span>必須</span>
+    </div>
+    <%= f.text_field :nickname, autofocus: true, placeholder: "例）タロウ" %>
+  </div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-2">
+      <%= f.label :image, "アイコン画像" %>
+      <span>任意</span>
+    </div>
+    <div class="registration-user-icon">
+      <%= image_tag "defalut.png" , class: 'default-icon' %>
+    </div>
+    <div class="registration-user-icon-form">
+      <%= f.label :image, accept: "image/*" do %>
+      <%= f.file_field :image, accept: "image/*", class: 'input-user-icon' %>
+      <i class="fas fa-camera-retro">タッチ</i>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :email %>
+      <span>必須</span>
+    </div>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "例）taro@gmail.com" %>
+  </div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :password %>
+      <span>必須</span>
+    </div>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :password_confirmation %>
+      <span>必須</span>
+    </div>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="registration-new-submit">
+    <%= f.submit "ユーザー新規登録" %>
+  </div>
+  <% end %>
+</div>
+<%#//新規登録画面%>
+
+<div class="session-new-link">
+  <%= link_to "ログインはこちらから", new_user_session_path %>
+</div>

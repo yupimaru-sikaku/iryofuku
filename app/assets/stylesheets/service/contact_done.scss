@@ -1,0 +1,27 @@
+.contact-done-content{
+  text-align: center;
+  min-height: 85vh;
+
+  h2{
+    font-size: 40px;
+  }
+
+    a{
+      background-color: #666ad6;
+      padding: 15px 50px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+  
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  
+    img{
+      position: absolute;
+      z-index: -1;
+      top: 250px;
+      left: 150px;
+    }
+}

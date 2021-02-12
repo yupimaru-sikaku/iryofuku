@@ -1,0 +1,22 @@
+  <%# コンタクトフォーム %>
+  <nav class="contact">
+    <p>お問い合わせフォーム</p>
+    <div class="module-spacer--medium"></div>
+    <p>ご興味ある方、ご質問のある方、まずはお気軽にご相談下さい</p>
+    <div class="module-spacer--medium     "></div>
+    <nav class="contact-forms">
+      <div class="contact-form">
+        <%= link_to do%>
+        <span>電話でのお問い合わせ</span>
+        <span>080-7283-1647</span>
+        <%= image_tag "calling.svg" %>
+        <% end %>
+      </div>
+      <div class="contact-form">
+        <%= link_to path do%>
+        <span>メールでのお問い合わせ</span>
+        <%= image_tag "message.svg" %>
+        <% end %>
+      </div>
+    </nav>
+    <%#// コンタクトフォーム %>

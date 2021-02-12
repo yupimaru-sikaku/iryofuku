@@ -20,32 +20,10 @@
   <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
-  <nav class="sageseru-contact-form">
-    <p>お問い合わせフォーム</p>
-    <div class="module-spacer--medium"></div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTEHyDiAnREzFFeGqcVgHLB35LJ3FEcMvhaKL-dFYF_k_KVw/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-  </nav>
+  <%= render partial: 'shared/contact_form', locals: {path: contact_message_sagaserus_path} %>
   <%#// コンタクトフォーム %>
 
-  <%# コンタクトフォーム %>
-  <nav class="contact-forms">
-    <div class="contact-form">
-      <%= link_to do%>
-      <span>電話でのお問い合わせ</span>
-      <span>080-7283-1647</span>
-      <%= image_tag "calling.svg" %>
-      <% end %>
-    </div>
-    <div class="contact-form">
-      <%= link_to do%>
-      <span>メールでのお問い合わせ</span>
-      <%= image_tag "message.svg" %>
-      <% end %>
-    </div>
-  </nav>
-  <%#// コンタクトフォーム %>
-
-
+  <div class="module-spacer--large"></div>
 
 </section>
 <%#//大枠%>

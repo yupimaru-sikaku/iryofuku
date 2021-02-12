@@ -3,22 +3,23 @@ Rails.application.routes.draw do
 
   root to: 'services#index';
 
-  resources :sagaserus, only: [:index] do
+  resource :services, only: [:index] do
     collection do
-      get 'contact'
+      get 'contact_done'
     end
   end
 
-  resources :kuraserus, only: [:index] do
+  resources :sagaserus, only: [:index] do
     collection do
       get 'contact'
+      get 'contact_message'
     end
   end
   
-  resources :inquiries, only: [:index] do
+  resources :kuraserus, only: [:index] do
     collection do
-      post 'confirm'
-      post 'done'
+      get 'contact'
+      get 'contact_message'
     end
   end
   

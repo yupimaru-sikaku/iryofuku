@@ -1,0 +1,87 @@
+<%#ヘッダー%>
+<%= render partial: 'shared/header' %>
+<%#//ヘッダー%>
+
+<div class="module-spacer--medium"></div>
+
+<%#メールお問い合わせフォーム%>
+<main class="contact-message-content">
+
+
+  <%#お問い合わせフォームタイトル%>
+  <div class="contact-message-title">
+    <p>メールでのお問合わせ</p>
+  </div>
+  <%#//お問い合わせフォームタイトル%>
+
+  <div class="module-spacer--medium"></div>
+
+  <%#お問い合わせフォーム各項目%>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeTEHyDiAnREzFFeGqcVgHLB35LJ3FEcMvhaKL-dFYF_k_KVw/formResponse" target="hidden_iframe" onsubmit="submitted=true;" method="POST" class='contact-message-fields'>
+
+    <div class="contact-message-field">
+      <label for="corporate">法人名<span>（必須）</span></label>
+      <input id='corporate' name='entry.704847369' type='text' required placeholder='法人名を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="office">事業所名<span>（必須）</span></label>
+      <input id='office' name='entry.1088225936' type='text' required placeholder='事業所名を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="address">事業所住所<span>（必須）</span></label>
+      <input id='address' name='entry.518242819' type='text' required placeholder='事業所住所を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="name">担当者名<span>（必須）</span></label>
+      <input id='name' name='entry.48624535' type='text' required placeholder='ご担当者名を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="phone-number">電話番号<span>（必須）</span></label>
+      <input id='phone-number' name='entry.1154614191' type='text' required placeholder='ご担当者の電話番号を入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="email">メールアドレス<span>（必須）</span></label>
+      <input id='email' name='entry.1724572144' type='text' required placeholder='ご担当者のメールアドレスを入力して下さい'>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="contact-message-field">
+      <label for="remarks">備考</label>
+      <textarea id='remarks' name="entry.2086769247" placeholder="備考" rows='10'></textarea>
+    </div>
+
+    <div class="module-spacer--medium"></div>
+
+    <button type="submit" class="contact-message-button">問い合わせをする</button>
+
+  </form>
+  <script type="text/javascript">
+    var submitted = false;
+  </script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/services/contact_done';}"></iframe>
+  <%#//お問い合わせフォーム各項目%>
+</main>
+<%#//メールお問い合わせフォーム%>
+<iframe name="dummyIframe" style="display:none;"></iframe>
+
+<div class="module-spacer--large"></div>
+
+<%# フッター%>
+<%= render partial: 'shared/footer' %>
+<%#// フッター%>
