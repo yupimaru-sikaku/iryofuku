@@ -1,12 +1,12 @@
 class Sagaseru < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :classification_id
-  belongs_to_active_hash :disability_type_id
-  belongs_to_active_hash :osaka_city_id
-  belongs_to_active_hash :prefecture_id
-  belongs_to_active_hash :service_type_id
-  belongs_to_active_hash :sex_id
+  belongs_to_active_hash :classification
+  belongs_to_active_hash :disability_type
+  belongs_to_active_hash :osaka_city
+  belongs_to_active_hash :prefecture
+  belongs_to_active_hash :service_type
+  belongs_to_active_hash :sex
 
   with_options presence: true do
     validates :age, numericality: { only_integer: true, message: 'は半角英数字で入力して下さい'}
