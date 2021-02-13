@@ -20,6 +20,8 @@ $main-font-size: 30px;
       border-radius: $list-border-radius;
       width: $list-width;
       box-shadow: $list-box-shadow;
+      display: flex;
+      justify-content: center;
       
       &:hover{
         background-color: #a6b5ef52;
@@ -28,6 +30,11 @@ $main-font-size: 30px;
       a{
         display: flex;
         text-decoration: none;
+
+        img{
+          width: 300px;
+          height: 300px;
+        }
         
         .service-kuraseru-text{
           padding-top: 30px;
@@ -54,6 +61,8 @@ $main-font-size: 30px;
       border-radius: $list-border-radius;
       width: $list-width;
       box-shadow: $list-box-shadow;
+      display: flex;
+      justify-content: center;
       
       &:hover{
         background-color: #a6efbc52;
@@ -63,12 +72,18 @@ $main-font-size: 30px;
         display: flex;
         text-decoration: none;
         
+        img{
+          width: 300px;
+          height: 300px;
+        }
+        
         .service-sagaseru-text{
           padding-top: 30px;
-
+          
           span{
             display: block;
             color: rgb(148, 147, 147);
+            font-size: 18px;
             
             &:nth-child(1){
               font-size: $main-font-size;
@@ -76,7 +91,8 @@ $main-font-size: 30px;
             }
             
             &:nth-child(2){
-              font-size: 18px;
+              font-size: $main-font-size;
+              color: rgb(0, 255, 42);
             }
           }
         }

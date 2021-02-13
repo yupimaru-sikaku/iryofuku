@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 2021_02_11_110809) do
   end
 
   create_table "sagaserus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "age", null: false
+    t.string "classification_id", null: false
+    t.string "disability_type_id", null: false
+    t.string "osaka_city_id", null: false
+    t.string "prefecture_id", null: false
+    t.string "service_type_id", null: false
+    t.string "sex_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

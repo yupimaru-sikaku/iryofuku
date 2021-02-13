@@ -17,7 +17,11 @@
 </head>
 
 <body>
+  <%= render partial: 'shared/header' %>
+  <div class="module-spacer--large"></div>
   <%= yield %>
+  <div class="module-spacer--large"></div>
+  <%= render partial: 'shared/footer' %>
 </body>
 
 </html>

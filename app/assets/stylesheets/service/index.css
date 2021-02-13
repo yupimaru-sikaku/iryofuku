@@ -18,6 +18,12 @@
   width: 45%;
   -webkit-box-shadow: 1px 1px 3px #bbafaf;
           box-shadow: 1px 1px 3px #bbafaf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .service-container .select-service .service-kuraseru:hover {
@@ -29,6 +35,11 @@
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+}
+
+.service-container .select-service .service-kuraseru a img {
+  width: 300px;
+  height: 300px;
 }
 
 .service-container .select-service .service-kuraseru a .service-kuraseru-text {
@@ -55,6 +66,12 @@
   width: 45%;
   -webkit-box-shadow: 1px 1px 3px #bbafaf;
           box-shadow: 1px 1px 3px #bbafaf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .service-container .select-service .service-sagaseru:hover {
@@ -68,6 +85,11 @@
   text-decoration: none;
 }
 
+.service-container .select-service .service-sagaseru a img {
+  width: 300px;
+  height: 300px;
+}
+
 .service-container .select-service .service-sagaseru a .service-sagaseru-text {
   padding-top: 30px;
 }
@@ -75,6 +97,7 @@
 .service-container .select-service .service-sagaseru a .service-sagaseru-text span {
   display: block;
   color: #949393;
+  font-size: 18px;
 }
 
 .service-container .select-service .service-sagaseru a .service-sagaseru-text span:nth-child(1) {
@@ -83,7 +106,8 @@
 }
 
 .service-container .select-service .service-sagaseru a .service-sagaseru-text span:nth-child(2) {
-  font-size: 18px;
+  font-size: 30px;
+  color: #00ff2a;
 }
 
 .service-container .about-us {

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :sagaserus, only: [:index] do
+  resources :sagaserus, only: [:index, :new, :create] do
     collection do
       get 'contact'
       get 'contact_message'

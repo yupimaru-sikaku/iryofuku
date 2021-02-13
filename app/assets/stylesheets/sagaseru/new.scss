@@ -1,0 +1,90 @@
+$input-border: 1px solid rgb(151, 151, 151);
+$input-margin-top: 10px;
+$input-border-radius: 5px;
+$input-padding-left: 10px;
+
+// 大枠
+.sagaseru-new-content{
+  padding: 0px 100px;
+  margin: 0 auto;
+  
+  // タイトル
+  .sageseru-new-title{
+    font-size: 28px;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+  }
+
+  // 新規作成フォーム
+  .sagaseru-new-forms{
+
+    .sagaseru-new-form-activehash, .sagaseru-new-form, .sagaseru-new-submit-btn{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      span{
+        color: red;
+        font-size: 12px;
+      }
+
+      select{
+        position: relative;
+        margin-top: $input-margin-top;
+        padding-left: $input-padding-left;
+        height: 35px;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+
+        .triangle{
+          width: 100px;
+          height: 100px;
+          background-color: black;
+        }
+
+      }
+
+      input{
+        margin-top: $input-margin-top;
+        padding-left: $input-padding-left;
+        height: 35px;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+      }
+      
+      .sagaseru-new-form-activehash2{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+
+        input{
+          margin-top: 0px;
+        }
+
+        label{
+          padding-left: 10px;
+        }
+      }
+    }
+
+   .sagaseru-new-submit-btn{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #666ad6;
+    padding: 15px 50px;
+    border-radius: 5px;
+    color: white;
+    width: auto;
+
+    &:hover{
+      opacity: 0.5;
+    }
+   } 
+  }
+
+}

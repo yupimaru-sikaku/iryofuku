@@ -1,9 +1,3 @@
-<%#ヘッダー%>
-<%= render partial: 'shared/header' %>
-<%#//ヘッダー%>
-
-<div class="module-spacer--large"></div>
-
 <%#大枠%>
 <section class="service-container">
 
@@ -12,7 +6,7 @@
     <div class="service-kuraseru">
       <%= link_to contact_kuraserus_path do %>
       <div class="service-kuraseru-img">
-        <%= image_tag "kuraseru.svg", :width => "400", :height => "400"  %>
+        <%= image_tag "kuraseru.svg" %>
       </div>
       <div class="service-kuraseru-text">
         <span>病院・相談所</span>
@@ -28,7 +22,8 @@
         <%= image_tag "sagaseru.svg", :width => "400", :height => "400"  %>
       </div>
       <div class="service-sagaseru-text">
-        <span>障害福祉事業所の経営者向け</span>
+        <span>障害福祉事業所の</span>
+        <span>経営者</span>
         <span>の方はこちら</span>
         <span><br></span>
       </div>
@@ -37,6 +32,7 @@
   </main>
   <%#//サービスの選択（クラセル or サガセル）%>
 
+  <div class="module-spacer--large"></div>
   <div class="module-spacer--large"></div>
   <div class="module-spacer--large"></div>
 
@@ -60,9 +56,5 @@
 
 </section>
 <%#//大枠%>
-
-<%# フッター%>
-<%= render partial: 'shared/footer' %>
-<%#// フッター%>
 
 <%= javascript_pack_tag 'services/index' %>
