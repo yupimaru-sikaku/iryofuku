@@ -1,0 +1,36 @@
+.sagaseru-index-content{
+
+  // タイトル
+ .sageseru-index-title{
+
+} 
+
+// 登録者一覧
+.sagaseru-indexes{
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  box-shadow: 5px 5px 1px #eee;
+
+  table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    
+    th{
+      border-bottom: 1px solid black;/**/
+      padding: 10px;
+    }
+    
+    td {
+      padding: 20px;
+      border-bottom: 1px dashed black;/**/
+      text-align: center;
+      /*破線 1px オレンジ*/
+    }
+  }
+}
+}

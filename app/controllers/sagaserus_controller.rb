@@ -20,6 +20,7 @@ class SagaserusController < ApplicationController
   end
 
   def index
+    @sagaserus = Sagaseru.all
   end
 
   private

@@ -2,99 +2,41 @@
 <section class="sagaseru-index-content">
 
   <%#タイトル%>
-  <p class="sageseru-index-title">ご利用希望者様申請フォーム</p>
+  <p class="sageseru-index-title">ご入居希望者様を探す</p>
   <%#//タイトル%>
 
   <div class="module-spacer--medium"></div>
 
-
-  <%#新規作成フォーム%>
-  <%= form_with model: @sagaseru, class: 'sagaseru-new-forms', local: true do |f| %>
-
-  <div class="sagaseru-new-form-activehash">
-    <%= f.label :prefecutre_id do%>
-    <p>都道府県<span>（必須）</span></p>
-    <% end %>
-    <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, selected: 27 do %>
-    <%end%>
+  <%#登録者一覧%>
+  <div class="sagaseru-indexes">
+    <table>
+      <thead>
+        <tr>
+          <th>都道府県</th>
+          <th>市町村</th>
+          <th>ご希望のサービス種別</th>
+          <th>障がいの種別</th>
+          <th>性別</th>
+          <th>ご年齢</th>
+          <th>更新日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sagaserus.each do |sagaseru| %>
+        <tr>
+          <td><%= sagaseru.prefecture.name %></td>
+          <td><%= sagaseru.osaka_city.name %></td>
+          <td><%= sagaseru.service_type.name %></td>
+          <td><%= sagaseru.disability_type.name %></td>
+          <td><%= sagaseru.sex.name %></td>
+          <td><%= "#{sagaseru.age}歳" %></td>
+          <td><%= sagaseru.updated_at.strftime("%Y-%m-%d ") %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <div class="sagaseru-new-form-activehash">
-    <%= f.label :osaka_city_id do%>
-    <p>市町村<span>（必須）</span></p>
-    <% end %>
-    <%= f.collection_select :osaka_city_id, OsakaCity.all, :id, :name, placeholder: 'fdsa' %>
-  </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <div class="sagaseru-new-form-activehash">
-    <%= f.label :service_type_id do%>
-    <p>サービスの種別<span>（必須）</span></p>
-    <% end %>
-    <%= f.collection_select :service_type_id, ServiceType.all, :id, :name %>
-  </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <div class="sagaseru-new-form-activehash">
-    <%= f.label :disability_type_id do%>
-    <p>障がい種別<span>（必須）</span></p>
-    <% end %>
-    <% DisabilityType.all.each do |disability_type| %>
-    <div class="sagaseru-new-form-activehash2">
-      <%= f.radio_button :disability_type_id, disability_type.id, id: "disability_type#{disability_type.id}" %>
-      <%= f.label :disability_type_id, disability_type.name, for: "disability_type#{disability_type.id}", class: "radio" %>
-    </div>
-    <% end %>
-  </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <div class="sagaseru-new-form-activehash">
-    <%= f.label :disabclassification_idility_type_id do%>
-    <p>障がい種別<span>（必須）</span></p>
-    <% end %>
-    <% Classification.all.each do |classification| %>
-    <div class="sagaseru-new-form-activehash2">
-      <%= f.radio_button :classification_id, classification.id, id: "classification#{classification.id}" %>
-      <%= f.label :classification_id, classification.name, for: "classification#{classification.id}", class: "radio" %>
-    </div>
-    <% end %>
-  </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <div class="sagaseru-new-form-activehash">
-    <%= f.label :sex_id do%>
-    <p>性別<span>（必須）</span></p>
-    <% end %>
-    <% Sex.all.each do |sex| %>
-    <div class="sagaseru-new-form-activehash2">
-      <%= f.radio_button :sex_id, sex.id, id: "sex#{sex.id}" %>
-      <%= f.label :sex_id, sex.name, for: "sex#{sex.id}", class: "radio" %>
-    </div>
-    <% end %>
-  </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <div class="sagaseru-new-form">
-    <%= f.label :age, 'ご年齢' %>
-    <span></span>
-    <%= f.text_field :age, type: 'number', placeholder: '例）28' %>
-  </div>
-
-  <div class="module-spacer--medium"></div>
-
-  <%= f.submit '申請する', class: 'sagaseru-new-submit-btn' %>
-
-  <% end %>
-  <%#//新規作成フォーム%>
-
-
+  <%#//登録者一覧%>
 
 </section>
 <%#//大枠%>
