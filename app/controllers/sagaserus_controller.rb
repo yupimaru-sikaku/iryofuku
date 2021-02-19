@@ -21,7 +21,7 @@ class SagaserusController < ApplicationController
 
   def index
     @search_params = sagaseru_search_params
-    @sagaserus_search = Sagaseru.search(@search_params)
+    @sagaserus_search = Sagaseru.search(@search_params).order(updated_at: :desc)
   end
 
   private
