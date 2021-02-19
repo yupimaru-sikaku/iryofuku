@@ -1,36 +1,126 @@
+$input-border: 1px solid rgb(151, 151, 151);
+$input-margin-top: 10px;
+$input-border-radius: 5px;
+$input-padding-left: 10px;
+
 .sagaseru-index-content{
+  margin-top: -50px;
 
+  
   // タイトル
- .sageseru-index-title{
-
-} 
-
-// 登録者一覧
-.sagaseru-indexes{
-  width: 60%;
-  height: 100%;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border: 1px solid #eee;
-  box-shadow: 5px 5px 1px #eee;
-
-  table{
+  .sageseru-index-title{
+    font-size: 28px;
+    text-align: center;
     margin: 0 auto;
-    border-collapse: collapse;
-    border-bottom: 1px solid black;
+    width: 500px;
+  } 
+  
+  .sagaseru-search-forms{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    box-shadow: 5px 5px 1px #eee;
+    padding: 20px;
+    display: flex;
+    position: relative;
     
-    th{
-      border-bottom: 1px solid black;/**/
-      padding: 10px;
+    .sagaseru-search-form{
+      display: flex;
+      align-items: center;
+      
+      label{
+        width: 150px;
+        display: block;
+        text-align: right;
+        margin-right: 20px;
+      }
+      
+      input{
+        display: block;
+        padding: 0 20px;
+        height: 35px;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+      }
+      
+      input#search_age_from, input#search_age_to{
+        width: 100px;
+      }
+      
+      select{
+        display: block;
+        position: relative;
+        padding: 0 20px;
+        height: 35px;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+      }
     }
     
-    td {
-      padding: 20px;
-      border-bottom: 1px dashed black;/**/
-      text-align: center;
-      /*破線 1px オレンジ*/
+    .sagaseru-search-btn{
+      
+      input{
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border-radius: 10px;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+    // 検索初期化
+    .sagaseru-index-reset{
+      a{
+        padding: 10px 20px;
+        background-color: gray;
+        color: white;
+        border-radius: 10px;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        text-decoration: none;
+
+        &:hover{
+          opacity: 0.5;
+        }
+      }
     }
   }
-}
+  
+  // 登録者一覧
+  .sagaseru-indexes{
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    box-shadow: 5px 5px 1px #eee;
+
+    table{
+      margin: 0 auto;
+      border-collapse: collapse;
+      border-bottom: 1px solid black;
+      
+      th{
+        border-bottom: 1px solid black;/**/
+        padding: 10px;
+      }
+      
+      td {
+        padding: 20px;
+        border-bottom: 1px dashed black;/**/
+        text-align: center;
+        /*破線 1px オレンジ*/
+      }
+    }
+  }
 }

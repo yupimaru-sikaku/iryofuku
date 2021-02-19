@@ -20,7 +20,8 @@ class SagaserusController < ApplicationController
   end
 
   def index
-    @sagaserus = Sagaseru.all
+    @search_params = sagaseru_search_params
+    @sagaserus_search = Sagaseru.search(@search_params)
   end
 
   private
@@ -33,6 +34,18 @@ class SagaserusController < ApplicationController
       :prefecture_id,
       :service_type_id,
       :sex_id
+    )
+  end
+
+  def sagaseru_search_params
+    params.fetch(:search, {}).permit(
+      :prefecture_id,
+      :osaka_city_id,
+      :service_type_id,
+      :disability_type_id,
+      :sex_id,
+      :age_from,
+      :age_to,
     )
   end
   
