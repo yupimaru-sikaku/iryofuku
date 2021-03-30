@@ -1,0 +1,2 @@
+module GhsHelper
+end

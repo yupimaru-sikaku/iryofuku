@@ -1,0 +1,37 @@
+<div class="session-content">
+  <h2 class="session-title">ログイン画面<span> - 病院・相談所 -</span></h2>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= form_with model: @user, url: user_session_path, class: 'session-fields', local: true do |f| %>
+
+  <div class="session-field">
+    <div class="session-field-1">
+      <%= f.label :email, "登録しているメールアドレス" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.email_field :email, placeholder: "例）taro@gmail.com" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="session-field">
+    <div class="session-field-1">
+      <%= f.label :password, "パスワード" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="session-field-button">
+    <%= f.submit "ログイン" %>
+  </div>
+
+  <div class="module-spacer--small"></div>
+
+  <%= link_to "新規登録はこちら", new_user_registration_path %>
+
+  <% end %>
+</div>

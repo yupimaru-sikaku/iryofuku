@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  
   root to: 'services#index';
+
+  # 病院・相談支援側
+  devise_for :users, controllers: {
+    sessions:      'users/sessions',
+    passwords:     'users/passwords',
+    registrations: 'users/registrations'
+  }
+  
+  # 事業所側
+  devise_for :companies, controllers: {
+    sessions:      'companies/sessions',
+    passwords:     'companies/passwords',
+    registrations: 'companies/registrations'
+  }
 
   resource :services, only: [:index] do
     collection do
@@ -10,6 +23,7 @@ Rails.application.routes.draw do
   end
 
   resources :sagaserus, only: [:index, :new, :create] do
+    resource :favorites, only: [:create, :destroy]
     collection do
       get 'contact'
       get 'contact_message'
@@ -22,6 +36,8 @@ Rails.application.routes.draw do
       get 'contact_message'
     end
   end
+
+  resources :ghs, only: [:new, :create, :index]
   
 
 end

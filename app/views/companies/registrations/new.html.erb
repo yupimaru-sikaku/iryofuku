@@ -1,0 +1,102 @@
+<div class="registration-new-content">
+  <h2 class="registration-new-title">新規登録画面<span> - 事業所 -</span></h2>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= form_with model: @company, url: company_registration_path, class: 'registration-new-fields', local: true do |f| %>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :company_name, "法人名" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.text_field :company_name, placeholder: "例）株式会社○○" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :postal_code, "法人の郵便番号" %>
+      <span>（必須）</span>
+    </div>
+    <div class="registration-new-field-2">
+      <%= f.text_field :postal_code, placeholder: "例）1234567（ハイフン無し）", maxlength: 7, id: 'postal_code' %>
+      <span><button id="address_btn">検索</button></span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :address, "法人の住所" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.text_field :address, id: 'address' %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :name, "ご担当者名" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.text_field :name, placeholder: "例）山田 太郎" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :phone_number, "ご担当者の電話番号" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.text_field :phone_number, placeholder: "例）090-○○○○-○○○○" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :email, "ご担当者のメールアドレス" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.email_field :email, placeholder: "例）taro@gmail.com" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :password, "パスワード" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+    <div class="registration-new-field-1">
+      <%= f.label :password_confirmation, "パスワード(確認用)" %>
+      <span>（必須）</span>
+    </div>
+    <%= f.password_field :encrypted_password %>
+  </div>
+
+  <div class="module-spacer--large"></div>
+
+  <div class="registration-new-field-button">
+    <%= f.submit "新規登録" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= link_to "既に登録している方はこちら（ログイン）", new_company_session_path %>
+
+  <% end %>
+</div>
+
+<%= javascript_pack_tag "shared/address" %>

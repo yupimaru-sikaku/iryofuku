@@ -60,3 +60,14 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+# ユーザー管理
+gem 'devise'
+
+# アクティブハッシュ
+gem 'active_hash'
+
+gem 'jquery-rails' # RailsでjQueryを使えるようにするgem
+
+
+gem 'rails-i18n', '~> 6.0'

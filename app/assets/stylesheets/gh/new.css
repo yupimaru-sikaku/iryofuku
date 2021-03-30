@@ -1,0 +1,229 @@
+@charset "UTF-8";
+.field_with_errors {
+  display: contents;
+}
+
+li {
+  list-style: none;
+}
+
+.gh-new-content .gh-new-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.gh-new-content .gh-new-title span {
+  font-size: 20px;
+  display: block;
+  color: #b6b8bf;
+}
+
+.gh-new-content .gh-new-fields {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field {
+  text-align: center;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-1 span {
+  color: red;
+  font-size: 16px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 span {
+  font-size: 16px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 span > button#address_btn {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  background-color: gray;
+  border-radius: 5px;
+  color: white;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 ul li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 input, .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 select {
+  display: block;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+  margin-left: 20px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 span {
+  color: green;
+  font-size: 16px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 span {
+  font-size: 16px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 ul li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 input, .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 select {
+  display: block;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+  margin-left: 20px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-submit input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #666ad6;
+  padding: 15px 50px;
+  border-radius: 5px;
+  color: white;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-submit input:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.gh-new-content a {
+  color: black;
+  display: block;
+  text-align: center;
+}
+
+.gh-new-content a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.gh-new-content .gh-new-field-radio-1, .gh-new-content .gh-new-field-check-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.gh-new-content .gh-new-field-radio-1 label, .gh-new-content .gh-new-field-check-1 label {
+  padding-left: 10px;
+  display: block;
+}
+
+.gh-new-content .gh-new-field-radio-1 .residential_style_textfield, .gh-new-content .gh-new-field-radio-1 .staff_weekdaytime_textfield, .gh-new-content .gh-new-field-radio-1 .barrier_free_textfield, .gh-new-content .gh-new-field-check-1 .residential_style_textfield, .gh-new-content .gh-new-field-check-1 .staff_weekdaytime_textfield, .gh-new-content .gh-new-field-check-1 .barrier_free_textfield {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+  margin-left: 20px;
+}
+
+.gh-new-content .gh-new-field-radio-1 .valid_disability_textfield, .gh-new-content .gh-new-field-check-1 .valid_disability_textfield {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+  margin-left: 20px;
+  display: none;
+}
+
+.gh-new-content .gh-new-field-radio-1 #valid_disabilityその他:checked ~ .valid_disability_textfield, .gh-new-content .gh-new-field-check-1 #valid_disabilityその他:checked ~ .valid_disability_textfield {
+  display: block;
+}
+
+.gh-new-content .gh-new-field-radio-1 #valid_disabilityその他:checked ~ label, .gh-new-content .gh-new-field-check-1 #valid_disabilityその他:checked ~ label {
+  width: 70px;
+}
+
+.price_1 {
+  margin-top: 40px;
+}
+
+.price_2 {
+  margin-top: 40px;
+}
+
+.price_3 {
+  margin-top: 40px;
+}
+
+.price_4 {
+  margin-top: 40px;
+}
+
+.price_5 {
+  margin-top: 40px;
+}
+/*# sourceMappingURL=new.css.map */

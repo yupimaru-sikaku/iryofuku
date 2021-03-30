@@ -76,9 +76,11 @@
   padding: 15px 50px;
   border-radius: 5px;
   color: white;
+  width: 200px;
 }
 
 .contact-message-content .contact-message-fields .contact-message-button:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 /*# sourceMappingURL=contact-message.css.map */

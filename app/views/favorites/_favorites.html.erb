@@ -1,0 +1,20 @@
+<% if company_signed_in? %>
+<% if Favorite.find_by(company_id: current_company.id, sagaseru_id: sagaseru.id) %>
+<%= link_to sagaseru_favorites_path(sagaseru), method: :delete, remote: true, class: "favorite_btn_destroy", data:
+{confirm: '申請を取りやめますか?'} do %>
+<i class="fas fa-star"> </i>
+申請済み
+<% end %>
+<% else %>
+<%= link_to sagaseru_favorites_path(sagaseru), method: :post, remote: true, class: "favorite_btn_create", data:
+{confirm: '申請をしますか?'} do %>
+<i class="far fa-star"></i>
+申請する
+<% end %>
+<% end %>
+<% else %>
+<div class="favorite-btn">
+  <i class="far fa-star"></i>
+  <%= sagaseru.favorites.count %>
+</div>
+<% end %>

@@ -36,7 +36,7 @@ $input-padding-left: 10px;
         border: none;
         border-bottom: $input-border;
         outline: none;
-        
+
       }
 
       textarea{
@@ -76,10 +76,12 @@ $input-padding-left: 10px;
       padding: 15px 50px;
       border-radius: 5px;
       color: white;
+      width: 200px;
 
       &:hover{
         opacity: 0.5;
+        cursor: pointer;
       }
     }
   }
-} 
+}

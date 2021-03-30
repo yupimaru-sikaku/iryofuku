@@ -1,0 +1,90 @@
+$input-border: 1px solid rgb(151, 151, 151);
+$input-margin-top: 10px;
+$input-border-radius: 5px;
+$input-padding-left: 10px;
+$span-font-size: 16px;
+
+// 新規登録画面
+.session-content{
+  
+  .session-title{
+    font-size: 32px;
+    text-align: center;
+
+    span{
+    font-size: 20px;
+    display: block;
+    color: #b6b8bf;
+    }
+  }
+
+  .session-fields{
+    width: 50%;
+    margin: 0 auto;
+    
+    .session-field{
+      border-radius: 10px;
+      text-align: center;
+      
+      .session-field-1{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          color: red;
+          font-size: $span-font-size;
+        }
+      }
+
+      input, select{
+        display: block;
+        margin-top: $input-margin-top;
+        padding-left: $input-padding-left;
+        width: 100%;
+        height: 35px;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+      }
+      
+      .session-field-2{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          color: green;
+          font-size: $span-font-size;
+        }
+        
+      }
+    }
+    .session-field-button{
+      input{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #666ad6;
+        padding: 15px 50px;
+        border-radius: 5px;
+        color: white;
+  
+        &:hover{
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  a{
+    color: black;
+    display: block;
+    text-align: center; 
+    
+    &:hover{
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}

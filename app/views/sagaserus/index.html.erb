@@ -71,6 +71,7 @@
           <th>性別</th>
           <th>ご年齢</th>
           <th>更新日</th>
+          <th>申請ボタン</th>
         </tr>
       </thead>
       <tbody>
@@ -83,6 +84,11 @@
           <td><%= sagaseru.sex.name %></td>
           <td><%= "#{sagaseru.age}歳" %></td>
           <td><%= sagaseru.updated_at.strftime("%Y.%m.%d ") %></td>
+          <td>
+            <div id="favorites_button-<%= sagaseru.id %>">
+              <%= render partial: "favorites/favorites", locals: { sagaseru: sagaseru } %>
+            </div>
+          </td>
         </tr>
         <% end %>
       </tbody>

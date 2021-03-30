@@ -12,7 +12,7 @@ class SagaserusController < ApplicationController
 
     if @sagaseru.valid?
       @sagaseru.save
-      redirect_to root_path
+      redirect_to root_path, flash: {success: "登録が完了しました"}
     else
       render :new
     end

@@ -1,5 +1,7 @@
 class Sagaseru < ApplicationRecord
 
+  has_many :favorites, dependent: :destroy
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :classification
   belongs_to_active_hash :disability_type

@@ -57,6 +57,8 @@ html {
   padding: 0;
   /* Reset `padding` and `margin` of all elements */
   margin: 0;
+  text-decoration: none;
+  outline: none;
 }
 
 /* # =================================================================
@@ -387,5 +389,14 @@ video {
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none;
+}
+
+select {
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+
+a {
+  color: black;
 }
 /*# sourceMappingURL=application.css.map */

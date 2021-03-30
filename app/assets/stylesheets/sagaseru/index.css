@@ -122,4 +122,21 @@
   text-align: center;
   /*破線 1px オレンジ*/
 }
+
+.sagaseru-index-content .sagaseru-indexes table a {
+  display: block;
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sagaseru-index-content .sagaseru-indexes table a.favorite_btn_create {
+  color: white;
+  background-color: blue;
+}
 /*# sourceMappingURL=index.css.map */

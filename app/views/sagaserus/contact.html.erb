@@ -1,7 +1,19 @@
 <%#大枠%>
 <section class="sagaseru-container">
-  <%= link_to '希望利用者新規作成（仮置き）', new_sagaseru_path %>
-  <%= link_to '希望利用者一覧（仮置き）', sagaserus_path %>
+
+  <%#仮置%>
+  <% if company_signed_in? %>
+  <p><%= current_company.company_name %>でログインしています</p>
+  <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
+  <% end %>
+  <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
+  <%= link_to '（仮置き）希望利用者の新規作成', new_sagaseru_path %>
+  <%= link_to '（仮置き）希望利用者の一覧', sagaserus_path %>
+  <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
+
+  <%#//仮置%>
+
+
   <%#サガセルの説明%>
   <div class="sagaseru-description">
     <div class="sagaseru-description-text">

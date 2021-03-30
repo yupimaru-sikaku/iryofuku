@@ -1,0 +1,203 @@
+$input-border: 1px solid rgb(151, 151, 151);
+$input-margin-top: 10px;
+$input-border-radius: 5px;
+$input-padding-left: 10px;
+$span-font-size: 16px;
+
+// 登録エラー時のスタイル崩れを防ぐ
+.field_with_errors {
+  display: contents;
+}
+
+li{
+  list-style: none;
+}
+
+// 新規登録画面
+.gh-new-content{
+  
+  .gh-new-title{
+    font-size: 32px;
+    text-align: center;
+    
+    span{
+      font-size: 20px;
+      display: block;
+      color: #b6b8bf;
+    }
+  }
+
+  .gh-new-fields{
+    width: 50%;
+    margin: 0 auto;
+    
+    .gh-new-field{
+      text-align: center;
+      
+      .gh-new-field-1{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          color: red;
+          font-size: $span-font-size;
+        }
+      }
+
+      .gh-new-field-2{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          font-size: $span-font-size;
+        }
+
+        span > button#address_btn{
+          width: 50px;
+          height: 30px;
+          text-align: center;
+          background-color: gray;
+          border-radius: 5px;
+          color: white;
+        }
+
+        ul{
+          li{
+            label{
+              display: flex;
+            }
+          }
+        }
+        input, select{
+          display: block;
+          margin-top: $input-margin-top;
+          padding-left: $input-padding-left;
+          width: 100%;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          margin-left: 20px;
+        }
+      }
+      
+      
+      .gh-new-field-3{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          color: green;
+          font-size: $span-font-size;
+        }
+        
+      }
+      
+      .gh-new-field-4{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          font-size: $span-font-size;
+        }
+        
+        ul{
+          li{
+            label{
+              display: flex;
+            }
+          }
+        }
+        input, select{
+          display: block;
+          margin-top: $input-margin-top;
+          padding-left: $input-padding-left;
+          width: 100%;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          margin-left: 20px;
+        }
+      }
+    }
+    
+    .gh-new-form-submit{
+      input{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #666ad6;
+        padding: 15px 50px;
+        border-radius: 5px;
+        color: white;
+        
+        &:hover{
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  a{
+    color: black;
+    display: block;
+    text-align: center; 
+    
+    &:hover{
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  
+  // ラジオボタン、チェックボタン
+  .gh-new-field-radio-1, .gh-new-field-check-1{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+
+    
+    label{
+      padding-left: 10px;
+      display: block;
+    }
+    
+    .residential_style_textfield, .staff_weekdaytime_textfield, .barrier_free_textfield{
+      margin-top: $input-margin-top;
+      padding-left: $input-padding-left;
+      width: 100%;
+      border: none;
+      border-bottom: $input-border;
+      outline: none;
+      margin-left: 20px;
+    }
+    
+    .valid_disability_textfield{
+      margin-top: $input-margin-top;
+      padding-left: $input-padding-left;
+      width: 100%;
+      border: none;
+      border-bottom: $input-border;
+      outline: none;
+      margin-left: 20px;
+      display: none;
+    }
+
+    #valid_disabilityその他:checked ~ .valid_disability_textfield{
+        display: block;
+    }
+    #valid_disabilityその他:checked ~ label{
+      width: 70px;
+    }
+    
+  }
+}
+
+@for $i from 1 through 5 {
+  .price_#{$i}{
+    margin-top: 40px;
+  }
+}

@@ -1,6 +1,15 @@
 <%#大枠%>
 <section class="kuraseru-container">
 
+  <%#仮置%>
+  <% if user_signed_in? %>
+  <p><%= current_user.main_company_name %>でログインしています</p>
+  <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
+  <% end %>
+  <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
+
+  <%#//仮置%>
+
   <%#サガセルの説明%>
   <div class="kuraseru-description">
     <div class="kuraseru-description-text">

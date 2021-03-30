@@ -121,6 +121,21 @@ $input-padding-left: 10px;
         text-align: center;
         /*破線 1px オレンジ*/
       }
+      a{
+        display: block;
+        box-shadow: 3px 3px 5px #a78b90;
+        padding: 10px;
+        width: 100px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 12px;
+        text-align: center;
+      }
+      a.favorite_btn_create{
+        color: white;
+        background-color: blue;
+      }
     }
   }
 }
+
