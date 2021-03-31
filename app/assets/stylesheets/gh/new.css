@@ -69,6 +69,10 @@ li {
   color: white;
 }
 
+.gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 span > button#address_btn :hover {
+  opacity: 0.5;
+}
+
 .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 ul li label {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -3,7 +3,7 @@ $(function(){
   $('#address_btn').on('click', (event) => {
     event.preventDefault();
     $.ajax({
-      url: "http://zipcloud.ibsnet.co.jp/api/search?zipcode=" + $('#postal_code').val(),
+      url: "//zipcloud.ibsnet.co.jp/api/search?zipcode=" + $('#postal_code').val(),
       dataType: 'jsonp',
     }).done((data) => {
       if (data.results) { 
