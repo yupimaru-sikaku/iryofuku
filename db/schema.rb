@@ -107,7 +107,9 @@ ActiveRecord::Schema.define(version: 2021_03_29_235832) do
     t.string "sub_company_name"
     t.string "service_type", null: false
     t.integer "postal_code", null: false
-    t.string "address", null: false
+    t.string "address_city", null: false
+    t.string "address_street", null: false
+    t.string "address_building", null: false
     t.string "human_name", null: false
     t.string "phone_number", null: false
     t.string "email", default: "", null: false

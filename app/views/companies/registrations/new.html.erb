@@ -3,6 +3,18 @@
 
   <div class="module-spacer--medium"></div>
 
+  <% if @company.errors.any? %>
+  <div id="error_explanation" class="alert_danger">
+    <ul>
+      <% @company.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="module-spacer--medium"></div>
+
   <%= form_with model: @company, url: company_registration_path, class: 'registration-new-fields', local: true do |f| %>
 
   <div class="registration-new-field">

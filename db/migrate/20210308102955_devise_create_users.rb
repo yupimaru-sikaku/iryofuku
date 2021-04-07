@@ -13,8 +13,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :service_type,      null: false
       # 病院もしくは法人の郵便番号
       t.integer :postal_code,        null: false
-      # 病院もしくは法人の住所
-      t.string :address,            null: false
+      # 病院もしくは法人の住所（市区町村）
+      t.string :address_city,            null: false
+      # 病院もしくは法人の住所（番地）
+      t.string :address_street,            null: false
+      # 病院もしくは法人の住所（建物名、部屋番号）
+      t.string :address_building,            null: false
       # 病院もしくは法人の担当者名
       t.string :human_name,         null: false
       # 病院もしくは法人の担当者電話番号

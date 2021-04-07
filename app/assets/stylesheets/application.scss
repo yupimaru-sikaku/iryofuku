@@ -19,4 +19,25 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+// フラッシュメッセージ
+.alert{
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #f8ffd3;
+  width: 50%;
+  margin: 50px auto;
+  margin-bottom: -30px;
+}
+
+// 登録画面でのエラーメッセージ
+.alert_danger{
+  text-align: center;
+  color: red;
+  li{
+    padding: 5px
+  }
+  
+}
+
 @import "reset";

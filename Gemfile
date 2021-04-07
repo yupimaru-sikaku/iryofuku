@@ -53,7 +53,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_hash'
-gem 'pry-rails'
 
 # デバック用
 group :development do
@@ -67,7 +66,15 @@ gem 'devise'
 # アクティブハッシュ
 gem 'active_hash'
 
-gem 'jquery-rails' # RailsでjQueryを使えるようにするgem
+ # RailsでjQueryを使えるようにするgem
+gem 'jquery-rails'
 
-
+# 日本語化
 gem 'rails-i18n', '~> 6.0'
+
+# slackに通知を送る
+gem 'slack-notifier'
+gem 'dotenv-rails'
+
+
+gem 'pry-rails'

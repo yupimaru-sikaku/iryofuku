@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAA;EACJ,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,IAAI;EACjB,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,SAAS;EACjB,aAAa,EAAE,KAAK;CACrB",
-    "sources": [
-        "flash.scss"
-    ],
-    "names": [],
-    "file": "flash.css"
-}

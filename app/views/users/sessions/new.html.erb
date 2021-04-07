@@ -3,6 +3,18 @@
 
   <div class="module-spacer--medium"></div>
 
+  <% if @user.errors.any? %>
+  <div id="error_explanation" class="alert_danger">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="module-spacer--medium"></div>
+
   <%= form_with model: @user, url: user_session_path, class: 'session-fields', local: true do |f| %>
 
   <div class="session-field">

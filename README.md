@@ -6,10 +6,11 @@
 | ----------------- | ------- | ----------- |
 | main_company_name | string  | null: false | 病院名・もしくは法人名
 | sub_company_name  | string  |             | 事業所名
-| service_type_id   | integer | null: false | サービス種別
-| service_sub_type  | string  |             | サービス種別（その他）
+| service_type   | string | null: false | サービス種別
 | postal_code       | integer | null: false | 病院もしくは法人の郵便番号
-| address           | string  | null: false | 病院もしくは法人の住所
+| address_city           | string  | null: false | 病院もしくは法人の住所（市区町村）
+| address_street           | string  | null: false | 病院もしくは法人の住所（番地）
+| address_building  | string  | null: false | 病院もしくは法人の住所（建物名、部屋番号）
 | human_name        | string  | null: false | 病院もしくは法人の担当者名
 | phone_number      | string  | null: false | 病院もしくは法人の担当者電話番号
 | email             | string  | null: false | 病院もしくは法人の担当者メールアドレス

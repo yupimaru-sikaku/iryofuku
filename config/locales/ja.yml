@@ -204,3 +204,23 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  
+  activerecord:
+    
+    models:
+    attributes:
+      user:
+        main_company_name: 病院名・もしくは法人名
+        service_type: 病院・もしくは法人が提供しているサービスの種別
+        postal_code: 郵便番号
+        address_city: 住所（病院もしくは法人）
+        address_street: 住所（番地）
+        address_building: 住所（建物名、部屋番号）
+        human_name: ご担当者名
+        phone_number: ご担当者の電話番号
+      company:
+        company_name: 法人名
+        postal_code: 法人の郵便番号
+        address: 法人の住所
+        name: ご担当者名
+        phone_number: ご担当者の電話番号

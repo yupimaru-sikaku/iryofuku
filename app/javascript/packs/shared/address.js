@@ -17,6 +17,6 @@ $(function(){
   });
 
   function getData(data) {
-    $('#address').val(data.address1 + data.address2 + data.address3);
+    $('#address_city').val(data.address1 + data.address2 + data.address3);
   }
 });

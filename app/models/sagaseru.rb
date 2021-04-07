@@ -41,4 +41,5 @@ class Sagaseru < ApplicationRecord
   scope :age_from, -> (from) { where('? <= age', from) if from.present? }
   scope :age_to, -> (to) { where('age <= ?', to) if to.present? }
 
+
 end

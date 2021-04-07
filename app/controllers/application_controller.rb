@@ -8,12 +8,15 @@ class ApplicationController < ActionController::Base
       :main_company_name,
       :sub_company_name,
       :postal_code,
-      :address,
+      :address_city,
+      :address_street,
+      :address_building,
       :human_name,
       :phone_number,
       :email,
       
       # 事業所側
+      :address,
       :company_name,
       :name,
       
