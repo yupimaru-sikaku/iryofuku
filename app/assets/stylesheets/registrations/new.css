@@ -24,6 +24,10 @@
   text-align: center;
 }
 
+.registration-new-content .registration-new-fields .registration-new-field .alert_danger {
+  background-color: #fff1f1;
+}
+
 .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +80,11 @@
 .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 span {
   color: green;
   font-size: 16px;
+}
+
+.registration-new-content .registration-new-fields .registration-new-field-check .alert_danger {
+  background-color: #fff1f1;
+  text-align: center;
 }
 
 .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-1 span {

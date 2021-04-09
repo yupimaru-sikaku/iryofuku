@@ -17,9 +17,6 @@ class SagaserusController < ApplicationController
       notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
       notifier.ping "user:が作成されました。"
 
-      #確認メールを送信
-      ContactMailer.complete_mail(current_company).deliver
-
       redirect_to root_path, flash: {success: "登録が完了しました"}
     else
       render :new

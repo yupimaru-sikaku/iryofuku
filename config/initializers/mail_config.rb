@@ -3,8 +3,8 @@ ActionMailer::Base.smtp_settings = {
   address: 'smtp.gmail.com',
   domain: 'gmail.com',
   port: 587,
-  user_name: 'メールアドレス',
-  password: 'パスワード',
+  user_name: ENV['gmail_address'],
+  password: ENV['gmail_password'],
   authentication: 'plain',
   enable_starttls_auto: true
 }

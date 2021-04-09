@@ -221,6 +221,49 @@ ja:
       company:
         company_name: 法人名
         postal_code: 法人の郵便番号
-        address: 法人の住所
+        address_city: 法人の住所（市区町村）
+        address_street: 住所（番地）
+        address_building: 住所（建物名、部屋番号）
         name: ご担当者名
         phone_number: ご担当者の電話番号
+        email: Eメール
+        password: パスワード
+      gh:
+        main_company_name: 法人名
+        sub_company_name: 事業所名
+        postal_code: 事業所の郵便番号
+        address: 事業所の住所
+        phone_number: 事業所の電話番号
+        fax_number: 事業所のFAX番号
+        email: 事業所のメールアドレス
+        price_main: 預り金総額
+        price_sub1: 預り金内訳1(項目)
+        price_sub_cost1: 預り金内訳1(値段)
+        price_sub2: 預り金内訳2(項目)
+        price_sub_cost2: 預り金内訳2(値段)
+        price_sub3: 預り金内訳3(項目)
+        price_sub_cost3: 預り金内訳3(値段)
+        price_sub4: 預り金内訳4(項目)
+        price_sub_cost4: 預り金内訳4(値段)
+        price_sub5: 預り金内訳5(項目)
+        price_sub_cost5: 預り金内訳5(値段)
+        construction_year: 建物の築年月日(年)
+        construction_month: 建物の築年月日(月)
+        designated_year: 指定年月日（年）
+        designated_month: 指定年月日（月）
+        human_name: ご担当者名
+        human_phone_number: ご担当者の電話番号
+        human_email: ご担当者のメールアドレス
+        hp_url: 事業所HPのURL
+        capacity: 事業所の定員数
+        availability: 事業所の現在の空き人数
+        station: 最寄りの駅
+        from_station: 最寄り駅から徒歩何分
+        gender: 入居可能な性別
+        disability: 入居可能な障害区分
+        valid_disability: 入居できない障害種別
+        residential_style: 住居タイプ
+        staff_weekdaytime: 平日の日中のスタッフ配置
+        staff_holidaytime: 土日祝のスタッフ配置
+        barrier_free: バリアフリー
+        

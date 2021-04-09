@@ -9,8 +9,12 @@ class DeviseCreateCompanies < ActiveRecord::Migration[6.0]
       t.string :company_name,  null: false
       # 法人の郵便番号
       t.integer :postal_code,        null: false
-      # 法人の住所
-      t.string :address,            null: false
+      # 法人の住所（市区町村）
+      t.string :address_city,            null: false
+      # 法人の住所（番地）
+      t.string :address_street,            null: false
+      # 法人の住所（建物名、部屋番号）
+      t.string :address_building
       # 担当者名
       t.string :name,         null: false
       # 担当者電話番号

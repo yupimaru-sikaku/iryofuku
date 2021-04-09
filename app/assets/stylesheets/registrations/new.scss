@@ -30,6 +30,10 @@ $span-font-size: 16px;
     .registration-new-field{
       border-radius: 10px;
       text-align: center;
+
+      .alert_danger{
+        background-color: #fff1f1;
+      }
       
       .registration-new-field-1{
         display: flex;
@@ -77,6 +81,11 @@ $span-font-size: 16px;
     }
 
     .registration-new-field-check{
+
+      .alert_danger{
+        background-color: #fff1f1;
+        text-align: center;
+      }
 
       .registration-new-field-check-1{
         

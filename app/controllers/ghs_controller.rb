@@ -1,11 +1,16 @@
 class GhsController < ApplicationController
 
   def new
-    @gh = Gh.new
+    if company_signed_in?
+      @gh = Gh.new
+    else
+      redirect_to new_company_registration_path, flash: {success: "事業所を登録するには会員登録が必要です"}
+    end
   end
-
+  
   def create
     @gh = Gh.new(gh_params)
+
     if @gh.valid?
       @gh.save
       redirect_to root_path, flash: {success: "登録が完了しました"}
@@ -16,6 +21,7 @@ class GhsController < ApplicationController
 
 
   private
+
   def gh_params
     params.require(:gh).permit(
       :main_company_name,
@@ -38,6 +44,8 @@ class GhsController < ApplicationController
       :price_sub_cost5,
       :construction_year,
       :construction_month,
+      :designated_year,
+      :designated_month,
       :human_name,
       :human_phone_number,
       :human_email,
@@ -53,6 +61,7 @@ class GhsController < ApplicationController
       disability: [],
       valid_disability: [],
       staff_holidaytime: [],
+      images: []
     ).merge(
       company_id: current_company.id
     )

@@ -38,10 +38,16 @@ class CreateGhs < ActiveRecord::Migration[6.0]
       t.string :price_sub5
       # 預り金内訳5（値段）
       t.integer :price_sub_cost5
-      # 指定年
+      # 築年
       t.integer :construction_year
-      # 指定月
+      # 築月
       t.integer :construction_month
+      # 築年数
+      t.integer :building_age
+      # 指定年
+      t.integer :designated_year
+      # 指定月
+      t.integer :designated_month
       # 担当者名（companiesと一緒）
       t.string :human_name
       # 担当者電話番号（companiesと一緒）

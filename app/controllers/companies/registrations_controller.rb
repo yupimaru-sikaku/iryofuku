@@ -10,9 +10,20 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+
+    # 事業所登録が完了したら事業所へウェルカムメール＆イリョフクにSlack通知
+    if @company.save
+
+      # 登録した事業所のアドレスにメール
+      ContactMailer.complete_mail(current_company).deliver
+
+      # slackへ通知を送る
+      notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
+      notifier.ping "#{current_company.company_name}が事業所登録しました。\n 電話番号は#{current_company.phone_number}です。 \n メールアドレスは#{current_company.email}です"
+    end
+  end
 
   # GET /resource/edit
   # def edit

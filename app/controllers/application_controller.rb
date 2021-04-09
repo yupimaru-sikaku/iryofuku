@@ -16,11 +16,11 @@ class ApplicationController < ActionController::Base
       :email,
       
       # 事業所側
-      :address,
       :company_name,
       :name,
       
       service_type: [],
     ])
   end
+
 end

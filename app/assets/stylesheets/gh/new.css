@@ -140,6 +140,57 @@ li {
   margin-left: 20px;
 }
 
+.gh-new-content .gh-new-fields .gh-new-field .short_input input {
+  width: 100px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list img {
+  width: 80px;
+  height: 80px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list p {
+  color: blue;
+  border-bottom: 1px solid;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image input {
+  display: none;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image label {
+  display: block;
+  background-color: #dcdada;
+  padding: 10px;
+  text-align: center;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image label .fa-camera {
+  font-size: 15px;
+}
+
 .gh-new-content .gh-new-fields .gh-new-form-submit input {
   display: block;
   margin: 0 auto;

@@ -1,0 +1,23 @@
+.short_input input {
+  width: 100px;
+}
+
+.middle_input {
+  width: 400px;
+}
+
+.middle_height {
+  height: 150px;
+  word-break: break-all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+/*# sourceMappingURL=input.css.map */

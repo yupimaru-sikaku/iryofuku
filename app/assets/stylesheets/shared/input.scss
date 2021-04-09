@@ -1,0 +1,18 @@
+.short_input{
+  input{
+    width: 100px;
+  }
+}
+
+.middle_input{
+  width: 400px;
+}
+
+.middle_height{
+  height: 150px;
+  word-break : break-all;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}

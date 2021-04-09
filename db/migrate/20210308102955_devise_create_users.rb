@@ -18,7 +18,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       # 病院もしくは法人の住所（番地）
       t.string :address_street,            null: false
       # 病院もしくは法人の住所（建物名、部屋番号）
-      t.string :address_building,            null: false
+      t.string :address_building
       # 病院もしくは法人の担当者名
       t.string :human_name,         null: false
       # 病院もしくは法人の担当者電話番号

@@ -33,6 +33,7 @@
 .alert_danger {
   text-align: center;
   color: red;
+  background-color: #fff1f1;
 }
 
 .alert_danger li {

@@ -3,11 +3,10 @@ for (var i=0; i<6; i++){
   let priceEnd = document.querySelector(`.price_${i}_end`);
   let prices = document.getElementsByClassName(`price_${i+1}`);
   
-  priceEnd.addEventListener('keyup', () => {
-    console.log(prices);
+  priceEnd.addEventListener('input', () => {
     for (var i=0; i<prices.length; i++){
       let priceSub = prices[i];
-      priceSub.hidden = false;
+      priceSub.hidden = false; 
     }
   })
 }
@@ -124,4 +123,67 @@ const validDisabilityTextField = document.querySelector('.valid_disability_textf
 
 validDisabilityOther.addEventListener('click', () => {
   validDisabilityTextField.disabled = false;
+})
+
+// パンフレットのプレビュー
+document.addEventListener('DOMContentLoaded', function(){
+  const fileField = document.querySelector('#gh_image');
+  const imageLists = document.querySelector('.image-lists');
+  const dataBox = new DataTransfer();
+  const inputLabel = document.querySelector('.gh_image_label');
+  
+  fileField.addEventListener('change', (e) =>{
+    file = e.target.files[0];
+    blob = window.URL.createObjectURL(file);
+    dataBox.items.add(file);
+
+    fileField.files = dataBox.files
+
+    if (fileField.files.length == 6){
+      inputLabel.style.display = 'none';
+    }
+    
+    const blobDiv = document.createElement('div');
+    blobDiv.setAttribute('class', 'image-list');
+    
+    // const blobImage = document.createElement('img');
+    // blobImage.setAttribute('src', blob);
+    // blobImage.setAttribute('id', file.name);
+
+    const blobImage = document.createElement('iframe');
+    blobImage.setAttribute('src', blob);
+    
+    const deleteButton = document.createElement('p')
+    deleteButton.setAttribute('class', 'delete');
+    deleteButton.innerHTML = '削除';
+    
+    blobDiv.appendChild(blobImage);
+    blobDiv.appendChild(deleteButton);
+    imageLists.appendChild(blobDiv);
+    
+    deleteButton.addEventListener('click', function(){
+      const deleteDiv = deleteButton.parentNode;
+      const deleteImg = deleteButton.previousElementSibling;
+      
+      if (fileField.files.length == 1){
+        deleteDiv.remove();
+        fileField.value = "";
+        dataBox.clearData();
+        
+      }else{
+        
+        Array.from(fileField.files).forEach(function(files, i){
+          if (files.name == deleteImg.id){
+            dataBox.items.remove(i);
+            fileField.files = dataBox.files
+          }
+        });
+      }
+      deleteDiv.remove();
+
+      if (fileField.files.length < 6){
+        inputLabel.style.display = 'block';
+      }
+    })
+  })
 })
