@@ -1,4 +1,4 @@
-.header-main {
+.header_main {
   padding: 10px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,13 +12,13 @@
   border-bottom: 1px solid #eee;
 }
 
-.header-main .header-main-logo {
+.header_main .header_main_logo {
   display: block;
   width: 300px;
   height: 100px;
 }
 
-.header-main .contact-form {
+.header_main .contact_form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,30 +27,13 @@
           justify-content: space-between;
 }
 
-.header-main .contact-form a {
-  display: block;
-  background-color: #f898ff;
-  color: white;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 15px;
-  -webkit-box-shadow: 1px 1px 1px #caa6c4;
-          box-shadow: 1px 1px 1px #caa6c4;
-}
-
-.header-main .contact-form a:hover {
-  opacity: 0.5;
-}
-
-.header-main .contact-form .contact-form-tel {
+.header_main .contact_form .contact_form_tel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px;
   margin-left: 15px;
   border-radius: 10px;
   border: 1px solid;
@@ -58,7 +41,11 @@
           box-shadow: 1px 1px 1px;
 }
 
-.header-main .contact-form .contact-form-tel span {
+.header_main .contact_form .contact_form_tel a {
+  padding: 15px;
+}
+
+.header_main .contact_form .contact_form_tel span {
   padding-left: 10px;
 }
 /*# sourceMappingURL=header.css.map */

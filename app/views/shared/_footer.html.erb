@@ -1,9 +1,12 @@
-<div class="footer-main">
-  <%= image_tag 'logo.jpeg', class:'footer-main-logo' %>
-  <div class="contact-form">
-    <div class="contact-form-tel">
-      <i class="fas fa-phone-volume"></i>
-      <span>080-7283-1647</span>
+<div class="footer_main">
+  <%= link_to root_path, class:'footer_main_logo' do %>
+  <%= image_tag 'logo.jpeg', class:'footer_main_logo' %>
+  <% end %>
+  <div class="contact_form">
+    <div class="contact_form_tel">
+      <a href="tel:080-7283-1647">
+        <i class="fas fa-phone-volume"> 080-7283-1647</i>
+      </a>
     </div>
   </div>
 </div>
