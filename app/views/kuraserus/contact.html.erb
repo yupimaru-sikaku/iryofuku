@@ -1,3 +1,5 @@
+<%= render partial: 'shared/header' %>
+
 <%#大枠%>
 <section class="kuraseru-container">
 
@@ -5,9 +7,9 @@
   <% if user_signed_in? %>
   <p><%= current_user.main_company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
-  <% end %>
+  <%= link_to '（仮置）パスワード変更', new_user_password_path, method: :get %>
+  <% else %>
   <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
-  <% unless user_signed_in? %>
   <%= link_to '（仮置）ログインはこちら', new_user_session_path %>
   <% end %>
 
@@ -71,5 +73,7 @@
 
 </section>
 <%#//大枠%>
+
+<%= render partial: 'shared/footer' %>
 
 <%= javascript_pack_tag 'kuraserus/contact' %>

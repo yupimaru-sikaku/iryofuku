@@ -17,4 +17,9 @@ class FavoritesController < ApplicationController
     favorite.destroy
   end
 
+  def index
+    favorites = current_company.favorites.pluck(:sagaseru_id)
+    @sagaseru_favorite_lists = Sagaseru.find(favorites)
+  end
+
 end

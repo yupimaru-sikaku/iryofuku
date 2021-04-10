@@ -1,3 +1,5 @@
+<%= render partial: 'shared/header' %>
+
 <div class="registration-new-content">
   <h2 class="registration-new-title">新規登録画面<span> - 病院・相談所 -</span></h2>
 
@@ -257,6 +259,8 @@
 
   <% end %>
 </div>
+
+<%= render partial: 'shared/footer' %>
 
 <%= javascript_pack_tag "users/new" %>
 <%= javascript_pack_tag "shared/address" %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'companies/show'
   root to: 'services#index';
 
   # 病院・相談支援側
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
     registrations: 'companies/registrations'
   }
 
+  resources :companies, only: [:show]
+  
   resource :services, only: [:index] do
     collection do
       get 'contact_done'
@@ -24,6 +27,7 @@ Rails.application.routes.draw do
 
   resources :sagaserus, only: [:index, :new, :create] do
     resource :favorites, only: [:create, :destroy]
+    resources :favorites, only: [:index]
     collection do
       get 'contact'
       get 'contact_message'
@@ -37,7 +41,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :ghs, only: [:new, :create, :index]
+  resources :ghs, only: [:new, :create, :index] do
+    collection do
+      get 'lists_company_ghs'
+    end
+  end
   
 
 end

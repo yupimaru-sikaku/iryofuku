@@ -1,3 +1,5 @@
+<%= render partial: 'shared/header' %>
+
 <%#大枠%>
 <section class="sagaseru-container">
 
@@ -5,14 +7,14 @@
   <% if company_signed_in? %>
   <p><%= current_company.company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
-  <% end %>
-  <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
-  <% unless company_signed_in? %>
-  <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
-  <% end %>
-  <%= link_to '（仮置き）希望利用者の新規作成', new_sagaseru_path %>
-  <%= link_to '（仮置き）希望利用者の一覧', sagaserus_path %>
   <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
+  <%= link_to '（仮置き）希望利用者申請画面', new_sagaseru_path %>
+  <%= link_to '（仮置き）事業者の管理画面', sagaserus_path %>
+  <% else %>
+  <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
+  <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
+  <%= link_to '（仮置き）希望利用者の新規作成', new_sagaseru_path %>
+  <% end %>
 
   <%#//仮置%>
 
@@ -40,5 +42,7 @@
 
 </section>
 <%#//大枠%>
+
+<%= render partial: 'shared/footer' %>
 
 <%= javascript_pack_tag 'sagaserus/contact' %>

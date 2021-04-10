@@ -1,0 +1,154 @@
+$header-height: 120px;
+
+.hamburger_content{
+  width: 100%;
+  height: $header-height;
+  // headerにspacer100pxを入れてるので打ち消すため
+  // margin-top: -100px;
+
+  // border-bottom: 0.5px solid #ecececec;
+
+  // ハンバーガーメニュー判断チェックボックス
+  input{
+    display: none;
+  }
+  
+  // ハンバーガーメニューの中身
+  .content{
+    background-color: white;
+    font-size: 1em;
+    width: 20%;
+    height: 100%;
+    transform: translateX(-1500px);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+
+    ul{
+      margin-top: 150px;
+    }
+
+    // ハンバーガーメニューの中のアイコン
+    .icon-img{
+      display: flex;
+      align-items: center;
+
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        margin-right: 10px;
+      }
+    }
+    
+    // ハンバーガーメニューの中の各項目
+    a{
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #dedede;
+      padding: 20px;
+      color: gray;
+    }
+  }
+  
+  // ハンバーガーメニューアイコン
+  & > .open{
+    position: absolute;
+    top: calc((#{$header-height} - 16px) / 2);
+    left: 20px;
+    cursor: pointer;
+    
+    span{
+      padding: 15px 70px;
+      display: block;
+      background-color: #e8e8e8;
+      border-radius: 30px;
+      transition: all 0.5s ease;
+    }
+  }
+  
+  // ハンバーガーメニュークリックされた時のアイコンの挙動
+  input[type="checkbox"]:checked ~ .open{
+    z-index: 3;
+    
+    span{
+      color: white;
+      background-color: green;
+      
+      // &:nth-child(1){
+      //   transition-delay: 70ms;
+      //   transform: translateY(7px) rotate(315deg);
+      // }
+      
+      // &:nth-child(2){
+      //   transition-delay: 0ms;
+      //   transform: translateX(-19px) scaleX(0);
+      // }
+      
+      // &:nth-child(3){
+      //   transition-delay: 140ms;
+      //   transform: translateY(-7px) rotate(45deg);
+      // }
+      
+    }
+    
+  }
+  
+  // ハンバーガーメニュークリックされた時の中身の挙動
+  input[type="checkbox"]:checked ~ .content{
+    z-index: 2;
+    transform: translateX(0px);
+    // transform: translateY(65px);
+  }
+  
+  // ハンバーガーメニュークリックされた時のアイコンの挙動２
+  input[type="checkbox"]:checked ~ .close-2{
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100vh;
+  }
+  
+  
+}
+
+// アプリケーションのロゴ
+.header-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $header-height;
+
+  img{
+    display: block;
+    width: 250px;
+  }
+}
+
+// ログイン中のユーザーのアイコン
+.header-user-img{
+  position: absolute;
+  top: calc((#{$header-height} - 47px) / 2);
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  
+  img{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    border: 1px solid #cecece;
+    margin: 0 auto;
+  }
+
+  span{
+    display: block;
+    font-size: 12px;
+    color: #928e8e;
+    text-align: center;
+  }
+}

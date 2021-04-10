@@ -1,3 +1,7 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/flash' %>
+<div class="module-spacer--large"></div>
+
 <%#大枠%>
 <section class="service-container">
 
@@ -56,5 +60,7 @@
 
 </section>
 <%#//大枠%>
+
+<%= render partial: 'shared/footer' %>
 
 <%= javascript_pack_tag 'services/index' %>

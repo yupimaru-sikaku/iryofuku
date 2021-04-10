@@ -1,0 +1,50 @@
+<%= render partial: "shared/hamburger" %>
+
+<%#お気入りリスト%>
+<div class="sagaseru-favorite-content">
+  <div class="sagaseru-favorite-title">
+    <h1>希望利用者の申請状況</h1>
+  </div>
+
+  <%#お気入りリスト一覧%>
+  <div class="sagaseru-indexes">
+    <table>
+      <thead>
+        <tr>
+          <th>都道府県</th>
+          <th>市町村</th>
+          <th>ご希望のサービス種別</th>
+          <th>障がいの種別</th>
+          <th>性別</th>
+          <th>ご年齢</th>
+          <th>更新日</th>
+          <th>申請ボタン</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @sagaseru_favorite_lists %>
+        <% @sagaseru_favorite_lists.each do |sagaseru| %>
+        <tr>
+          <td><%= sagaseru.prefecture.name %></td>
+          <td><%= sagaseru.osaka_city.name %></td>
+          <td><%= sagaseru.service_type.name %></td>
+          <td><%= sagaseru.disability_type.name %></td>
+          <td><%= sagaseru.sex.name %></td>
+          <td><%= "#{sagaseru.age}歳" %></td>
+          <td><%= sagaseru.updated_at.strftime("%Y.%m.%d ") %></td>
+          <td>
+            <div id="favorites_button-<%= sagaseru.id %>">
+              <%= render partial: "favorites/favorites", locals: { sagaseru: sagaseru } %>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%#//登録者一覧%>
+  <%#//お気入りリスト一覧%>
+
+</div>
+<%#//お気入りリスト%>

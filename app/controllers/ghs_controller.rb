@@ -19,6 +19,10 @@ class GhsController < ApplicationController
     end
   end
 
+  def lists_company_ghs
+    ghs = current_company.ghs.pluck(:company_id)
+    @ghs = Gh.find(ghs)
+  end
 
   private
 

@@ -1,3 +1,6 @@
+<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/flash' %>
+
 <div class="registration-new-content">
   <h2 class="registration-new-title">新規登録画面<span> - 事業所 -</span></h2>
 
@@ -54,7 +57,7 @@
       <%= f.label :address_city, "法人の住所（市区町村）" %>
       <span>（必須）</span>
     </div>
-    <%= f.text_field :address_city, id: 'address' %>
+    <%= f.text_field :address_city, id: 'address_city' %>
   </div>
 
   <div class="module-spacer--medium"></div>
@@ -182,5 +185,7 @@
 
   <% end %>
 </div>
+
+<%= render partial: 'shared/footer' %>
 
 <%= javascript_pack_tag "shared/address" %>

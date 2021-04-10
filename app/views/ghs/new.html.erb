@@ -1,3 +1,5 @@
+<%= render partial: 'shared/header' %>
+
 <%#GH新規作成%>
 <div class="gh-new-content">
 
@@ -62,7 +64,7 @@
       </div>
       <div class="gh-new-field-2">
         <%= f.text_field :postal_code, placeholder: '例）1234567（ハイフン無し）', id: 'postal_code', maxlength: '7' %>
-        <span><button id="address_btn">検索</button></span>
+        <span><button id="address_btn">住所検索</button></span>
       </div>
     </div>
 
@@ -80,7 +82,7 @@
         <span>（必須）</span>
       </div>
       <div class="gh-new-field-2">
-        <%= f.text_field :address, id: 'address' %>
+        <%= f.text_field :address, id: 'address_city' %>
         <span></span>
       </div>
     </div>
@@ -682,6 +684,8 @@
   <%#GH新規作成フォーム%>
 
 </div>
+
+<%= render partial: 'shared/footer' %>
 
 <%= javascript_pack_tag "ghs/new" %>
 <%= javascript_pack_tag "shared/address" %>

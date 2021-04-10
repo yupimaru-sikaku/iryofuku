@@ -1,0 +1,105 @@
+<%#ヘッダー%>
+<div class="header">
+
+  <%#左上のハンバーガーメニュー%>
+  <input id="menu" type="checkbox">
+  <label for="menu" class="open">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <label for="menu" class="close-2"></label>
+  <%#//左上のハンバーガーメニュー%>
+
+
+  <%#ハンバーガーメニュークリック後に表示されるコンテンツ%>
+  <div class="content">
+    <ul class="content-lists">
+
+      <% if user_signed_in? %>
+      <li>
+        <div class="user-icon">
+          <%= link_to user_path(current_user), class: "icon-img" do %>
+          <% if current_user.image.attached? %>
+          <%= image_tag current_user.image %>
+          <% else %>
+          <%= image_tag "defalut.png"  %>
+          <% end %>
+          <span><%= current_user.nickname %></span>
+          <% end %>
+        </div>
+      </li>
+      <li>
+        <%= link_to root_path, class: "registration-img" do %>
+        <i class="fas fa-home"></i>
+        <span>トップページ</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to rooms_path, class: "registration-img" do %>
+        <i class="far fa-paper-plane"></i>
+        <span>メッセージ</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#", class: "registration-img" do %>
+        <i class="fas fa-user"></i>
+        <span>アカウント設定</span>
+        <% end %>
+      </li>
+      <% end %>
+
+      <li>
+        <%= link_to admin_index_services_path, class: "registration-img" do %>
+        <i class="fas fa-business-time"></i>
+        <span>事業者はこちら</span>
+        <% end %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to destroy_user_session_path, method: :delete, class: "registration-img" do %>
+        <i class="fas fa-door-open"></i>
+        <span>ログアウト</span>
+        <% end %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to new_user_registration_path, class: "registration-img" do %>
+        <i class="fas fa-sign-in-alt"></i>
+        <span>新規登録</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_user_session_path, class: "registration-img" do %>
+        <i class="fas fa-key"></i>
+        <span>ログイン</span>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <%#//ハンバーガーメニュークリック後に表示されるコンテンツ%>
+
+  <%#会社ロゴ%>
+  <div class="header-img">
+    <%= link_to image_tag("logo.jpeg"), root_path %>
+  </div>
+  <%#//会社ロゴ%>
+
+  <%#ログイン後のアイコン%>
+  <% if user_signed_in? %>
+  <% if current_user.image.attached? %>
+  <%= link_to user_path(current_user), class: 'header-user-img' do %>
+  <%= image_tag current_user.image %>
+  <span><%= current_user.nickname.truncate(8) %></span>
+  <% end %>
+  <% else %>
+  <%= link_to user_path(current_user), class: 'header-user-img' do %>
+  <%= image_tag "defalut.png" %>
+  <span><%= current_user.nickname.truncate(8) %></span>
+  <% end %>
+  <% end %>
+  <% end %>
+  <%#//ログイン後のアイコン%>
+
+</div>
