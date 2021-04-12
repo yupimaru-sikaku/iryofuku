@@ -1,16 +1,48 @@
-<h2>Forgot your password?</h2>
+<%= render partial: 'shared/header' %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<div class="module-spacer--large"></div>
+
+<div class="password-new-content">
+  <div class="password-new-title">
+    <p>パスワードをお忘れですか？</p>
+    <div class="module-spacer--small"></div>
+
+    <span>
+      お客様が登録したメールアドレスへ、再設定のご案内をお送りします。</br>
+      メールアドレスを入力して「送信する」をクリックしてください。</br>
+      入力していただいたメールアドレスに、</br>
+      パスワード再設定ページのリンクを記載したメールをお送りいたします。
+    </span>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: 'password-new-fields', method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="password-new-field">
+    <div class="password-new-field-1">
+      <%= f.label :email, "ご登録済みのメールアドレス" %>
+      <span>（必須）</span>
+    </div>
+    <div class="password-new-field-2">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <div class="module-spacer--large"></div>
 
-<%= render "users/shared/links" %>
+  <div class="password-new-field-button">
+    <%= f.submit "送信" %>
+  </div>
+
+  <div class="module-spacer--small"></div>
+  <%= link_to "新規登録はこちら", new_user_registration_path %>
+  <div class="module-spacer--small"></div>
+  <%= link_to "ログイン画面はこちら", new_user_session_path %>
+  <% end %>
+</div>
+
+
+
+<%= render partial: 'shared/footer' %>

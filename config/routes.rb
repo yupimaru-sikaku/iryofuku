@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
-  
+
   # 事業所側
   devise_for :companies, controllers: {
     sessions:      'companies/sessions',

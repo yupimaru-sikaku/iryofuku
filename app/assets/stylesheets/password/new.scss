@@ -1,0 +1,160 @@
+$input-border: 1px solid rgb(151, 151, 151);
+$input-margin-top: 10px;
+$input-border-radius: 5px;
+$input-padding-left: 10px;
+$span-font-size: 16px;
+
+// 登録エラー時のスタイル崩れを防ぐ
+.field_with_errors {
+  display: contents;
+}
+
+// 新規登録画面
+.password-new-content{
+  
+  .password-new-title{
+    font-size: 32px;
+    text-align: center;
+    
+    span{
+      font-size: 16px;
+      display: block;
+      color: #b6b8bf;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  
+  .password-new-fields{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    
+    .password-new-field{
+      border-radius: 10px;
+      text-align: center;
+
+      .alert_danger{
+        background-color: #fff1f1;
+      }
+      
+      .password-new-field-1{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          color: red;
+          font-size: $span-font-size;
+        }
+      }
+      .password-new-field-2{
+        span > button#address_btn{
+          width: 80px;
+          height: 30px;
+          text-align: center;
+          background-color: gray;
+          border-radius: 5px;
+          color: white;
+        }
+      }
+
+      input, select{
+        display: block;
+        margin-top: $input-margin-top;
+        padding-left: $input-padding-left;
+        width: 100%;
+        height: 35px;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+      }
+      
+      .password-new-field-2{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+        span{
+          color: green;
+          font-size: $span-font-size;
+        }
+        
+      }
+    }
+
+    .password-new-field-check{
+
+      .alert_danger{
+        background-color: #fff1f1;
+        text-align: center;
+      }
+
+      .password-new-field-check-1{
+        
+        span{
+          color: red;
+          font-size: $span-font-size;
+        }
+        
+      }
+      .password-new-field-check-2{
+        margin-top: 10px;
+        word-break : break-all;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .password-new-field-check-3{
+          padding: 10px;
+          padding-left: 20px;
+
+          .service_type_textfield{
+            margin-top: $input-margin-top;
+            padding-left: $input-padding-left;
+            width: 100%;
+            border: none;
+            border-bottom: $input-border;
+            outline: none;
+            margin-left: 20px;
+            display: none;
+          }
+      
+          #service_typeその他:checked ~ .service_type_textfield{
+              display: block;
+          }
+        }
+
+      }
+    }
+
+    .password-new-field-button{
+      input{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #666ad6;
+        padding: 15px 50px;
+        border-radius: 5px;
+        color: white;
+  
+        &:hover{
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  a{
+    color: black;
+    display: block;
+    text-align: center; 
+    
+    &:hover{
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}

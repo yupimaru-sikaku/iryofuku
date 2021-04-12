@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates :human_name
     validates :phone_number
     validates :email
-    validates :password
+    validates :password, on: :create
   end
   
   # postal_code
@@ -26,7 +26,7 @@ class User < ApplicationRecord
   
   # password
   # 8桁以上半角英数字混在
-  validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角数字で入力して下さい' }
+  validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角数字で入力して下さい' }, on: :create
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable

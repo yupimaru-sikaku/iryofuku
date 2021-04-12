@@ -9,8 +9,9 @@
   <% if user_signed_in? %>
   <p><%= current_user.main_company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
+  <%= link_to '（仮置）編集画面はこちら', edit_user_registration_path %>
   <% else %>
-  <%= link_to '（仮置）パスワードの再発行', new_user_password_path, method: :get %>
+  <%= link_to '（仮置）パスワードのnew', new_user_password_path %>
   <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
   <%= link_to '（仮置）ログインはこちら', new_user_session_path %>
   <% end %>
