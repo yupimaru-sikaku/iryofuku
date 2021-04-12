@@ -1,5 +1,7 @@
 <%= render partial: 'shared/header' %>
 
+<div class="module-spacer--large"></div>
+
 <%#大枠%>
 <section class="kuraseru-container">
 
@@ -7,8 +9,8 @@
   <% if user_signed_in? %>
   <p><%= current_user.main_company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
-  <%= link_to '（仮置）パスワード変更', new_user_password_path, method: :get %>
   <% else %>
+  <%= link_to '（仮置）パスワードの再発行', new_user_password_path, method: :get %>
   <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
   <%= link_to '（仮置）ログインはこちら', new_user_session_path %>
   <% end %>

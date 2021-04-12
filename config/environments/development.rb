@@ -60,4 +60,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # deviseのパスワード変更時に使用（パスワードをお忘れの方）
+  config.action_mailer.default_url_options = { host: 'example.com'}
+
+
 end
