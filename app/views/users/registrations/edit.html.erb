@@ -41,6 +41,65 @@
 
   <div class="module-spacer--medium"></div>
 
+  <div class="registration-edit-field-check">
+
+    <% if @user.errors.include?(:service_type) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @user.errors.full_messages_for(:service_type).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
+    <div class="registration-edit-field-check-1">
+      <%= f.label :service_type, '病院・もしくは法人が提供しているサービスの種別' %>
+      <span>（必須、複数選択可）</span>
+    </div>
+    <div class="registration-edit-field-check-2">
+      <% [
+      "病院・クリニック",
+      "計画相談支援",
+      "障がい児相談支援",
+      "障害児相談支援",
+      "地域移行支援",
+      "居宅介護",
+      "重度訪問介護",
+      "同行援護",
+      "行動援護",
+      "療養介護",
+      "生活介護",
+      "短期入所",
+      "重度障害者等包括支援",
+      "施設入所支援",
+      "難自立訓練（機能訓練）",
+      "自立訓練（生活訓練）",
+      "就労移行支援",
+      "就労継続支援A型",
+      "就労継続支援B型",
+      "就労定着支援",
+      "自立生活援助",
+      "共同生活援助",
+      "児童発達支援",
+      "医療型児童発達支援",
+      "放課後等デイサービス",
+      "居宅訪問型児童発達支援",
+      "保育所等訪問支援",
+      "福祉型障害児入所施設",
+      "医療型障害児入所施設",
+      ].each do |service_type| %>
+      <div class="registration-edit-field-check-3">
+        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type' }, service_type %>
+        <%= f.label :service_type, service_type, for: "service_type#{service_type}" %>
+      </div>
+      <% end %>
+      <div class="registration-edit-field-check-3">
+        <%= f.check_box :service_type, { id: "service_typeその他", multiple: true, include_hidden: false }, 'その他' %>
+        <%= f.label :service_type, 'その他', for: "service_typeその他" %>
+        <%= f.text_field :service_type, class: 'service_type_textfield', placeholder: '例）○○サービス', multiple: true, disabled: true %>
+      </div>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
   <div class="registration-edit-field">
 
     <% if @user.errors.include?(:postal_code) %>
@@ -158,15 +217,13 @@
     <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
-  <div class="module-spacer--large"></div>
+  <div class="module-spacer--medium"></div>
 
   <div class="registration-edit-field-button">
     <%= f.submit "情報変更" %>
   </div>
 
   <div class="module-spacer--medium"></div>
-
-  <%= link_to "パスワードの変更はこちらから", "#" %>
 
   <% end %>
 </div>
