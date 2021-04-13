@@ -85,6 +85,13 @@
   <div class="module-spacer--medium"></div>
 
   <div class="sagaseru-new-form">
+
+    <% if @sagaseru.errors.include?(:age) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @sagaseru.errors.full_messages_for(:age).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
     <%= f.label :age, 'ご年齢' %>
     <span></span>
     <%= f.text_field :age, type: 'number', placeholder: '例）28' %>

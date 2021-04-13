@@ -228,6 +228,8 @@ ja:
         phone_number: ご担当者の電話番号
         email: Eメール
         password: パスワード
+      sagaseru:
+        age: ご年齢
       gh:
         main_company_name: 法人名
         sub_company_name: 事業所名

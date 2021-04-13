@@ -18,7 +18,6 @@
   <div class="module-spacer--medium"></div>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: 'password-new-fields', method: :post }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="password-new-field">
     <div class="password-new-field-1">
@@ -26,7 +25,7 @@
       <span>（必須）</span>
     </div>
     <div class="password-new-field-2">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", autofocus: true %>
     </div>
   </div>
 

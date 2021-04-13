@@ -1,25 +1,59 @@
-<h2>Change your password</h2>
+<%= render partial: 'shared/header' %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
+<div class="module-spacer--large"></div>
+
+<div class="password-new-content">
+  <div class="password-new-title">
+    <p>パスワード再発行画面</p>
+    <span> - 病院・相談所 -</span>
+    <div class="module-spacer--small"></div>
+
+    <span>
+      新しく発行するパスワードを入力下さい</br>
+    </span>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: 'password-new-fields', method: :put }) do |f| %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+  <div class="password-new-field">
+    <div class="password-new-field-1">
+      <%= f.label :password, "新規パスワード" %>
+      <span>（必須）</span>
+    </div>
+    <div class="password-new-field-2">
+      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", autofocus: true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="module-spacer--large"></div>
+
+  <div class="password-new-field">
+    <div class="password-new-field-1">
+      <%= f.label :password_confirmation, "新規パスワード（確認用）" %>
+      <span>（必須）</span>
+    </div>
+    <div class="password-new-field-2">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
+  <div class="module-spacer--large"></div>
 
-<%= render "users/shared/links" %>
+  <div class="password-new-field-button">
+    <%= f.submit "送信" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= link_to "新規登録はこちら", new_user_registration_path %>
+
+  <div class="module-spacer--small"></div>
+
+  <%= link_to "ログイン画面はこちら", new_user_session_path %>
+  <% end %>
+</div>
+
+<%= render partial: 'shared/footer' %>

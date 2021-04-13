@@ -21,7 +21,7 @@
       <%= f.label :main_company_name, "病院名・もしくは法人名" %>
       <span>（必須）</span>
     </div>
-    <%= f.text_field :main_company_name, placeholder: "例）○○病院、株式会社○○" %>
+    <%= f.text_field :main_company_name, placeholder: "例）○○病院、株式会社○○", autofocus: true %>
   </div>
 
   <div class="module-spacer--medium"></div>
@@ -157,9 +157,9 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-new-field-1">
+    <div class="registration-new-field-2">
       <%= f.label :address_building, " ー 住所（建物名、部屋番号）" %>
-      <span>（必須）</span>
+      <span>（任意）</span>
     </div>
     <%= f.text_field :address_building, id: 'address_building' %>
   </div>
