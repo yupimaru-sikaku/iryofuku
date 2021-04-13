@@ -1,6 +1,8 @@
 @charset "UTF-8";
 .sagaseru-index-content {
-  margin-top: -50px;
+  overflow: auto;
+  height: 100vh;
+  margin-left: 260px;
 }
 
 .sagaseru-index-content .sageseru-index-title {

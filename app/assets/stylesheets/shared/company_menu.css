@@ -1,0 +1,82 @@
+.menu_content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 260px;
+  height: 100vh;
+  background-color: #3b3b3b;
+  padding: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: auto;
+}
+
+.menu_content .menu .menu_icon {
+  border-bottom: 0.5px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+.menu_content .menu .menu_icon img {
+  display: block;
+}
+
+.menu_content .menu .menu_icon span {
+  display: block;
+  margin-left: 16px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.menu_content .menu .menu_icon img.menu_logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #efefef;
+}
+
+.menu_content .menu ul.menu_lists {
+  width: 100%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.menu_content .menu ul.menu_lists li {
+  width: 100%;
+}
+
+.menu_content .menu ul.menu_lists li a {
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: block;
+  padding: 20px 0px;
+  padding-left: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.menu_content .menu ul.menu_lists li a :hover {
+  background-color: transparent;
+}
+
+.menu_content .menu ul.menu_lists li :hover {
+  background-color: rgba(115, 113, 113, 0.95);
+}
+/*# sourceMappingURL=company_menu.css.map */

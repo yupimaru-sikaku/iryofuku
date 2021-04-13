@@ -4,7 +4,9 @@ $input-border-radius: 5px;
 $input-padding-left: 10px;
 
 .sagaseru-index-content{
-  margin-top: -50px;
+  overflow: auto;
+  height: 100vh;
+  margin-left: 260px;
 
   
   // タイトル

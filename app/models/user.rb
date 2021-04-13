@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates :human_name
     validates :phone_number
     validates :email
-    validates :password, on: :create
+    validates :password
   end
   
   # postal_code

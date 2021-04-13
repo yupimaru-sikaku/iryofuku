@@ -9,7 +9,6 @@
   <p><%= current_company.company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
   <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
-  <%= link_to '（仮置き）希望利用者申請画面', new_sagaseru_path %>
   <%= link_to '（仮置き）事業者の管理画面', sagaserus_path %>
   <% else %>
   <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
