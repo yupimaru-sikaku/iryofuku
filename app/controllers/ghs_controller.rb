@@ -13,7 +13,7 @@ class GhsController < ApplicationController
 
     if @gh.valid?
       @gh.save
-      redirect_to root_path, flash: {success: "登録が完了しました"}
+      redirect_to index_all_companies_path, flash: {success: "登録が完了しました"}
     else
       render :new
     end
