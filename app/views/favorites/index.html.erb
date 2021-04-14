@@ -1,23 +1,28 @@
-<%= render partial: "shared/hamburger" %>
+<%= render partial: "shared/company_menu" %>
 
 <%#お気入りリスト%>
-<div class="sagaseru-favorite-content">
-  <div class="sagaseru-favorite-title">
-    <h1>希望利用者の申請状況</h1>
+<div class="sagaseru_favorite_content">
+
+  <div class="module-spacer--large"></div>
+
+  <div class="sagaseru_favorite_title">
+    <p>希望利用者の申請状況</p>
   </div>
 
+  <div class="module-spacer--medium"></div>
+
   <%#お気入りリスト一覧%>
-  <div class="sagaseru-indexes">
+  <div class="sagaseru_indexes">
     <table>
       <thead>
         <tr>
           <th>都道府県</th>
           <th>市町村</th>
-          <th>ご希望のサービス種別</th>
+          <th>ご希望の</br>サービス種別</th>
           <th>障がいの種別</th>
           <th>性別</th>
           <th>ご年齢</th>
-          <th>更新日</th>
+          <th>申請日</th>
           <th>申請ボタン</th>
         </tr>
       </thead>
@@ -46,5 +51,6 @@
   <%#//登録者一覧%>
   <%#//お気入りリスト一覧%>
 
+  <div class="module-spacer--large"></div>
 </div>
 <%#//お気入りリスト%>

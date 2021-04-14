@@ -1,0 +1,46 @@
+<%= render partial: 'shared/company_menu' %>
+
+<div class="company_index_all_content">
+  <%= render partial: 'shared/flash' %>
+
+  <div class="module-spacer--large"></div>
+
+  <div class="company_index_all_fields">
+    <% if @ghs %>
+    <div class="company_index_all_field">
+      <div class="company_index_all_title">
+        <p>共同生活援助</p>
+      </div>
+
+      <div class="module-spacer--small"></div>
+
+      <div class="company_index_all_table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>事業所名</th>
+              <th>法人</th>
+              <th>編集</th>
+              <th>削除</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @ghs.each do |gh| %>
+            <tr>
+              <td><%= gh.id %></td>
+              <td><%= link_to "#{gh.sub_company_name}", gh_path(gh) %></td>
+              <td><%= gh.main_company_name %></td>
+              <td><%= link_to '編集', edit_gh_path(gh) %></td>
+              <td><%= link_to '削除', gh_path(gh), method: :delete, data: { confirm: '削除しますか？' } %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="module-spacer--large"></div>

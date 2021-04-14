@@ -13,7 +13,7 @@ class Company < ApplicationRecord
     validates :name
     validates :phone_number
     validates :email
-    validates :password
+    validates :password_confirmation, on: [:create]
   end
 
   # postal_code
@@ -30,10 +30,23 @@ class Company < ApplicationRecord
 
   # password
   # 8桁以上半角英数字混在
-  validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角数字で入力して下さい' }
+  validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角数字で入力して下さい' }, on: [:create]
 
 
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
+
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+  
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+  
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
 end

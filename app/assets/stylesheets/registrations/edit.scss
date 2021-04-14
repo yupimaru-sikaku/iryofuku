@@ -11,6 +11,10 @@ $span-font-size: 16px;
 
 // 新規登録画面
 .registration-edit-content{
+  background-color: #eee;
+  height: 100vh;
+  overflow: auto;
+  margin-left: 260px;
   
   .registration-edit-title{
     font-size: 32px;
@@ -22,10 +26,17 @@ $span-font-size: 16px;
       color: #b6b8bf;
     }
   }
-
+  
   .registration-edit-fields{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-size: 14px;
+    border-radius: 10px;
     
     .registration-edit-field{
       border-radius: 10px;

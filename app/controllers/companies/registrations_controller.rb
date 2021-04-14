@@ -49,8 +49,16 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
+  def update_resource(resource, params)
+    resource.update_without_current_password(params)
+  end
+
+  # company情報編集後に会社情報詳細に遷移
+  def after_update_path_for(resource)
+    company_path(current_company)
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])

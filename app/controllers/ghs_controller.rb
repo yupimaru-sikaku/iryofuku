@@ -19,6 +19,33 @@ class GhsController < ApplicationController
     end
   end
 
+  def edit
+    @gh = Gh.find(params[:id])
+  end
+  
+  def update
+    @gh = Gh.find(params[:id])
+
+    @gh.valid?
+    if @gh.update(gh_params)
+      redirect_to index_all_companies_path, flash: {success: "編集が完了しました"}
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @gh = Gh.find(params[:id])
+    if @gh.company_id == current_company.id
+      @gh.destroy
+      redirect_to index_all_companies_path
+    end
+  end
+
+  def show
+    @gh = Gh.find(params[:id])
+  end
+
   def lists_company_ghs
     ghs = current_company.ghs.pluck(:company_id)
     @ghs = Gh.find(ghs)

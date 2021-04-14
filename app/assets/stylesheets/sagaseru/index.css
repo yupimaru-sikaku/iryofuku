@@ -3,6 +3,7 @@
   overflow: auto;
   height: 100vh;
   margin-left: 260px;
+  background-color: #eee;
 }
 
 .sagaseru-index-content .sageseru-index-title {
@@ -17,13 +18,15 @@
   text-align: center;
   margin: 0 auto;
   border: 1px solid #eee;
-  -webkit-box-shadow: 5px 5px 1px #eee;
-          box-shadow: 5px 5px 1px #eee;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form {
@@ -95,14 +98,15 @@
 }
 
 .sagaseru-index-content .sagaseru-indexes {
-  width: 80%;
-  height: 100%;
+  width: 95%;
   padding: 20px;
   margin: 0 auto;
   background-color: #ffffff;
   border: 1px solid #eee;
-  -webkit-box-shadow: 5px 5px 1px #eee;
-          box-shadow: 5px 5px 1px #eee;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  font-size: 14px;
+  border-radius: 10px;
 }
 
 .sagaseru-index-content .sagaseru-indexes table {

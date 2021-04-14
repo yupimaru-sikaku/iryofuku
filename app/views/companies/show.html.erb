@@ -1,3 +1,68 @@
-<%= render partial: 'shared/hamburger' %>
+<%= render partial: 'shared/company_menu' %>
 
-<h1>ユーザー情報</h1>
+<section class="company_show_content">
+  <%= render partial: 'shared/flash' %>
+
+  <div class="module-spacer--large"></div>
+
+  <div class="company_show_title">
+    <p>管理者情報</p>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="company_show_fields">
+
+    <div class="company_show_field">
+      <p>法人名</p>
+      <p><%= current_company.company_name %></p>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="company_show_field">
+      <p>法人の郵便番号</p>
+      <p><%= current_company.postal_code %></p>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="company_show_field">
+      <p>法人の住所（市区町村）</p>
+      <p><%= current_company.address_city %></p>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="company_show_field">
+      <p>法人の住所（番地）</p>
+      <p><%= current_company.address_street %></p>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="company_show_field">
+      <p>法人の住所（建物名、部屋番号）</p>
+      <p><%= current_company.address_building %></p>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="company_show_field">
+      <p>電話番号</p>
+      <p><%= current_company.phone_number %></p>
+    </div>
+
+    <div class="module-spacer--small"></div>
+
+    <div class="company_show_field">
+      <p>Eメールアドレス</p>
+      <p><%= current_company.email %></p>
+    </div>
+
+    <div class="company_show_edit_button">
+      <%= link_to "編集", edit_company_registration_path %>
+    </div>
+
+  </div>
+</section>

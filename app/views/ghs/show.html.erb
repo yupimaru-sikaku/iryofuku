@@ -1,0 +1,28 @@
+<%= render partial: 'shared/company_menu' %>
+
+<%#GH詳細%>
+<div class="gh-show-content">
+
+  <div class="module-spacer--large"></div>
+
+  <%#GH詳細タイトル%>
+  <div class="gh-show-title">
+    <p>事業所情報詳細<span>- 共同生活援助 -</span></p>
+  </div>
+  <%#//GH詳細タイトル%>
+
+  <div class="module-spacer--medium"></div>
+
+  <%#GH詳細フォーム%>
+  <div class="gh-show-field">
+    <div class="gh-show-field-1">
+      <span>法人名</span>
+      <span>
+        <%= @gh.main_company_name %></span>
+    </div>
+    <div class="gh-show-field-1">
+      <span>事業所名</span>
+      <span>
+        <%= @gh.sub_company_name %></span>
+    </div>
+  </div>

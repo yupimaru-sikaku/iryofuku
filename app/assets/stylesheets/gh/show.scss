@@ -14,13 +14,13 @@ li{
 }
 
 // 新規登録画面
-.gh-show-content{
+.gh-edit-content{
   background-color: #eee;
   margin-left: 260px;
   height: 100vh;
   overflow: auto;
   
-  .gh-show-title{
+  .gh-edit-title{
     font-size: 32px;
     text-align: center;
     
@@ -31,7 +31,7 @@ li{
     }
   }
 
-  .gh-show-fields{
+  .gh-edit-fields{
     width: 60%;
     margin: 0 auto;
     padding: 20px;
@@ -42,10 +42,10 @@ li{
     font-size: 14px;
     border-radius: 10px;
     
-    .gh-show-field{
+    .gh-edit-field{
       text-align: center;
       
-      .gh-show-field-1{
+      .gh-edit-field-1{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -56,7 +56,7 @@ li{
         }
       }
 
-      .gh-show-field-2{
+      .gh-edit-field-2{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -98,7 +98,7 @@ li{
       }
       
       
-      .gh-show-field-3{
+      .gh-edit-field-3{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -110,7 +110,7 @@ li{
         
       }
       
-      .gh-show-field-4{
+      .gh-edit-field-4{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -146,7 +146,7 @@ li{
     }
 
     // パンフレットの写真
-    .gh-show-form-2-image{
+    .gh-edit-form-2-image{
       width: 50%;
       margin: 0 auto;
       padding-top: 10px;
@@ -191,7 +191,7 @@ li{
       }        
     }
     
-    .gh-show-form-submit{
+    .gh-edit-form-submit{
       input{
         display: block;
         margin: 0 auto;
@@ -220,7 +220,7 @@ li{
   }
   
   // ラジオボタン、チェックボタン
-  .gh-show-field-radio-1, .gh-show-field-check-1{
+  .gh-edit-field-radio-1, .gh-edit-field-check-1{
     display: flex;
     align-items: center;
     padding: 10px;

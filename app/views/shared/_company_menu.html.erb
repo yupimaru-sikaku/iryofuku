@@ -18,6 +18,12 @@
         <% end %>
       </li>
       <li>
+        <%= link_to sagaseru_favorites_path(current_company), class: "registration-img" do %>
+        <i class="far fa-address-book"></i>
+        <span>希望利用者の申請状況</span>
+        <% end %>
+      </li>
+      <li>
         <%= link_to root_path, class: "registration-img" do %>
         <i class="fas fa-flag-checkered"></i>
         <span>お知らせ</span>
@@ -26,19 +32,20 @@
       <li>
         <%= link_to company_path(current_company), class: "registration-img" do %>
         <i class="fas fa-user"></i>
-        <span>ユーザー情報</span>
+        <span>管理者情報</span>
         <% end %>
       </li>
       <li>
-        <%= link_to lists_company_ghs_ghs_path, class: "registration-img" do %>
+        <%= link_to new_gh_path, class: "registration-img" do %>
+        <i class="fas fa-briefcase"></i>
         <i class="fas fa-home"></i>
-        <span>事業所情報</span>
+        <span>事業所情報登録</span>
         <% end %>
       </li>
       <li>
-        <%= link_to sagaseru_favorites_path(current_company), class: "registration-img" do %>
-        <i class="far fa-address-book"></i>
-        <span>希望利用者の申請状況</span>
+        <%= link_to index_all_companies_path, class: "registration-img" do %>
+        <i class="fas fa-home"></i>
+        <span>事業所情報一覧</span>
         <% end %>
       </li>
       <li>

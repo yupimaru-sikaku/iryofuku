@@ -17,7 +17,11 @@ Rails.application.routes.draw do
     registrations: 'companies/registrations'
   }
 
-  resources :companies, only: [:show]
+  resources :companies, only: [:show] do
+    collection do
+      get 'index_all'
+    end
+  end
   
   resource :services, only: [:index] do
     collection do
@@ -41,7 +45,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :ghs, only: [:new, :create, :index] do
+  resources :ghs, only: [:index, :new, :create, :edit, :update, :destroy, :show] do
     collection do
       get 'lists_company_ghs'
     end

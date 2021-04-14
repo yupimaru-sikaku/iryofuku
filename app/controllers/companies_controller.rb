@@ -6,6 +6,10 @@ class CompaniesController < ApplicationController
     company = Company.find(params[:id])
   end
 
+  def index_all
+    @ghs = Gh.where(company_id: current_company.id)
+  end
+
   private
   def checked_auth
     if company_signed_in?
