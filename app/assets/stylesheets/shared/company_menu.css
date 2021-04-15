@@ -79,4 +79,8 @@
 .menu_content .menu ul.menu_lists li :hover {
   background-color: rgba(115, 113, 113, 0.95);
 }
+
+.menu_content .menu ul.menu_lists li.selected_menu a {
+  color: orange;
+}
 /*# sourceMappingURL=company_menu.css.map */

@@ -36,7 +36,7 @@
           <td><%= sagaseru.disability_type.name %></td>
           <td><%= sagaseru.sex.name %></td>
           <td><%= "#{sagaseru.age}歳" %></td>
-          <td><%= sagaseru.updated_at.strftime("%Y.%m.%d ") %></td>
+          <td><%= Favorite.find_by(sagaseru_id: sagaseru.id).updated_at.strftime("%Y.%m.%d ") %></td>
           <td>
             <div id="favorites_button-<%= sagaseru.id %>">
               <%= render partial: "favorites/favorites", locals: { sagaseru: sagaseru } %>

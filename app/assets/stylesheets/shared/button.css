@@ -1,0 +1,18 @@
+a.favorite_btn_destroy {
+  color: blue !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  padding: 5px !important;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+}
+
+a.favorite_btn_create {
+  color: white !important;
+  background-color: blue !important;
+  border-radius: 5px !important;
+  padding: 5px !important;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+}
+/*# sourceMappingURL=button.css.map */

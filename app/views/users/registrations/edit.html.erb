@@ -85,7 +85,7 @@
       "医療型障害児入所施設",
       ].each do |service_type| %>
       <div class="registration-edit-field-check-3">
-        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type' }, service_type %>
+        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type'}, service_type %>
         <%= f.label :service_type, service_type, for: "service_type#{service_type}" %>
       </div>
       <% end %>

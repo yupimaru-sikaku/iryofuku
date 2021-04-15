@@ -49,7 +49,7 @@
       
       li{
         width: 100%;
-        
+
         a{
           transition: 1s;
           display: block;
@@ -67,6 +67,12 @@
         }
         :hover{
           background-color: rgba(115, 113, 113, 0.95);
+        }
+      }
+      
+      li.selected_menu{
+        a{
+          color: orange;
         }
       }
     }

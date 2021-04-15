@@ -11,50 +11,50 @@
 
     <ul class="menu_lists">
 
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(sagaserus_path) %>">
         <%= link_to sagaserus_path, class: "registration-img" do %>
         <i class="fas fa-users"></i>
         <span>希望利用者一覧</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(sagaseru_favorites_path(current_company)) %>">
         <%= link_to sagaseru_favorites_path(current_company), class: "registration-img" do %>
         <i class="far fa-address-book"></i>
         <span>希望利用者の申請状況</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(root_path) %>">
         <%= link_to root_path, class: "registration-img" do %>
         <i class="fas fa-flag-checkered"></i>
         <span>お知らせ</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(company_path(current_company)) %>">
         <%= link_to company_path(current_company), class: "registration-img" do %>
         <i class="fas fa-user"></i>
         <span>管理者情報</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(new_gh_path) %>">
         <%= link_to new_gh_path, class: "registration-img" do %>
         <i class="fas fa-briefcase"></i>
         <i class="fas fa-home"></i>
         <span>事業所情報登録</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(index_all_companies_path) %>">
         <%= link_to index_all_companies_path, class: "registration-img" do %>
         <i class="fas fa-home"></i>
         <span>事業所情報一覧</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(company_password_path) %>">
         <%= link_to company_password_path, class: "registration-img", method: :put do %>
         <i class="fas fa-key"></i>
         <span>パスワードの変更</span>
         <% end %>
       </li>
-      <li>
+      <li class="<%= 'selected_menu' if current_page?(destroy_company_session_path) %>">
         <%= link_to destroy_company_session_path, class: "registration-img", method: :delete do %>
         <i class="fas fa-sign-out-alt"></i>
         <span>ログアウト</span>

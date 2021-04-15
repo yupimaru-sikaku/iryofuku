@@ -1,5 +1,8 @@
 class SagaserusController < ApplicationController
 
+  before_action :checked_auth, only: [:index]
+
+
   def contact
   end
 
@@ -52,6 +55,13 @@ class SagaserusController < ApplicationController
       :age_from,
       :age_to,
     )
+  end
+
+  def checked_auth
+    if company_signed_in?
+    else
+      redirect_to new_company_registration_path, flash: {success: "会員登録が必要です"}
+    end
   end
   
 end

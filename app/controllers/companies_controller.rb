@@ -1,13 +1,13 @@
 class CompaniesController < ApplicationController
 
-  before_action :checked_auth, only: [:show]
+  before_action :checked_auth, only: [:show, :index_all]
 
   def show
     company = Company.find(params[:id])
   end
 
   def index_all
-    @ghs = Gh.where(company_id: current_company.id)
+      @ghs = Gh.where(company_id: current_company.id)
   end
 
   private

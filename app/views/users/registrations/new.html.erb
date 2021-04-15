@@ -78,18 +78,13 @@
       "居宅訪問型児童発達支援",
       "保育所等訪問支援",
       "福祉型障害児入所施設",
-      "医療型障害児入所施設",
+      "医療型障害児入所施設"
       ].each do |service_type| %>
       <div class="registration-new-field-check-3">
-        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type' }, service_type %>
+        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type' }, checked_value = service_type %>
         <%= f.label :service_type, service_type, for: "service_type#{service_type}" %>
       </div>
       <% end %>
-      <div class="registration-new-field-check-3">
-        <%= f.check_box :service_type, { id: "service_typeその他", multiple: true, include_hidden: false }, 'その他' %>
-        <%= f.label :service_type, 'その他', for: "service_typeその他" %>
-        <%= f.text_field :service_type, class: 'service_type_textfield', placeholder: '例）○○サービス', multiple: true, disabled: true %>
-      </div>
     </div>
   </div>
 

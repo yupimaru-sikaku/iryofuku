@@ -1,5 +1,7 @@
 class FavoritesController < ApplicationController
 
+  before_action :checked_auth, only: [:index]
+
   def create
     @sagaseru = Sagaseru.find(params[:sagaseru_id])
     favorite = current_company.favorites.new(sagaseru_id: @sagaseru.id)
@@ -20,6 +22,14 @@ class FavoritesController < ApplicationController
   def index
     favorites = current_company.favorites.pluck(:sagaseru_id)
     @sagaseru_favorite_lists = Sagaseru.find(favorites)
+  end
+
+  private
+  def checked_auth
+    if company_signed_in?
+    else
+      redirect_to new_company_registration_path, flash: {success: "会員登録が必要です"}
+    end
   end
 
 end
