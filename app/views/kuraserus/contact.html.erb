@@ -3,7 +3,7 @@
 <div class="module-spacer--large"></div>
 
 <%#大枠%>
-<section class="kuraseru-container">
+<section class="iryo-container">
 
   <%#仮置%>
   <% if user_signed_in? %>
@@ -20,12 +20,12 @@
   <%#//仮置%>
 
   <%#サガセルの説明%>
-  <div class="kuraseru-description">
-    <div class="kuraseru-description-text">
+  <div class="iryo-description">
+    <div class="iryo-description-text">
       <span>事業所紹介サービス</span>
       <p>ご希望に沿った障害福祉サービスをご紹介致します。<br><br>まずは下記のお問い合わせフォームから<br>必要事項をご記入の上、送信ボタンを押して下さい。<br><br>追って、ご連絡致します。</p>
     </div>
-    <div class="kuraseru-description-img">
+    <div class="iryo-description-img">
       <%= image_tag "Group therapy-amico.svg" %>
     </div>
   </div>
@@ -72,7 +72,7 @@
   <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
-  <%= render partial: 'shared/contact_form', locals: {path: contact_message_kuraserus_path} %>
+  <%= render partial: 'shared/contact_form', locals: {path: contact_message_iryoes_path} %>
   <%#// コンタクトフォーム %>
 
 </section>
@@ -80,4 +80,4 @@
 
 <%= render partial: 'shared/footer' %>
 
-<%= javascript_pack_tag 'kuraserus/contact' %>
+<%= javascript_pack_tag 'iryoes/contact' %>

@@ -2,7 +2,7 @@ class Company < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
-  has_many :ghs
+  has_many :ghs      , dependent: :destroy
   has_many :favorites, dependent: :destroy
 
   with_options presence: true do

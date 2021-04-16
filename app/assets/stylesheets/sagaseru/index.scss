@@ -4,7 +4,7 @@ $input-border-radius: 5px;
 $input-padding-left: 10px;
 
 // 全体
-.sagaseru-index-content{
+.fukushi-index-content{
   overflow: auto;
   height: 100vh;
   margin-left: 260px;
@@ -19,7 +19,7 @@ $input-padding-left: 10px;
   } 
   
   // 検索フォーム
-  .sagaseru-search-forms{
+  .fukushi-search-forms{
     width: 50%;
     text-align: center;
     margin: 0 auto;
@@ -31,7 +31,7 @@ $input-padding-left: 10px;
     background-color: white;
     border-radius: 10px;
     
-    .sagaseru-search-form{
+    .fukushi-search-form{
       display: flex;
       align-items: center;
       
@@ -66,7 +66,7 @@ $input-padding-left: 10px;
       }
     }
     
-    .sagaseru-search-btn{
+    .fukushi-search-btn{
       
       input{
         padding: 10px 20px;
@@ -83,7 +83,7 @@ $input-padding-left: 10px;
       }
     }
     // 検索初期化
-    .sagaseru-index-reset{
+    .fukushi-index-reset{
       a{
         padding: 10px 20px;
         background-color: gray;
@@ -102,7 +102,7 @@ $input-padding-left: 10px;
   }
   
   // 登録者一覧
-  .sagaseru-indexes{
+  .fukushi-indexes{
     width: 95%;
     padding: 20px;
     margin: 0 auto;

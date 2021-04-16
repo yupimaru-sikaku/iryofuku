@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_many :fukushies, dependent: :destroy
+
   with_options presence: true do
     validates :main_company_name
     validates :service_type

@@ -1,16 +1,16 @@
-.sagaseru-new-content {
+.fukushi-new-content {
   padding: 0px 100px;
   margin: 0 auto;
 }
 
-.sagaseru-new-content .sageseru-new-title {
+.fukushi-new-content .sageseru-new-title {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
   width: 500px;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash, .fukushi-new-content .fukushi-new-forms .fukushi-new-form, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,12 +22,12 @@
   width: 50%;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash span, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form span, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn span {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash span, .fukushi-new-content .fukushi-new-forms .fukushi-new-form span, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn span {
   color: red;
   font-size: 12px;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash select, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form select, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn select {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash select, .fukushi-new-content .fukushi-new-forms .fukushi-new-form select, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn select {
   position: relative;
   margin-top: 10px;
   padding-left: 10px;
@@ -37,13 +37,13 @@
   outline: none;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash select .triangle, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form select .triangle, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn select .triangle {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash select .triangle, .fukushi-new-content .fukushi-new-forms .fukushi-new-form select .triangle, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn select .triangle {
   width: 100px;
   height: 100px;
   background-color: black;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash input, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form input, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn input {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash input, .fukushi-new-content .fukushi-new-forms .fukushi-new-form input, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn input {
   margin-top: 10px;
   padding-left: 10px;
   height: 35px;
@@ -52,7 +52,7 @@
   outline: none;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash .sagaseru-new-form-activehash2, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form .sagaseru-new-form-activehash2, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn .sagaseru-new-form-activehash2 {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash .fukushi-new-form-activehash2, .fukushi-new-content .fukushi-new-forms .fukushi-new-form .fukushi-new-form-activehash2, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn .fukushi-new-form-activehash2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,15 +62,15 @@
   padding-left: 20px;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash .sagaseru-new-form-activehash2 input, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form .sagaseru-new-form-activehash2 input, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn .sagaseru-new-form-activehash2 input {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash .fukushi-new-form-activehash2 input, .fukushi-new-content .fukushi-new-forms .fukushi-new-form .fukushi-new-form-activehash2 input, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn .fukushi-new-form-activehash2 input {
   margin-top: 0px;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form-activehash .sagaseru-new-form-activehash2 label, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-form .sagaseru-new-form-activehash2 label, .sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn .sagaseru-new-form-activehash2 label {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-form-activehash .fukushi-new-form-activehash2 label, .fukushi-new-content .fukushi-new-forms .fukushi-new-form .fukushi-new-form-activehash2 label, .fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn .fukushi-new-form-activehash2 label {
   padding-left: 10px;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -81,7 +81,7 @@
   width: auto;
 }
 
-.sagaseru-new-content .sagaseru-new-forms .sagaseru-new-submit-btn:hover {
+.fukushi-new-content .fukushi-new-forms .fukushi-new-submit-btn:hover {
   opacity: 0.5;
 }
 /*# sourceMappingURL=new.css.map */

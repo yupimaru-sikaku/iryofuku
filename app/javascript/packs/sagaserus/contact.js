@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  ScrollReveal().reveal('.sagaseru-description', {
+  ScrollReveal().reveal('.fukushi-description', {
     duration: 1600, 
     origin: 'top', 
     distance: '50px',

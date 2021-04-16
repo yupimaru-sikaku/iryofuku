@@ -1,4 +1,4 @@
-class SagaserusController < ApplicationController
+class FukushiesController < ApplicationController
 
   before_action :checked_auth, only: [:index]
 
@@ -7,14 +7,14 @@ class SagaserusController < ApplicationController
   end
 
   def new
-    @sagaseru = Sagaseru.new
+    @fukushi = Fukushi.new
   end
 
   def create
-    @sagaseru = Sagaseru.new(sagaseru_params)
+    @fukushi = Fukushi.new(fukushi_params)
 
-    if @sagaseru.valid?
-      @sagaseru.save
+    if @fukushi.valid?
+      @fukushi.save
 
       # slackへ通知を送る
       notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
@@ -28,13 +28,13 @@ class SagaserusController < ApplicationController
   end
 
   def index
-    @search_params = sagaseru_search_params
-    @sagaserus_search = Sagaseru.search(@search_params).order(updated_at: :desc)
+    @search_params = fukushi_search_params
+    @fukushis_search = Fukushi.search(@search_params).order(updated_at: :desc)
   end
 
   private
-  def sagaseru_params
-    params.require(:sagaseru).permit(
+  def fukushi_params
+    params.require(:fukushi).permit(
       :age,
       :classification_id,
       :disability_type_id,
@@ -45,7 +45,7 @@ class SagaserusController < ApplicationController
     )
   end
 
-  def sagaseru_search_params
+  def fukushi_search_params
     params.fetch(:search, {}).permit(
       :prefecture_id,
       :osaka_city_id,

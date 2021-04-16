@@ -1,8 +1,8 @@
-.sagaseru-container {
+.fukushi-container {
   padding: 50px 200px;
 }
 
-.sagaseru-container .sagaseru-description {
+.fukushi-container .fukushi-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,7 +11,7 @@
           justify-content: space-evenly;
 }
 
-.sagaseru-container .sagaseru-description .sagaseru-description-text span {
+.fukushi-container .fukushi-description .fukushi-description-text span {
   display: block;
   text-align: center;
   font-size: 28px;
@@ -22,11 +22,11 @@
   margin-bottom: 10px;
 }
 
-.sagaseru-container .sagaseru-description .sagaseru-description-text p {
+.fukushi-container .fukushi-description .fukushi-description-text p {
   font-size: 18px;
 }
 
-.sagaseru-container .sagaseru-description .sagaseru-description-img img {
+.fukushi-container .fukushi-description .fukushi-description-img img {
   width: 500px;
 }
 /*# sourceMappingURL=contact.css.map */

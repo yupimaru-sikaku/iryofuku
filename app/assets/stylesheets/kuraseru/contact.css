@@ -1,8 +1,8 @@
-.kuraseru-container {
+.iryo-container {
   padding: 50px 200px;
 }
 
-.kuraseru-container .kuraseru-description {
+.iryo-container .iryo-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,7 +11,7 @@
           justify-content: space-evenly;
 }
 
-.kuraseru-container .kuraseru-description .kuraseru-description-text span {
+.iryo-container .iryo-description .iryo-description-text span {
   display: block;
   text-align: center;
   font-size: 28px;
@@ -22,15 +22,15 @@
   margin-bottom: 10px;
 }
 
-.kuraseru-container .kuraseru-description .kuraseru-description-text p {
+.iryo-container .iryo-description .iryo-description-text p {
   font-size: 18px;
 }
 
-.kuraseru-container .kuraseru-description .kuraseru-description-img img {
+.iryo-container .iryo-description .iryo-description-img img {
   width: 500px;
 }
 
-.kuraseru-container .sageseru-contact-form p {
+.iryo-container .sageseru-contact-form p {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;

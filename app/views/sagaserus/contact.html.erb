@@ -2,14 +2,14 @@
 
 <div class="module-spacer--large"></div>
 <%#大枠%>
-<section class="sagaseru-container">
+<section class="fukushi-container">
 
   <%#仮置%>
   <% if company_signed_in? %>
   <p><%= current_company.company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
   <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
-  <%= link_to '（仮置き）事業者の管理画面', sagaserus_path %>
+  <%= link_to '（仮置き）事業者の管理画面', fukushies_path %>
   <% else %>
   <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
   <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
@@ -19,12 +19,12 @@
 
 
   <%#サガセルの説明%>
-  <div class="sagaseru-description">
-    <div class="sagaseru-description-text">
+  <div class="fukushi-description">
+    <div class="fukushi-description-text">
       <span>利用者紹介サービス</span>
       <p>障害福祉サービスを利用したい方をご紹介致します。<br><br>まずは下記のお問い合わせフォームから<br>必要事項をご記入の上、送信ボタンを押して下さい。<br><br>追って、ご連絡致します。</p>
     </div>
-    <div class="sagaseru-description-img">
+    <div class="fukushi-description-img">
       <%= image_tag "5 - RECRUITING.svg" %>
     </div>
   </div>
@@ -34,7 +34,7 @@
   <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
-  <%= render partial: 'shared/contact_form', locals: {path: contact_message_sagaserus_path} %>
+  <%= render partial: 'shared/contact_form', locals: {path: contact_message_fukushies_path} %>
   <%#// コンタクトフォーム %>
 
   <div class="module-spacer--large"></div>
@@ -44,4 +44,4 @@
 
 <%= render partial: 'shared/footer' %>
 
-<%= javascript_pack_tag 'sagaserus/contact' %>
+<%= javascript_pack_tag 'fukushies/contact' %>

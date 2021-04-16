@@ -52,10 +52,10 @@ class GhsController < ApplicationController
   end
 
   def downloadpdf
-    myfile=Gh.find(params[:id])
-    filepath = Rails.root.join('src',myfile.images)
+    @gh=Gh.find(params[:id])
+    filepath = Rails.root.join('storage',@gh.images)
     stat = File::stat(filepath)
-    send_file(filepath, :filename => myfile.filename, :length => stat.size)
+    send_file(filepath, :filename => @gh.filename, :length => stat.size)
   end
 
   private

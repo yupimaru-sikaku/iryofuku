@@ -1,19 +1,19 @@
 @charset "UTF-8";
-.sagaseru-index-content {
+.fukushi-index-content {
   overflow: auto;
   height: 100vh;
   margin-left: 260px;
   background-color: #eee;
 }
 
-.sagaseru-index-content .sageseru-index-title {
+.fukushi-index-content .sageseru-index-title {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
   width: 500px;
 }
 
-.sagaseru-index-content .sagaseru-search-forms {
+.fukushi-index-content .fukushi-search-forms {
   width: 50%;
   text-align: center;
   margin: 0 auto;
@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,14 +38,14 @@
           align-items: center;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form label {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-form label {
   width: 150px;
   display: block;
   text-align: right;
   margin-right: 20px;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form input {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-form input {
   display: block;
   padding: 0 20px;
   height: 35px;
@@ -54,11 +54,11 @@
   outline: none;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form input#search_age_from, .sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form input#search_age_to {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-form input#search_age_from, .fukushi-index-content .fukushi-search-forms .fukushi-search-form input#search_age_to {
   width: 100px;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-form select {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-form select {
   display: block;
   position: relative;
   padding: 0 20px;
@@ -68,7 +68,7 @@
   outline: none;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-btn input {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-btn input {
   padding: 10px 20px;
   background-color: blue;
   color: white;
@@ -78,11 +78,11 @@
   right: 5%;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-search-btn input:hover {
+.fukushi-index-content .fukushi-search-forms .fukushi-search-btn input:hover {
   opacity: 0.5;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-index-reset a {
+.fukushi-index-content .fukushi-search-forms .fukushi-index-reset a {
   padding: 10px 20px;
   background-color: gray;
   color: white;
@@ -93,11 +93,11 @@
   text-decoration: none;
 }
 
-.sagaseru-index-content .sagaseru-search-forms .sagaseru-index-reset a:hover {
+.fukushi-index-content .fukushi-search-forms .fukushi-index-reset a:hover {
   opacity: 0.5;
 }
 
-.sagaseru-index-content .sagaseru-indexes {
+.fukushi-index-content .fukushi-indexes {
   width: 95%;
   padding: 20px;
   margin: 0 auto;
@@ -109,19 +109,19 @@
   border-radius: 10px;
 }
 
-.sagaseru-index-content .sagaseru-indexes table {
+.fukushi-index-content .fukushi-indexes table {
   margin: 0 auto;
   border-collapse: collapse;
   border-bottom: 1px solid black;
 }
 
-.sagaseru-index-content .sagaseru-indexes table th {
+.fukushi-index-content .fukushi-indexes table th {
   border-bottom: 1px solid black;
   /**/
   padding: 10px;
 }
 
-.sagaseru-index-content .sagaseru-indexes table td {
+.fukushi-index-content .fukushi-indexes table td {
   padding: 20px;
   border-bottom: 1px dashed black;
   /**/
@@ -129,7 +129,7 @@
   /*破線 1px オレンジ*/
 }
 
-.sagaseru-index-content .sagaseru-indexes table a {
+.fukushi-index-content .fukushi-indexes table a {
   display: block;
   -webkit-box-shadow: 3px 3px 5px #a78b90;
           box-shadow: 3px 3px 5px #a78b90;

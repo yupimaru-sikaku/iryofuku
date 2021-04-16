@@ -12,7 +12,7 @@
       flex-wrap: wrap;
 }
 
-.service-container .select-service .service-kuraseru {
+.service-container .select-service .service-iryo {
   border: 1px solid #eee;
   border-radius: 5px;
   width: 45%;
@@ -26,37 +26,37 @@
           justify-content: center;
 }
 
-.service-container .select-service .service-kuraseru:hover {
+.service-container .select-service .service-iryo:hover {
   background-color: #a6b5ef52;
 }
 
-.service-container .select-service .service-kuraseru a {
+.service-container .select-service .service-iryo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
 }
 
-.service-container .select-service .service-kuraseru a img {
+.service-container .select-service .service-iryo a img {
   width: 300px;
   height: 300px;
 }
 
-.service-container .select-service .service-kuraseru a .service-kuraseru-text {
+.service-container .select-service .service-iryo a .service-iryo-text {
   padding-top: 30px;
 }
 
-.service-container .select-service .service-kuraseru a .service-kuraseru-text span {
+.service-container .select-service .service-iryo a .service-iryo-text span {
   display: block;
   color: #949393;
 }
 
-.service-container .select-service .service-kuraseru a .service-kuraseru-text span:nth-child(1) {
+.service-container .select-service .service-iryo a .service-iryo-text span:nth-child(1) {
   font-size: 30px;
   color: blue;
 }
 
-.service-container .select-service .service-kuraseru a .service-kuraseru-text span:nth-child(2) {
+.service-container .select-service .service-iryo a .service-iryo-text span:nth-child(2) {
   font-size: 18px;
 }
 

@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :sagaserus, only: [:index, :new, :create] do
+  resources :fukushies, only: [:index, :new, :create] do
     resource :favorites, only: [:create, :destroy]
     resources :favorites, only: [:index]
     collection do
@@ -38,7 +38,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :kuraserus, only: [:index] do
+  resources :iryoes, only: [:index] do
     collection do
       get 'contact'
       get 'contact_message'

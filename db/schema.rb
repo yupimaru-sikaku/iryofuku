@@ -52,15 +52,6 @@ ActiveRecord::Schema.define(version: 2021_04_08_080323) do
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
   end
 
-  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "company_id"
-    t.bigint "sagaseru_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["company_id"], name: "index_favorites_on_company_id"
-    t.index ["sagaseru_id"], name: "index_favorites_on_sagaseru_id"
-  end
-
   create_table "ghs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "main_company_name"
     t.string "sub_company_name"
@@ -106,19 +97,7 @@ ActiveRecord::Schema.define(version: 2021_04_08_080323) do
     t.index ["company_id"], name: "index_ghs_on_company_id"
   end
 
-  create_table "kuraserus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sagaserus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "age", null: false
-    t.string "classification_id", null: false
-    t.string "disability_type_id", null: false
-    t.string "osaka_city_id", null: false
-    t.string "prefecture_id", null: false
-    t.string "service_type_id", null: false
-    t.string "sex_id", null: false
+  create_table "iryoes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -150,7 +129,5 @@ ActiveRecord::Schema.define(version: 2021_04_08_080323) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "favorites", "companies"
-  add_foreign_key "favorites", "sagaserus"
   add_foreign_key "ghs", "companies"
 end

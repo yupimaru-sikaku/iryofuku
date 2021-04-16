@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  ScrollReveal().reveal('.kuraseru-description', {
+  ScrollReveal().reveal('.iryo-description', {
     duration: 1600, 
     origin: 'top', 
     distance: '50px',

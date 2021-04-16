@@ -7,12 +7,12 @@
 
   <%#サービスの選択（クラセル or サガセル）%>
   <main class="select-service">
-    <div class="service-kuraseru">
-      <%= link_to contact_kuraserus_path do %>
-      <div class="service-kuraseru-img">
-        <%= image_tag "kuraseru.svg" %>
+    <div class="service-iryo">
+      <%= link_to contact_iryoes_path do %>
+      <div class="service-iryo-img">
+        <%= image_tag "iryo.svg" %>
       </div>
-      <div class="service-kuraseru-text">
+      <div class="service-iryo-text">
         <span>病院・相談所</span>
         <span>の方はこちら</span>
         <span><br>障がい福祉事業所の<span style='color: blue'>ご紹介・ご入居</span>のお手続きをサポートします</span>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="service-sagaseru">
-      <%= link_to contact_sagaserus_path do %>
+      <%= link_to contact_fukushies_path do %>
       <div class="service-sagaseru-img">
         <%= image_tag "sagaseru.svg", :width => "400", :height => "400"  %>
       </div>

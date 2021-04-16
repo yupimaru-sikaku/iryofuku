@@ -1,2 +1,2 @@
-class Kuraseru < ApplicationRecord
+class Iryoes < ApplicationRecord
 end

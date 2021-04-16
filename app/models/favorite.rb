@@ -1,8 +1,8 @@
 class Favorite < ApplicationRecord
   
   belongs_to :company
-  belongs_to :sagaseru
+  belongs_to :fukushi
 
-  validates_uniqueness_of :sagaseru_id, scope: :company_id
+  validates_uniqueness_of :fukushi_id, scope: :company_id
 
 end
