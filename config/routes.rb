@@ -47,7 +47,7 @@ Rails.application.routes.draw do
 
   resources :ghs, only: [:index, :new, :create, :edit, :update, :destroy, :show] do
     collection do
-      get 'lists_company_ghs'
+      get 'ghs/downloadpdf/:id'=> 'ghs#downloadpdf' ,as: :donwload_pdf
     end
   end
   

@@ -5,7 +5,12 @@
   overflow: auto;
 
   .company_index_all_fields{
-
+    
+    .company_index_all_title{
+      font-size: 28px;
+      text-align: center;
+    }
+    
     .company_index_all_field{
       width: 95%;
       padding: 20px;
@@ -16,10 +21,6 @@
       font-size: 14px;
       border-radius: 10px;
 
-      .company_index_all_title{
-        font-size: 28px;
-        text-align: center;
-      }
 
       .company_index_all_table{
         table{

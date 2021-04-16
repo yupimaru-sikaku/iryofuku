@@ -51,7 +51,15 @@ class GhsController < ApplicationController
     @ghs = Gh.find(ghs)
   end
 
+  def downloadpdf
+    myfile=Gh.find(params[:id])
+    filepath = Rails.root.join('src',myfile.images)
+    stat = File::stat(filepath)
+    send_file(filepath, :filename => myfile.filename, :length => stat.size)
+  end
+
   private
+
 
   def gh_params
     params.require(:gh).permit(
