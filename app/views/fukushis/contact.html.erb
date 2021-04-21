@@ -9,7 +9,7 @@
   <p><%= current_company.company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
   <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
-  <%= link_to '（仮置き）事業者の管理画面', fukushies_path %>
+  <%= link_to '（仮置き）事業者の管理画面', fukushis_path %>
   <% else %>
   <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
   <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
@@ -34,7 +34,7 @@
   <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
-  <%= render partial: 'shared/contact_form', locals: {path: contact_message_fukushies_path} %>
+  <%= render partial: 'shared/contact_form', locals: {path: contact_message_fukushis_path} %>
   <%#// コンタクトフォーム %>
 
   <div class="module-spacer--large"></div>
@@ -44,4 +44,4 @@
 
 <%= render partial: 'shared/footer' %>
 
-<%= javascript_pack_tag 'fukushies/contact' %>
+<%= javascript_pack_tag 'shared/reveal' %>

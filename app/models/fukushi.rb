@@ -1,7 +1,7 @@
 class Fukushi < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
-  belong_to :user
+  belongs_to :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :classification

@@ -1,6 +1,6 @@
-class CreateFukushies < ActiveRecord::Migration[6.0]
+class CreateFukushis < ActiveRecord::Migration[6.0]
   def change
-    create_table :fukushies do |t|
+    create_table :fukushis do |t|
 
       t.integer    :age               , null: false
       t.string     :classification_id , null: false

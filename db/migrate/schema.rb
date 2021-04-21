@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_10_235832) do
+ActiveRecord::Schema.define(version: 2021_04_08_080323) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -50,29 +50,6 @@ ActiveRecord::Schema.define(version: 2021_04_10_235832) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
-  end
-
-  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "fukushi_id", null: false
-    t.bigint "company_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["company_id"], name: "index_favorites_on_company_id"
-    t.index ["fukushi_id"], name: "index_favorites_on_fukushi_id"
-  end
-
-  create_table "fukushis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "age", null: false
-    t.string "classification_id", null: false
-    t.string "disability_type_id", null: false
-    t.string "osaka_city_id", null: false
-    t.string "prefecture_id", null: false
-    t.string "service_type_id", null: false
-    t.string "sex_id", null: false
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_fukushis_on_user_id"
   end
 
   create_table "ghs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -152,8 +129,5 @@ ActiveRecord::Schema.define(version: 2021_04_10_235832) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "favorites", "companies"
-  add_foreign_key "favorites", "fukushis"
-  add_foreign_key "fukushis", "users"
   add_foreign_key "ghs", "companies"
 end

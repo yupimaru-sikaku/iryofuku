@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :fukushies, only: [:index, :new, :create] do
+  resources :fukushis, only: [:index, :new, :create] do
     resource :favorites, only: [:create, :destroy]
     resources :favorites, only: [:index]
     collection do

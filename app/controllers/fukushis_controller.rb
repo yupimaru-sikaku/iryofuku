@@ -1,4 +1,4 @@
-class FukushiesController < ApplicationController
+class FukushisController < ApplicationController
 
   before_action :checked_auth, only: [:index]
 
@@ -42,7 +42,7 @@ class FukushiesController < ApplicationController
       :prefecture_id,
       :service_type_id,
       :sex_id
-    )
+    ).merge(:user_id)
   end
 
   def fukushi_search_params
