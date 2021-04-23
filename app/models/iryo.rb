@@ -1,0 +1,2 @@
+class Iryo < ApplicationRecord
+end

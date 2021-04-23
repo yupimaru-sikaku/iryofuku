@@ -1,2 +1,0 @@
-class Iryoes < ApplicationRecord
-end
