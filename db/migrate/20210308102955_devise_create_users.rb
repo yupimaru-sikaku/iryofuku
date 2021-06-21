@@ -11,6 +11,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :sub_company_name
       # サービス種別
       t.string :service_type,      null: false
+      # サービス種別（その他）
+      t.string :service_type_other
       # 病院もしくは法人の郵便番号
       t.integer :postal_code,        null: false
       # 病院もしくは法人の住所（市区町村）

@@ -1,17 +1,17 @@
 @charset "UTF-8";
-.sagaseru_favorite_content {
+.iryo_favorite_content {
   margin-left: 260px;
   background-color: #eee;
   height: 100vh;
   overflow: auto;
 }
 
-.sagaseru_favorite_content .sagaseru_favorite_title {
+.iryo_favorite_content .iryo_favorite_title {
   font-size: 28px;
   text-align: center;
 }
 
-.sagaseru_favorite_content .sagaseru_indexes {
+.iryo_favorite_content .iryo_indexes {
   width: 95%;
   padding: 20px;
   margin: 0 auto;
@@ -23,31 +23,31 @@
   border-radius: 10px;
 }
 
-.sagaseru_favorite_content .sagaseru_indexes table {
+.iryo_favorite_content .iryo_indexes table {
   margin: 0 auto;
   border-collapse: collapse;
   border-bottom: 1px solid #b7b7b7;
 }
 
-.sagaseru_favorite_content .sagaseru_indexes table th {
+.iryo_favorite_content .iryo_indexes table th {
   border-bottom: 1px solid #b7b7b7;
   /**/
   padding: 10px;
 }
 
-.sagaseru_favorite_content .sagaseru_indexes table td {
+.iryo_favorite_content .iryo_indexes table td {
   padding: 20px;
   text-align: center;
   /*破線 1px オレンジ*/
 }
 
-.sagaseru_favorite_content .sagaseru_indexes table a {
+.iryo_favorite_content .iryo_indexes table a {
   text-decoration: none;
   margin: 0 auto;
   color: blue;
 }
 
-.sagaseru_favorite_content .sagaseru_indexes table a :hover {
+.iryo_favorite_content .iryo_indexes table a :hover {
   opacity: 0.5;
 }
 /*# sourceMappingURL=index.css.map */

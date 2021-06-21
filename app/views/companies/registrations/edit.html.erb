@@ -10,6 +10,7 @@
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'registration-edit-fields' }) do |f| %>
 
+  <div class="module-spacer--small"></div>
 
   <div class="registration-edit-field">
 
@@ -169,11 +170,18 @@
   <div class="module-spacer--medium"></div>
 
   <div class="registration-edit-field">
+
+    <% if @company.errors.include?(:password_confirmation) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @company.errors.full_messages_for(:password_confirmation).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
     <div class="registration-edit-field-2">
       <%= f.label :password_confirmation, "パスワード(確認用、変更がある場合)" %>
       <span>（任意）</span>
     </div>
-    <%= f.password_field :encrypted_password %>
+    <%= f.password_field :password_confirmation %>
   </div>
 
   <div class="module-spacer--medium"></div>
@@ -181,7 +189,8 @@
   <div class="registration-edit-field-button">
     <%= f.submit "情報変更" %>
   </div>
-  <div class="module-spacer--large"></div>
+
+  <div class="module-spacer--small"></div>
 
   <% end %>
   <div class="module-spacer--medium"></div>

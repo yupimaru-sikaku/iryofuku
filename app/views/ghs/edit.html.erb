@@ -16,6 +16,8 @@
   <%#GH新規作成フォーム%>
   <%= form_with model: @gh, class: 'gh-edit-fields', name: "form", local: true do |f| %>
 
+  <div class="module-spacer--small"></div>
+
   <% if @gh.errors.include?(:main_company_name) %>
   <p class="alert_danger" style=" color: red;">
     <%= @gh.errors.full_messages_for(:main_company_name).first %>
@@ -28,7 +30,7 @@
       <span>（必須）</span>
     </div>
     <div class="gh-edit-field-2">
-      <%= f.text_field :main_company_name, placeholder: '例）株式会社〇〇', value: current_company.name %>
+      <%= f.text_field :main_company_name, placeholder: '例）株式会社〇〇', value: current_company.company_name %>
       <span></span>
     </div>
   </div>
@@ -50,548 +52,566 @@
       <%= f.text_field :sub_company_name, placeholder: '例）グループホーム〇〇' %>
       <span></span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <div class="module-spacer--medium"></div>
 
-    <% if @gh.errors.include?(:postal_code) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:postal_code).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
+  <% if @gh.errors.include?(:postal_code) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:postal_code).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
 
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-1">
-        <%= f.label :postal_code, '事業所の郵便番号（半角、ハイフン無し）'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :postal_code, placeholder: '例）1234567（ハイフン無し）', id: 'postal_code', maxlength: '7' %>
-        <span><button id="address_btn">住所検索</button></span>
-      </div>
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-1">
+      <%= f.label :postal_code, '事業所の郵便番号（半角、ハイフン無し）'%>
+      <span>（必須）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:address) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:address).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-1">
-        <%= f.label :address, '事業所の住所'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :address, id: 'address_city' %>
-        <span></span>
-      </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :postal_code, placeholder: '例）1234567（ハイフン無し）', id: 'postal_code', maxlength: '7' %>
+      <span><button id="address_btn">住所検索</button></span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <div class="module-spacer--medium"></div>
 
-    <% if @gh.errors.include?(:phone_number) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:phone_number).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
+  <% if @gh.errors.include?(:address) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:address).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
 
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-1">
-        <%= f.label :phone_number, '事業所の電話番号（半角、ハイフン無し）'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :phone_number, placeholder: '例）08072831647', maxlength: '11' %>
-        <span></span>
-      </div>
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-1">
+      <%= f.label :address, '事業所の住所'%>
+      <span>（必須）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:fax_number) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:fax_number).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :fax_number, '事業所のFAX番号（半角）' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :fax_number, placeholder: '例）08072831647', maxlength: '11' %>
-        <span></span>
-      </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :address, id: 'address_city' %>
+      <span></span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <div class="module-spacer--medium"></div>
 
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :email, '事業所のメールアドレス'%>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :email, placeholder: '例）home@gmail.com' %>
-        <span></span>
-      </div>
+  <% if @gh.errors.include?(:phone_number) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:phone_number).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-1">
+      <%= f.label :phone_number, '事業所の電話番号（半角、ハイフン無し）'%>
+      <span>（必須）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:price_main) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:price_main).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field price_0">
-      <div class="gh-edit-field-1">
-        <%= f.label :price_main, '預り金総額（半角）'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2 short_input">
-        <%= f.text_field :price_main, placeholder: '例）90000', class: 'price_0_end' %>
-        <span>円</span>
-      </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :phone_number, placeholder: '例）08072831647', maxlength: '11' %>
+      <span></span>
     </div>
+  </div>
 
-    <div hidden class="gh-edit-field price_1 middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub1, 'ー 預り金内訳1(項目)' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :price_sub1, placeholder: '例）家賃'  %>
-        <span></span>
-      </div>
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:fax_number) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:fax_number).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :fax_number, '事業所のFAX番号（半角）' %>
+      <span>（任意）</span>
     </div>
-
-    <% if @gh.errors.include?(:price_sub_cost1) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:price_sub_cost1).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div hidden class="gh-edit-field price_1">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub_cost1, 'ー 預り金内訳1(値段)（半角）' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4 short_input">
-        <%= f.text_field :price_sub_cost1, placeholder: '例）30000' , class: 'price_1_end' %>
-        <span>円</span>
-      </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :fax_number, placeholder: '例）08072831647', maxlength: '11' %>
+      <span></span>
     </div>
+  </div>
 
-    <div hidden class="gh-edit-field price_2 middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub2, 'ー 預り金内訳2(項目)' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :price_sub2, placeholder: '例）食事代' %>
-        <span></span>
-      </div>
+  <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :email, '事業所のメールアドレス'%>
+      <span>（任意）</span>
     </div>
-
-    <% if @gh.errors.include?(:price_sub_cost2) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:price_sub_cost2).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div hidden class="gh-edit-field price_2">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub_cost2, 'ー 預り金内訳2(値段)（半角）' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4 short_input">
-        <%= f.text_field :price_sub_cost2, placeholder: '例）20000', class: 'price_2_end' %>
-        <span>円</span>
-      </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :email, placeholder: '例）home@gmail.com' %>
+      <span></span>
     </div>
+  </div>
 
-    <div hidden class="gh-edit-field price_3 middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub3, 'ー 預り金内訳3(項目)' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :price_sub3, placeholder: '例）水道光熱費' %>
-        <span></span>
-      </div>
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:price_main) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:price_main).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field price_0">
+    <div class="gh-edit-field-1">
+      <%= f.label :price_main, '預り金総額（半角）'%>
+      <span>（必須）</span>
     </div>
-
-    <% if @gh.errors.include?(:price_sub_cost3) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:price_sub_cost3).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div hidden class="gh-edit-field price_3">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub_cost3, 'ー 預り金内訳3(値段)（半角）' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4 short_input">
-        <%= f.text_field :price_sub_cost3, placeholder: '例）10000', class: 'price_3_end' %>
-        <span>円</span>
-      </div>
+    <div class="gh-edit-field-2 short_input">
+      <%= f.text_field :price_main, placeholder: '例）90000', class: 'price_0_end' %>
+      <span>円</span>
     </div>
+  </div>
 
-    <div hidden class="gh-edit-field price_4 middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub4, 'ー 預り金内訳4(項目)' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :price_sub4, placeholder: '例）日用品費' %>
-        <span></span>
-      </div>
+  <div hidden class="gh-edit-field price_1 middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub1, 'ー 預り金内訳1(項目)' %>
+      <span>（任意）</span>
     </div>
-
-    <% if @gh.errors.include?(:price_sub_cost4) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:price_sub_cost4).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div hidden class="gh-edit-field price_4">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub_cost4, 'ー 預り金内訳4(値段)（半角）' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4 short_input">
-        <%= f.text_field :price_sub_cost4, placeholder: '例）20000', class: 'price_4_end' %>
-        <span>円</span>
-      </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :price_sub1, placeholder: '例）家賃'  %>
+      <span></span>
     </div>
+  </div>
 
-    <div hidden class="gh-edit-field price_5 middle_input">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub5, 'ー 預り金内訳5(項目)' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :price_sub5, placeholder: '例）その他' %>
-        <span></span>
-      </div>
+  <% if @gh.errors.include?(:price_sub_cost1) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:price_sub_cost1).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div hidden class="gh-edit-field price_1">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub_cost1, 'ー 預り金内訳1(値段)（半角）' %>
+      <span>（任意）</span>
     </div>
-
-    <% if @gh.errors.include?(:price_sub_cost5) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:price_sub_cost5).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div hidden class="gh-edit-field price_5">
-      <div class="gh-edit-field-3">
-        <%= f.label :price_sub_cost5, 'ー 預り金内訳5(値段)（半角）' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4 short_input">
-        <%= f.text_field :price_sub_cost5, placeholder: '例）10000', class: 'price_5_end' %>
-        <span>円</span>
-      </div>
+    <div class="gh-edit-field-4 short_input">
+      <%= f.text_field :price_sub_cost1, placeholder: '例）30000' , class: 'price_1_end' %>
+      <span>円</span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:construction_year) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:construction_year).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-    <% if @gh.errors.include?(:construction_month) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:construction_month).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-3">
-        <%= f.label :construction_year, '建物の築年月日（半角）'%>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4 short_input">
-        <%= f.text_field :construction_year, placeholder: '例）1992', maxlength: '4' %>
-        <span>年</span>
-        <%= f.text_field :construction_month, placeholder: '例）3', maxlength: '2' %>
-        <span>月</span>
-        <%= f.hidden_field :building_age %>
-      </div>
+  <div hidden class="gh-edit-field price_2 middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub2, 'ー 預り金内訳2(項目)' %>
+      <span>（任意）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:designated_year) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:designated_year).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-    <% if @gh.errors.include?(:designated_month) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:designated_month).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-1">
-        <%= f.label :designated_year, '指定年月日（半角）'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2 short_input">
-        <%= f.text_field :designated_year, placeholder: '例）2000', maxlength: '4' %>
-        <span>年</span>
-        <%= f.text_field :designated_month, placeholder: '例）3', maxlength: '2' %>
-        <span>月</span>
-      </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :price_sub2, placeholder: '例）食事代' %>
+      <span></span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <% if @gh.errors.include?(:price_sub_cost2) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:price_sub_cost2).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
 
-    <% if @gh.errors.include?(:human_name) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:human_name).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-1">
-        <%= f.label :human_name, 'ご担当者名  ※ご担当者に変更がある場合は変更してください。'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :human_name, placeholder: '例）山田 太郎', value: current_company.name %>
-        <span></span>
-      </div>
+  <div hidden class="gh-edit-field price_2">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub_cost2, 'ー 預り金内訳2(値段)（半角）' %>
+      <span>（任意）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:human_phone_number) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:human_phone_number).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-1">
-        <%= f.label :human_phone_number, 'ご担当者の電話番号（半角、ハイフン無し）' %>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :human_phone_number, placeholder: '例）08072831647', value: current_company.phone_number %>
-        <span></span>
-      </div>
+    <div class="gh-edit-field-4 short_input">
+      <%= f.text_field :price_sub_cost2, placeholder: '例）20000', class: 'price_2_end' %>
+      <span>円</span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:human_email) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:human_email).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-1">
-        <%= f.label :human_email, 'ご担当者のメールアドレス'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :human_email, placeholder: '例）taro@gmail.com', value: current_company.email %>
-        <span></span>
-      </div>
+  <div hidden class="gh-edit-field price_3 middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub3, 'ー 預り金内訳3(項目)' %>
+      <span>（任意）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-3">
-        <%= f.label :hp_url, '事業所HPのURL' %>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-4">
-        <%= f.text_field :hp_url, placeholder: '例）https://○○○○○○○.com' %>
-        <span></span>
-      </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :price_sub3, placeholder: '例）水道光熱費' %>
+      <span></span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <% if @gh.errors.include?(:price_sub_cost3) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:price_sub_cost3).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
 
-    <% if @gh.errors.include?(:capacity) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:capacity).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-1">
-        <%= f.label :capacity, '事業所の定員数'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2 short_input">
-        <%= f.text_field :capacity, placeholder: '例）4', maxlength: '2' %>
-        <span>名</span>
-      </div>
+  <div hidden class="gh-edit-field price_3">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub_cost3, 'ー 預り金内訳3(値段)（半角）' %>
+      <span>（任意）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:availability) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:availability).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-
-
-      <div class="gh-edit-field-1">
-        <%= f.label :availability, '事業所の現在の空き人数'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2 short_input">
-        <%= f.text_field :availability, placeholder: '例）2', maxlength: '2' %>
-        <span>名</span>
-      </div>
+    <div class="gh-edit-field-4 short_input">
+      <%= f.text_field :price_sub_cost3, placeholder: '例）10000', class: 'price_3_end' %>
+      <span>円</span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:station) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:station).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field middle_input">
-      <div class="gh-edit-field-1">
-        <%= f.label :station, '最寄りの駅'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-2">
-        <%= f.text_field :station, placeholder: '例）JR〇〇線△△駅' %>
-        <span></span>
-      </div>
+  <div hidden class="gh-edit-field price_4 middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub4, 'ー 預り金内訳4(項目)' %>
+      <span>（任意）</span>
     </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <% if @gh.errors.include?(:from_station) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:from_station).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-1">
-        <%= f.label :from_station, '最寄り駅から徒歩何分'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-radio middle_height">
-        <% ["〜5分", "〜10分", "〜15分", "〜20分", "〜25分", "〜30分", "〜40分", "40分以上"].each do |from_station| %>
-        <div class="gh-edit-field-radio-1">
-          <%= f.radio_button :from_station, from_station, id: "from_station#{from_station}" %>
-          <%= f.label :from_station, from_station, for: "from_station#{from_station}" %>
-        </div>
-        <% end %>
-      </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :price_sub4, placeholder: '例）日用品費' %>
+      <span></span>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <% if @gh.errors.include?(:price_sub_cost4) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:price_sub_cost4).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
 
-    <% if @gh.errors.include?(:gender) %>
-    <p class="alert_danger" style=" color: red;">
-      <%= @gh.errors.full_messages_for(:gender).first %>
-    <div class="module-spacer--small"></div>
-    <% end %>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-1">
-        <%= f.label :gender, '入居可能な性別'%>
-        <span>（必須）</span>
-      </div>
-      <div class="gh-edit-field-radio">
-        <% ["男性", "女性", "どちらでも可"].each do |gender| %>
-        <div class="gh-edit-field-radio-1">
-          <%= f.radio_button :gender, gender, id: "gender#{gender}" %>
-          <%= f.label :gender, gender, for: "gender#{gender}" %>
-        </div>
-        <% end %>
-      </div>
+  <div hidden class="gh-edit-field price_4">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub_cost4, 'ー 預り金内訳4(値段)（半角）' %>
+      <span>（任意）</span>
     </div>
+    <div class="gh-edit-field-4 short_input">
+      <%= f.text_field :price_sub_cost4, placeholder: '例）20000', class: 'price_4_end' %>
+      <span>円</span>
+    </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <div hidden class="gh-edit-field price_5 middle_input">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub5, 'ー 預り金内訳5(項目)' %>
+      <span>（任意）</span>
+    </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :price_sub5, placeholder: '例）その他' %>
+      <span></span>
+    </div>
+  </div>
 
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-3">
-        <%= f.label :disability, '入居可能な障害区分'%>
-        <span>（任意）、複数選択可</span>
+  <% if @gh.errors.include?(:price_sub_cost5) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:price_sub_cost5).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div hidden class="gh-edit-field price_5">
+    <div class="gh-edit-field-3">
+      <%= f.label :price_sub_cost5, 'ー 預り金内訳5(値段)（半角）' %>
+      <span>（任意）</span>
+    </div>
+    <div class="gh-edit-field-4 short_input">
+      <%= f.text_field :price_sub_cost5, placeholder: '例）10000', class: 'price_5_end' %>
+      <span>円</span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:construction_year) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:construction_year).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+  <% if @gh.errors.include?(:construction_month) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:construction_month).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-3">
+      <%= f.label :construction_year, '建物の築年月日（半角）'%>
+      <span>（任意）</span>
+    </div>
+    <div class="gh-edit-field-4 short_input">
+      <%= f.text_field :construction_year, placeholder: '例）1992', maxlength: '4' %>
+      <span>年</span>
+      <%= f.text_field :construction_month, placeholder: '例）3', maxlength: '2' %>
+      <span>月</span>
+      <%= f.hidden_field :building_age %>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:designated_year) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:designated_year).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+  <% if @gh.errors.include?(:designated_month) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:designated_month).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-1">
+      <%= f.label :designated_year, '指定年月日（半角）'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2 short_input">
+      <%= f.text_field :designated_year, placeholder: '例）2000', maxlength: '4' %>
+      <span>年</span>
+      <%= f.text_field :designated_month, placeholder: '例）3', maxlength: '2' %>
+      <span>月</span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:human_name) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:human_name).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-1">
+      <%= f.label :human_name, 'ご担当者名  ※ご担当者に変更がある場合は変更してください。'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :human_name, placeholder: '例）山田 太郎', value: current_company.name %>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:human_phone_number) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:human_phone_number).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-1">
+      <%= f.label :human_phone_number, 'ご担当者の電話番号（半角、ハイフン無し）' %>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :human_phone_number, placeholder: '例）08072831647', value: current_company.phone_number %>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:human_email) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:human_email).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-1">
+      <%= f.label :human_email, 'ご担当者のメールアドレス'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :human_email, placeholder: '例）taro@gmail.com', value: current_company.email %>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-3">
+      <%= f.label :hp_url, '事業所HPのURL' %>
+      <span>（任意）</span>
+    </div>
+    <div class="gh-edit-field-4">
+      <%= f.text_field :hp_url, placeholder: '例）https://○○○○○○○.com' %>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:capacity) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:capacity).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-1">
+      <%= f.label :capacity, '事業所の定員数'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2 short_input">
+      <%= f.text_field :capacity, placeholder: '例）4', maxlength: '2' %>
+      <span>名</span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:availability) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:availability).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+
+
+    <div class="gh-edit-field-1">
+      <%= f.label :availability, '事業所の現在の空き人数'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2 short_input">
+      <%= f.text_field :availability, placeholder: '例）2', maxlength: '2' %>
+      <span>名</span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:station) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:station).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field middle_input">
+    <div class="gh-edit-field-1">
+      <%= f.label :station, '最寄りの駅'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-2">
+      <%= f.text_field :station, placeholder: '例）JR〇〇線△△駅' %>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:from_station) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:from_station).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-1">
+      <%= f.label :from_station, '最寄り駅から徒歩何分'%>
+      <span>（必須）</span>
+    </div>
+    <div class="gh-edit-field-radio middle_height">
+      <% ["〜5分", "〜10分", "〜15分", "〜20分", "〜25分", "〜30分", "〜40分", "40分以上"].each do |from_station| %>
+      <div class="gh-edit-field-radio-1">
+        <%= f.radio_button :from_station, from_station, id: "from_station#{from_station}" %>
+        <%= f.label :from_station, from_station, for: "from_station#{from_station}" %>
       </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <% if @gh.errors.include?(:gender) %>
+  <p class="alert_danger" style=" color: red;">
+    <%= @gh.errors.full_messages_for(:gender).first %>
+  <div class="module-spacer--small"></div>
+  <% end %>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-1">
+      <%= f.label :gender, '入居可能な性別'%>
+      <span>（必須）、複数選択可</span>
+    </div>
+    <div class="gh-edit-field-check-1">
+      <% ["男性", "女性"].each do |gender| %>
       <div class="gh-edit-field-check-1">
-        <%= f.check_box :disability, {id: "disabilityどれでも可", multiple: true, include_hidden: false, class: "disability_all" }, "どれでも可" %>
-        <%= f.label :disability, "どれでも可", for: "disabilityどれでも可" %>
+        <%= f.check_box :gender, {id: "gender#{gender}", multiple: true, include_hidden: false, class: 'gender', checked: is_checked_edit?(Gh.find(params[:id]), :gender, gender)}, gender %>
+        <%= f.label :gender, gender, for: "gender#{gender}" %>
       </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-3">
+      <%= f.label :disability, '入居可能な障害区分'%>
+      <span>（任意）、複数選択可</span>
+    </div>
+    <div class="gh-edit-field-check-1">
       <% ["6", "5", "4", "3", "2", "1"].each do |disability| %>
       <div class="gh-edit-field-check-1">
-        <%= f.check_box :disability, {id: "disability#{disability}", multiple: true, include_hidden: false, class: "disability_test" }, disability %>
+        <%= f.check_box :disability, {id: "disability#{disability}", multiple: true, include_hidden: false, class: "disability", checked: is_checked_edit?(Gh.find(params[:id]), :disability, disability)}, disability %>
         <%= f.label :disability, disability, for: "disability#{disability}" %>
       </div>
       <% end %>
     </div>
+  </div>
 
-    <div class="module-spacer--medium"></div>
+  <div class="module-spacer--medium"></div>
 
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-3">
-        <%= f.label :valid_disability, '入居できない障害種別'%>
-        <span>（任意）、複数選択可</span>
-      </div>
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-3">
+      <%= f.label :valid_disability, '入居できない障害種別'%>
+      <span>（任意）、複数選択可</span>
+    </div>
+    <div class="gh-edit-field-check-1">
       <% ["なし", "知的", "精神", "身体", "難病"].each do |valid_disability| %>
-      <div class="gh-edit-field-radio-1">
-        <%= f.check_box :valid_disability, { id: "valid_disability#{valid_disability}", multiple: true, include_hidden: false, class: 'valid_disability' }, valid_disability %>
+      <div class="gh-edit-field-check-1">
+        <%= f.check_box :valid_disability, { id: "valid_disability#{valid_disability}", multiple: true, include_hidden: false, class: 'valid_disability', checked: is_checked_edit?(Gh.find(params[:id]), :valid_disability, valid_disability) }, valid_disability %>
         <%= f.label :valid_disability, valid_disability, for: "valid_disability#{valid_disability}" %>
       </div>
       <% end %>
       <div class="gh-edit-field-check-1">
-        <%= f.check_box :valid_disability, { id: "valid_disabilityその他", multiple: true, include_hidden: false, }, 'その他' %>
+        <%= f.check_box :valid_disability, { id: "valid_disabilityその他", multiple: true, include_hidden: false, checked: is_checked?(:gh, :valid_disability, 'その他')}, 'その他' %>
         <%= f.label :valid_disability, 'その他', for: "valid_disabilityその他" %>
-        <%= f.text_field :valid_disability, class: 'valid_disability_textfield', placeholder: '例）○○な疾患をお持ちの方', multiple: true, disabled: true %>
-      </div>
-    </div>
-
-    <div class="module-spacer--medium"></div>
-
-    <div class="gh-edit-field">
-      <div class="gh-edit-field-3">
-        <%= f.label :residential_style, '住居タイプ'%>
-        <span>（任意）</span>
-      </div>
-      <div class="gh-edit-field-radio">
-        <% ["一軒家", "マンション・アパート(1K)", "マンション・アパート（2K以上）"].each do |residential_style| %>
-        <div class="gh-edit-field-radio-1">
-          <%= f.radio_button :residential_style, residential_style, id: "residential_style#{residential_style}", class: "residential_style" %>
-          <%= f.label :residential_style, residential_style, for: "residential_style#{residential_style}" %>
-        </div>
-        <% end %>
-        <div class="gh-edit-field-radio-1">
-          <%= f.radio_button :residential_style, 'その他', id: "residential_styleその他" %>
-          <%= f.label :residential_style, 'その他', for: "residential_styleその他" %>
-        </div>
-        <div class="gh-edit-field-radio-1">
-          <%= f.text_field :residential_style, disabled: true, hidden: true, class: 'residential_style_textfield', placeholder: '例）マンション・アパート（1K）' %>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field">
+    <div class="valid_disability_hidden_field hidden">
+      <div class="gh-edit-field-3">
+        <%= f.label :valid_disability_other, "上記でその他を選択された方は入居できない障がい種別を入力下さい" %>
+        <span>（任意）</span>
+      </div>
+      <%= f.text_field :valid_disability_other, class: 'valid_disability_textfield', placeholder: "例）○○をお持ちの方" %>
+      <div class="module-spacer--medium"></div>
+    </div>
+  </div>
+
+  <div class="gh-edit-field">
+    <div class="gh-edit-field-3">
+      <%= f.label :residential_style, '住居タイプ'%>
+      <span>（任意）</span>
+    </div>
+    <div class="gh-edit-field-radio">
+      <% ["一軒家", "マンション・アパート(1K)", "マンション・アパート（2K以上）"].each do |residential_style| %>
+      <div class="gh-edit-field-radio-1">
+        <%= f.radio_button :residential_style, residential_style, id: "residential_style#{residential_style}", class: "residential_style" %>
+        <%= f.label :residential_style, residential_style, for: "residential_style#{residential_style}" %>
+      </div>
+      <% end %>
+      <div class="gh-edit-field-radio-1">
+        <%= f.radio_button :residential_style, 'その他', id: "residential_styleその他" %>
+        <%= f.label :residential_style, 'その他', for: "residential_styleその他" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field">
+    <div class="residential_style_hidden_field hidden">
+      <div class="gh-edit-field-3">
+        <%= f.label :residential_style_other, "上記でその他を選択された方は住居タイプを入力下さい" %>
+        <span>（任意）</span>
+      </div>
+      <%= f.text_field :residential_style_other, class: 'residential_style_textfield', placeholder: "例）マンション・アパート（○○）" %>
+      <div class="module-spacer--medium"></div>
+    </div>
+  </div>
 
   <div class="gh-edit-field">
     <div class="gh-edit-field-3">
@@ -609,13 +629,21 @@
         <%= f.radio_button :staff_weekdaytime, 'その他', id: "staff_weekdaytimeその他" %>
         <%= f.label :staff_weekdaytime, 'その他', for: "staff_weekdaytimeその他" %>
       </div>
-      <div class="gh-edit-field-radio-1">
-        <%= f.text_field :staff_weekdaytime, disabled: true, hidden: true, class: 'staff_weekdaytime_textfield', placeholder: '例）○時〜○時のみ有り' %>
-      </div>
     </div>
   </div>
 
   <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field">
+    <div class="staff_weekdaytime_hidden_field hidden">
+      <div class="gh-edit-field-3">
+        <%= f.label :staff_weekdaytime_other, "上記でその他を選択された方は平日の日中のスタッフ配置を入力下さい" %>
+        <span>（任意）</span>
+      </div>
+      <%= f.text_field :staff_weekdaytime_other, class: 'staff_weekdaytime_textfield', placeholder: "例）○○曜日のみ有り" %>
+      <div class="module-spacer--medium"></div>
+    </div>
+  </div>
 
   <div class="gh-edit-field">
     <div class="gh-edit-field-3">
@@ -623,15 +651,13 @@
       <span>（任意）、複数選択可</span>
     </div>
     <div class="gh-edit-field-check-1">
-      <%= f.check_box :staff_holidaytime, {id: "staff_holidaytimeどれでも可", multiple: true, include_hidden: false, class: "staff_holidaytime_all" }, "どれでも可" %>
-      <%= f.label :staff_holidaytime, "どれでも可", for: "staff_holidaytimeどれでも可" %>
+      <% ["土曜日", "日曜日", "祝日"].each do |staff_holidaytime| %>
+      <div class="gh-edit-field-check-1">
+        <%= f.check_box :staff_holidaytime, { id: "staff_holidaytime#{staff_holidaytime}", multiple: true, include_hidden: false, class: 'staff_holidaytime', checked: is_checked_edit?(Gh.find(params[:id]), :staff_holidaytime, staff_holidaytime) }, staff_holidaytime %>
+        <%= f.label :staff_holidaytime, staff_holidaytime, for: "staff_holidaytime#{staff_holidaytime}" %>
+      </div>
+      <% end %>
     </div>
-    <% ["土曜日", "日曜日", "祝日"].each do |staff_holidaytime| %>
-    <div class="gh-edit-field-check-1">
-      <%= f.check_box :staff_holidaytime, { id: "staff_holidaytime#{staff_holidaytime}", multiple: true, include_hidden: false, class: 'staff_holidaytime_test' }, staff_holidaytime %>
-      <%= f.label :staff_holidaytime, staff_holidaytime, for: "staff_holidaytime#{staff_holidaytime}" %>
-    </div>
-    <% end %>
   </div>
 
   <div class="module-spacer--medium"></div>
@@ -652,13 +678,21 @@
         <%= f.radio_button :barrier_free, 'その他', id: "barrier_freeその他" %>
         <%= f.label :barrier_free, 'その他', for: "barrier_freeその他" %>
       </div>
-      <div class="gh-edit-field-radio-1">
-        <%= f.text_field :barrier_free, disabled: true, hidden: true, class: 'barrier_free_textfield', placeholder: '例）階段のみバリアフリー' %>
-      </div>
     </div>
   </div>
 
   <div class="module-spacer--medium"></div>
+
+  <div class="gh-edit-field">
+    <div class="barrier_free_hidden_field hidden">
+      <div class="gh-edit-field-3">
+        <%= f.label :barrier_free_other, "上記でその他を選択された方はバリアフリーを入力下さい" %>
+        <span>（任意）</span>
+      </div>
+      <%= f.text_field :barrier_free_other, class: 'barrier_free_textfield', placeholder: "例）階段のみバリアフリー" %>
+      <div class="module-spacer--medium"></div>
+    </div>
+  </div>
 
   <div class="gh-edit-field">
     <div class="gh-edit-field-3">
@@ -666,12 +700,20 @@
       <span>（任意）</span>
     </div>
     <div class="module-spacer--small"></div>
-    <div class="gh-edit-form-2-image">
+    <% if @gh.images.attached? %>
+    <% @gh.images.each_with_index do |image, index| %>
+    <div class="gh_edit_images_<%=index%>">
+      <%= link_to image.filename, rails_blob_url(image, disposition: "attachment"), class:"gh_image_#{index}"%>
+      <iframe src=<%=rails_blob_url(image)%>></iframe>
+      <a class="gh_images_delete_<%=index%> images_delete_btn">削除
+      </a>
+    </div>
+    <% end %>
+    <% end %>
+    <div class=" gh-edit-form-2-image">
       <div class="image-lists">
       </div>
-      <%= f.label :images, name: 'gh[images][]', class: "gh_image_label", for: "gh_image" do %>
-      <%= f.file_field :images, name: 'gh[images][]', id: "gh_image", accept: ".pdf" %>
-      <i class="fas fa-camera">クリック！！</i>
+      <%= f.label :images, name: 'gh[images][]', class: "gh_image_label", for: "gh_image" do %> <%= f.file_field :images, name: 'gh[images][]', id: "gh_image", accept: ".pdf" %> <i class="fas fa-camera">クリック！！</i>
       <% end%>
     </div>
   </div>
@@ -682,7 +724,7 @@
     <%= f.submit '情報編集' %>
   </div>
 
-  <div class="module-spacer--large"></div>
+  <div class="module-spacer--small"></div>
 
   <% end %>
   <%#GH新規作成フォーム%>

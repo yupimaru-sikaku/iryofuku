@@ -228,6 +228,7 @@ ja:
         phone_number: ご担当者の電話番号
         email: Eメール
         password: パスワード
+        password_confirmation: パスワード（確認用）
       sagaseru:
         age: ご年齢
       gh:
@@ -268,4 +269,8 @@ ja:
         staff_weekdaytime: 平日の日中のスタッフ配置
         staff_holidaytime: 土日祝のスタッフ配置
         barrier_free: バリアフリー
-        
+      iryo:
+        disability_type_id: 障がい種別
+        classification_id: 障がい区分
+        sex_id: 性別
+        age: ご年齢

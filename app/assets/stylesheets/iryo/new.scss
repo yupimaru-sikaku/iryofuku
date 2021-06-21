@@ -4,12 +4,12 @@ $input-border-radius: 5px;
 $input-padding-left: 10px;
 
 // 大枠
-.fukushi-new-content{
+.iryo_new_content{
   padding: 0px 100px;
   margin: 0 auto;
   
   // タイトル
-  .sageseru-new-title{
+  .sageseru_new_title{
     font-size: 28px;
     text-align: center;
     margin: 0 auto;
@@ -17,9 +17,9 @@ $input-padding-left: 10px;
   }
 
   // 新規作成フォーム
-  .fukushi-new-forms{
+  .iryo_new_forms{
 
-    .fukushi-new-form-activehash, .fukushi-new-form, .fukushi-new-submit-btn{
+    .iryo_new_form_activehash, .iryo_new_form, .iryo_new_submit_btn{
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -56,7 +56,7 @@ $input-padding-left: 10px;
         outline: none;
       }
       
-      .fukushi-new-form-activehash2{
+      .iryo_new_form_activehash2{
         display: flex;
         align-items: center;
         padding-left: 20px;
@@ -69,9 +69,46 @@ $input-padding-left: 10px;
           padding-left: 10px;
         }
       }
+
+      .iryo_new_form_activehash_check{
+        display: flex;
+      }
+
+      .iryo_new_form_activehash__2{
+        display: flex;
+        flex-wrap: wrap;
+
+        .iryo_new_form_activehash_check{
+          display: flex;
+          align-items: center;
+          padding: 10px;
+
+          input{
+            margin-top: 0px;
+          }
+          
+          label{
+            margin-left: 10px;
+          }
+        }
+      }
+      .active_hash_all{
+        display: flex;
+        align-items: center;
+        
+        input{
+          margin-top: 0px;
+        }
+
+        label{
+          margin-left: 10px;
+        }
+      }
+
+
     }
 
-   .fukushi-new-submit-btn{
+   .iryo_new_submit_btn{
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -86,5 +123,4 @@ $input-padding-left: 10px;
     }
    } 
   }
-
 }

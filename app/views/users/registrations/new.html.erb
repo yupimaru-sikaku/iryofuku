@@ -81,14 +81,31 @@
       "医療型障害児入所施設"
       ].each do |service_type| %>
       <div class="registration-new-field-check-3">
-        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type' }, checked_value = service_type %>
+        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type', checked: is_checked?(:user, :service_type, service_type) }, service_type %>
         <%= f.label :service_type, service_type, for: "service_type#{service_type}" %>
       </div>
       <% end %>
+      <div class="registration-new-field-check-3">
+        <%= f.check_box :service_type, { id: "service_typeその他", multiple: true, include_hidden: false, checked: is_checked?(:user, :service_type, 'その他') }, 'その他' %>
+        <%= f.label :service_type, 'その他', for: "service_typeその他" %>
+      </div>
     </div>
   </div>
 
   <div class="module-spacer--medium"></div>
+
+  <div class="registration-new-field">
+
+    <div class="hidden_field">
+      <div class="registration-new-field-2">
+        <%= f.label :service_type_other, "上記でその他を選択された方はサービス名を入力下さい" %>
+        <span>（任意）</span>
+      </div>
+      <%= f.text_field :service_type_other, class: 'service_type_textfield', placeholder: "例）○○サービス" %>
+      <div class="module-spacer--medium"></div>
+    </div>
+
+  </div>
 
   <div class="registration-new-field">
 
@@ -99,7 +116,7 @@
     <% end %>
 
     <div class="registration-new-field-1">
-      <%= f.label :postal_code, "郵便番号（半角）「病院もしくは法人」" %>
+      <%= f.label :postal_code, "郵便番号（半角）" %>
       <span>（必須）</span>
     </div>
     <div class="registration-new-field-2">
@@ -119,7 +136,7 @@
     <% end %>
 
     <div class="registration-new-field-1">
-      <%= f.label :address_city, "住所（市区町村）「病院もしくは法人」" %>
+      <%= f.label :address_city, "住所（市区町村）" %>
       <span>（必須）</span>
     </div>
     <%= f.text_field :address_city, id: 'address_city' %>
@@ -241,7 +258,7 @@
       <%= f.label :password_confirmation, "パスワード(確認用)" %>
       <span>（必須）</span>
     </div>
-    <%= f.password_field :encrypted_password %>
+    <%= f.password_field :password_confirmation %>
   </div>
 
   <div class="module-spacer--large"></div>

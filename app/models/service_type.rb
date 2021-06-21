@@ -1,7 +1,7 @@
 class ServiceType < ActiveHash::Base
 
   include ActiveHash::Associations
-  has_many :sagaserus
+  has_many :iryos
 
   self.data = [
     { id: 1, name: 'サービス1' },

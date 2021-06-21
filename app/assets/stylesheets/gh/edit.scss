@@ -14,13 +14,13 @@ li{
 }
 
 // 新規登録画面
-.gh-new-content{
+.gh-edit-content{
   background-color: #eee;
   margin-left: 260px;
   height: 100vh;
   overflow: auto;
   
-  .gh-new-title{
+  .gh-edit-title{
     font-size: 32px;
     text-align: center;
     
@@ -31,7 +31,7 @@ li{
     }
   }
 
-  .gh-new-fields{
+  .gh-edit-fields{
     width: 60%;
     margin: 0 auto;
     padding: 20px;
@@ -42,10 +42,10 @@ li{
     font-size: 14px;
     border-radius: 10px;
     
-    .gh-new-field{
+    .gh-edit-field{
       text-align: center;
       
-      .gh-new-field-1{
+      .gh-edit-field-1{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -56,7 +56,7 @@ li{
         }
       }
 
-      .gh-new-field-2{
+      .gh-edit-field-2{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -98,7 +98,7 @@ li{
       }
       
       
-      .gh-new-field-3{
+      .gh-edit-field-3{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -110,7 +110,7 @@ li{
         
       }
       
-      .gh-new-field-4{
+      .gh-edit-field-4{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -137,16 +137,39 @@ li{
           margin-left: 20px;
         }
       }
-
-      .short_input{
-        input{
-          width: 100px;
+    }
+    
+    @for $i from 0 through 6 {
+      .gh_edit_images_#{$i}{
+        padding: 10px;
+        a{
+          padding: 10px;
+          color: blue;
+        }
+        a.images_delete_btn{
+          color: black;
+          padding: 10px;
         }
       }
+
+      .hidden{
+        input, select{
+          display: block;
+          margin-top: $input-margin-top;
+          padding-left: $input-padding-left;
+          width: 90%;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          margin-left: 20px;
+        }
+      }
+
+
     }
 
     // パンフレットの写真
-    .gh-new-form-2-image{
+    .gh-edit-form-2-image{
       width: 50%;
       margin: 0 auto;
       padding-top: 10px;
@@ -191,7 +214,7 @@ li{
       }        
     }
     
-    .gh-new-form-submit{
+    .gh-edit-form-submit{
       input{
         display: block;
         margin: 0 auto;
@@ -220,7 +243,7 @@ li{
   }
   
   // ラジオボタン、チェックボタン
-  .gh-new-field-radio-1, .gh-new-field-check-1{
+  .gh-edit-field-radio-1, .gh-edit-field-check-1{
     display: flex;
     align-items: center;
     padding: 10px;
@@ -261,10 +284,19 @@ li{
     }
     
   }
+  .short_input{
+    width: 170px;
+  }
 }
 
 @for $i from 1 through 5 {
   .price_#{$i}{
     margin-top: 40px;
+    margin-left: 40px;
   }
+}
+
+
+.middle_input{
+  width: 100px;
 }

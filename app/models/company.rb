@@ -1,9 +1,8 @@
 class Company < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   has_many :ghs      , dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :iryos    , through: :favorites
 
   with_options presence: true do
     validates :company_name
@@ -13,7 +12,6 @@ class Company < ApplicationRecord
     validates :name
     validates :phone_number
     validates :email
-    validates :password_confirmation, on: [:create]
   end
 
   # postal_code
@@ -28,11 +26,11 @@ class Company < ApplicationRecord
   # 一意性
   validates :email, uniqueness: { message: 'アドレスは既に使用されています' }
 
-  # password
+  # password,password_confirmation
   # 8桁以上半角英数字混在
-  validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角数字で入力して下さい' }, on: [:create]
-
-
+  validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角英数字で入力して下さい' }, on: [:create]
+  # password_comfirmationと同じか
+  validates :password, confirmation: { message: 'がパスワードと一致していません'}
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable

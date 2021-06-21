@@ -1,0 +1,159 @@
+@charset "UTF-8";
+.field_with_errors {
+  display: contents;
+}
+
+.registration-edit-user-content .registration-edit-user-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.registration-edit-user-content .registration-edit-user-title span {
+  font-size: 20px;
+  display: block;
+  color: #b6b8bf;
+}
+
+.registration-edit-user-content .registration-edit-user-fields {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .alert_danger {
+  background-color: #fff1f1;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-1 span {
+  color: red;
+  font-size: 16px;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-2 span > button#address_btn {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  background-color: gray;
+  border-radius: 5px;
+  color: white;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field input, .registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field select {
+  display: block;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-2 span {
+  color: green;
+  font-size: 16px;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-check .alert_danger {
+  background-color: #fff1f1;
+  text-align: center;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-check .registration-edit-user-field-check-1 span {
+  color: red;
+  font-size: 16px;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-check .registration-edit-user-field-check-2 {
+  margin-top: 10px;
+  word-break: break-all;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-check .registration-edit-user-field-check-2 .registration-edit-user-field-check-3 {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-check .registration-edit-user-field-check-2 .registration-edit-user-field-check-3 .service_type_textfield {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #979797;
+  outline: none;
+  margin-left: 20px;
+  display: none;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-check .registration-edit-user-field-check-2 .registration-edit-user-field-check-3 #service_typeその他:checked ~ .service_type_textfield {
+  display: block;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-button input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #666ad6;
+  padding: 15px 50px;
+  border-radius: 5px;
+  color: white;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-button input:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.registration-edit-user-content a {
+  color: black;
+  display: block;
+  text-align: center;
+}
+
+.registration-edit-user-content a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+/*# sourceMappingURL=user_edit.css.map */

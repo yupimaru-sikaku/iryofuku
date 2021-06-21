@@ -78,6 +78,21 @@ $span-font-size: 16px;
         }
         
       }
+      .registration-new-hidden-field{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        
+        span{
+          color: green;
+          font-size: $span-font-size;
+        }
+        input{
+          display: block;
+        }
+
+      }
     }
 
     .registration-new-field-check{
@@ -116,14 +131,8 @@ $span-font-size: 16px;
             border-bottom: $input-border;
             outline: none;
             margin-left: 20px;
-            display: none;
-          }
-      
-          #service_typeその他:checked ~ .service_type_textfield{
-              display: block;
           }
         }
-
       }
     }
 

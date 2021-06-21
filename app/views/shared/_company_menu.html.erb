@@ -4,21 +4,21 @@
   <%#ハンバーガーメニュークリック後に表示されるコンテンツ%>
   <div class="menu">
 
-    <%= link_to sagaserus_path, class:'menu_icon' do %>
+    <%= link_to iryos_path, class:'menu_icon' do %>
     <%= image_tag 'logo.jpeg', class:'menu_logo' %>
     <span>管理画面</span>
     <% end %>
 
     <ul class="menu_lists">
 
-      <li class="<%= 'selected_menu' if current_page?(sagaserus_path) %>">
-        <%= link_to sagaserus_path, class: "registration-img" do %>
+      <li class="<%= 'selected_menu' if current_page?(iryos_path) %>">
+        <%= link_to iryos_path, class: "registration-img" do %>
         <i class="fas fa-users"></i>
         <span>希望利用者一覧</span>
         <% end %>
       </li>
-      <li class="<%= 'selected_menu' if current_page?(sagaseru_favorites_path(current_company)) %>">
-        <%= link_to sagaseru_favorites_path(current_company), class: "registration-img" do %>
+      <li class="<%= 'selected_menu' if current_page?(iryo_favorites_path(current_company)) %>">
+        <%= link_to iryo_favorites_path(current_company), class: "registration-img" do %>
         <i class="far fa-address-book"></i>
         <span>希望利用者の申請状況</span>
         <% end %>

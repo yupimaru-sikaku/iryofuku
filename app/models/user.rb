@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  has_many :fukushies, dependent: :destroy
+  has_many :iryos, dependent: :destroy
 
   with_options presence: true do
     validates :main_company_name
@@ -11,7 +11,6 @@ class User < ApplicationRecord
     validates :human_name
     validates :phone_number
     validates :email
-    validates :password_confirmation, on: [:create]
   end
   
   # postal_code
@@ -21,14 +20,16 @@ class User < ApplicationRecord
   # phone_numner
   # 半角数字のみ
   validates :phone_number, format: { with: /\A[0-9]+\z/, message: 'は半角数字で入力して下さい' }
-
+  
   # email
   # 一意性
   validates :email, uniqueness: true
   
-  # password
+  # password,password_confirmation
   # 8桁以上半角英数字混在
   validates :password, format: {with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}/, message: 'は8桁以上の半角英数字で入力して下さい' }, on: [:create]
+  # password_comfirmationと同じか
+  validates :password, confirmation: { message: 'がパスワードと一致していません'}
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
@@ -45,5 +46,5 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
-
+  
 end

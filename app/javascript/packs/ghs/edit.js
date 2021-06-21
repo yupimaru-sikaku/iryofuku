@@ -1,129 +1,78 @@
-// // 預り金を入力したら次のフォームが出てくる
-for (var i=0; i<6; i++){
-  let priceEnd = document.querySelector(`.price_${i}_end`);
-  let prices = document.getElementsByClassName(`price_${i+1}`);
-  
-  priceEnd.addEventListener('input', () => {
-    for (var i=0; i<prices.length; i++){
-      let priceSub = prices[i];
-      priceSub.hidden = false; 
+// 預り金を入力したら次のフォームが出てくる
+setInterval(() => {
+  for (var i=0; i<6; i++){
+    let priceEnd = document.querySelector(`.price_${i}_end`);
+    let prices = document.getElementsByClassName(`price_${i+1}`);
+    
+    // price[0]が項目、[1]が値段
+    if (priceEnd.value) {
+      prices[0].hidden = false; 
+      prices[1].hidden = false; 
     }
-  })
-}
-// //預り金を入力したら次のフォームが出てくる
-
-// disability チェックの全選択、解除
-const disabilityAll = document.querySelector('.disability_all');
-const disabilityTests = document.getElementsByClassName('disability_test');
-
-// 「全て選択」チェックで全てにチェック付く
-disabilityAll.addEventListener('click', () => {
-  for (var i=0; i<disabilityTests.length; i++){
-    let test = disabilityTests[i];
-    test.checked = disabilityAll;
   }
-});
+}, 500);
 
-// 一つでもチェックを外すと「全て選択」のチェック外れる
-for (var i=0; i<disabilityTests.length; i++){
-  let disability_test = disabilityTests[i];
-  disability_test.addEventListener('click', () => {
-    disabilityAll.checked = false;
-  })
-}
-
-// staff_holiday_timeチェックの全選択、解除
-const staffHolidayTimeAll = document.querySelector('.staff_holidaytime_all');
-const staffHolidayTimeTests = document.getElementsByClassName('staff_holidaytime_test');
-
-staffHolidayTimeAll.addEventListener('click', () => {
-  for (var i=0; i<staffHolidayTimeTests.length; i++){
-    let test = staffHolidayTimeTests[i];
-    test.checked = staffHolidayTimeAll;
+// 預り金が既に入力されている場合は表示されるようにする
+window.addEventListener('DOMContentLoaded', () => {
+  for (var i=1; i<6; i++){
+    let prices = document.getElementsByClassName(`price_${i}`);
+    let priceSub = document.querySelector(`#gh_price_sub${i}`);
+    
+    // price[0]が項目、[1]が値段
+    if (priceSub.value) {
+      prices[0].hidden = false; 
+      prices[1].hidden = false; 
+    }
   }
-});
-
-for (var i=0; i<staffHolidayTimeTests.length; i++){
-  let disability_test = staffHolidayTimeTests[i];
-  disability_test.addEventListener('click', () => {
-    staffHolidayTimeAll.checked = false;
-  })
-}
-
-// residentialstyle その他チェックでテキスト入力できるように
-const residentialStyleOther = document.querySelector('#residential_styleその他');
-const residentialStyleTextField = document.querySelector('.residential_style_textfield')
-
-residentialStyleOther.addEventListener('click', () => {
-  
-  residentialStyleTextField.disabled = false;
-  residentialStyleTextField.hidden = false;
-  
 })
 
-const residentialStyles = document.getElementsByClassName('residential_style')
-
-for (var i=0; i<residentialStyles.length; i++){
-  let residentialStyle = residentialStyles[i];
-
-  residentialStyle.addEventListener('click', () => {
-    residentialStyleTextField.disabled = true;
-    residentialStyleTextField.hidden = true;
-  })
-}
-
-//  staff_weekdaytimeその他チェックでテキスト入力できるように
-const staffWeekdayTimeOther = document.querySelector('#staff_weekdaytimeその他');
-const staffWeekdayTimeTextField = document.querySelector('.staff_weekdaytime_textfield')
-
-staffWeekdayTimeOther.addEventListener('click', () => {
-  
-  staffWeekdayTimeTextField.disabled = false;
-  staffWeekdayTimeTextField.hidden = false;
-  
-})
-
-const staffWeekdays = document.getElementsByClassName('staff_weekdaytime')
-
-for (var i=0; i<staffWeekdays.length; i++){
-  let staffWeekday = staffWeekdays[i];
-  
-  staffWeekday.addEventListener('click', () => {
-    staffWeekdayTimeTextField.disabled = true;
-    staffWeekdayTimeTextField.hidden = true;
-  })
-}
-
-//  barrier_freeその他チェックでテキスト入力できるように（ラジオボタン）
-const barrierFreeOther = document.querySelector('#barrier_freeその他');
-const barrierFreeTextField = document.querySelector('.barrier_free_textfield')
-
-barrierFreeOther.addEventListener('click', () => {
-  
-  barrierFreeTextField.disabled = false;
-  barrierFreeTextField.hidden = false;
-  
-})
-
-const barrierFrees = document.getElementsByClassName('barrier_free')
-
-for (var i=0; i<barrierFrees.length; i++){
-  let staffWeekday = barrierFrees[i];
-  
-  staffWeekday.addEventListener('click', () => {
-    barrierFreeTextField.disabled = true;
-    barrierFreeTextField.hidden = true;
-  })
-}
-
-
-//  valid_disabilityその他チェックでテキスト入力できるように（チェックボタン）
+// その他にチェックが入るとフォームが表示される
 const validDisabilityOther = document.querySelector('#valid_disabilityその他');
+const validDisabilityField = document.querySelector('.valid_disability_hidden_field');
 const validDisabilityTextField = document.querySelector('.valid_disability_textfield');
 
-validDisabilityOther.addEventListener('click', () => {
-  validDisabilityTextField.disabled = false;
-})
+const residentialStyleOther = document.querySelector('#residential_styleその他');
+const residentialStyleField = document.querySelector('.residential_style_hidden_field');
+const residentialStyleTextField = document.querySelector('.residential_style_textfield');
+
+const staffWeekdayTimeOther = document.querySelector('#staff_weekdaytimeその他');
+const staffWeekdayTimeField = document.querySelector('.staff_weekdaytime_hidden_field');
+const staffWeekdayTimeTextField = document.querySelector('.staff_weekdaytime_textfield');
+
+const barrierFreeTimeOther = document.querySelector('#barrier_freeその他');
+const barrierFreeTimeField = document.querySelector('.barrier_free_hidden_field');
+const barrierFreeTimeTextField = document.querySelector('.barrier_free_textfield');
+
+setInterval(() => {
+  if (validDisabilityOther.checked){
+    validDisabilityField.hidden = false;
+  }else{
+    validDisabilityField.hidden = true;
+    validDisabilityTextField.value = '';
+  }
+
+  if (residentialStyleOther.checked){
+    residentialStyleField.hidden = false;
+  }else{
+    residentialStyleField.hidden = true;
+    residentialStyleTextField.value = '';
+  }
+
+  if (staffWeekdayTimeOther.checked){
+    staffWeekdayTimeField.hidden = false;
+  }else{
+    staffWeekdayTimeField.hidden = true;
+    staffWeekdayTimeTextField.value = '';
+  }
+
+  if (barrierFreeTimeOther.checked){
+    barrierFreeTimeField.hidden = false;
+  }else{
+    barrierFreeTimeField.hidden = true;
+    barrierFreeTimeTextField.value = '';
+  }
+  
+}, 500);
 
 // パンフレットのプレビュー
 document.addEventListener('DOMContentLoaded', function(){
@@ -136,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function(){
     file = e.target.files[0];
     blob = window.URL.createObjectURL(file);
     dataBox.items.add(file);
-
+    
     fileField.files = dataBox.files
-
+    
     if (fileField.files.length == 6){
       inputLabel.style.display = 'none';
     }
@@ -149,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // const blobImage = document.createElement('img');
     // blobImage.setAttribute('src', blob);
     // blobImage.setAttribute('id', file.name);
-
+    
     const blobImage = document.createElement('iframe');
     blobImage.setAttribute('src', blob);
     
@@ -187,3 +136,23 @@ document.addEventListener('DOMContentLoaded', function(){
     })
   })
 })
+
+
+// 既存の画像を削除したいとき
+// imagesの枚数を取得して
+const ghEditImagesArray = [];
+
+for(i=0;i<2;i++){
+  let ghImagesDelete = document.querySelector(`.gh_images_delete_${i}`);
+  let ghEditImages= document.querySelector(`.gh_edit_images_${i}`);
+  ghEditImagesArray.push(ghEditImages)
+}
+  
+for(i=0; i<ghEditImagesArray.length; i++){
+  let ghImagesDelete = document.querySelector(`.gh_images_delete_${i}`);
+  let ghEditImages_= document.querySelector(`.gh_edit_images_${i}`);
+
+  ghImagesDelete.addEventListener('click', () => {
+    ghEditImages_.remove();
+  })
+}

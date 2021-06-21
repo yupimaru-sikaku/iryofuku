@@ -14,13 +14,13 @@ li{
 }
 
 // 新規登録画面
-.gh-show-content{
+.gh-new-content{
   background-color: #eee;
   margin-left: 260px;
   height: 100vh;
   overflow: auto;
   
-  .gh-show-title{
+  .gh-new-title{
     font-size: 32px;
     text-align: center;
     
@@ -31,7 +31,7 @@ li{
     }
   }
 
-  .gh-show-fields{
+  .gh-new-fields{
     width: 60%;
     margin: 0 auto;
     padding: 20px;
@@ -42,10 +42,10 @@ li{
     font-size: 14px;
     border-radius: 10px;
     
-    .gh-show-field{
+    .gh-new-field{
       text-align: center;
       
-      .gh-show-field-1{
+      .gh-new-field-1{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -56,7 +56,7 @@ li{
         }
       }
 
-      .gh-show-field-2{
+      .gh-new-field-2{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -98,7 +98,7 @@ li{
       }
       
       
-      .gh-show-field-3{
+      .gh-new-field-3{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -107,10 +107,9 @@ li{
           color: green;
           font-size: $span-font-size;
         }
-        
       }
       
-      .gh-show-field-4{
+      .gh-new-field-4{
         display: flex;
         align-items: center;
         justify-content: left;
@@ -138,6 +137,19 @@ li{
         }
       }
 
+      .hidden{
+        input, select{
+          display: block;
+          margin-top: $input-margin-top;
+          padding-left: $input-padding-left;
+          width: 90%;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          margin-left: 20px;
+        }
+      }
+
       .short_input{
         input{
           width: 100px;
@@ -146,7 +158,7 @@ li{
     }
 
     // パンフレットの写真
-    .gh-show-form-2-image{
+    .gh-new-form-2-image{
       width: 50%;
       margin: 0 auto;
       padding-top: 10px;
@@ -191,7 +203,7 @@ li{
       }        
     }
     
-    .gh-show-form-submit{
+    .gh-new-form-submit{
       input{
         display: block;
         margin: 0 auto;
@@ -220,7 +232,7 @@ li{
   }
   
   // ラジオボタン、チェックボタン
-  .gh-show-field-radio-1, .gh-show-field-check-1{
+  .gh-new-field-radio-1, .gh-new-field-check-1{
     display: flex;
     align-items: center;
     padding: 10px;
@@ -266,5 +278,6 @@ li{
 @for $i from 1 through 5 {
   .price_#{$i}{
     margin-top: 40px;
+    margin-left: 40px;
   }
 }

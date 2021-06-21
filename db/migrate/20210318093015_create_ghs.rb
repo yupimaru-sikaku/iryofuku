@@ -70,14 +70,18 @@ class CreateGhs < ActiveRecord::Migration[6.0]
       t.string :disability
       # 入居できない障害種別
       t.string :valid_disability
+      t.string :valid_disability_other
       # 住居タイプ
       t.string :residential_style
+      t.string :residential_style_other
       # 平日の日中
       t.string :staff_weekdaytime
       # 土日祝のスタッフ配置
       t.string :staff_holidaytime
+      t.string :staff_weekdaytime_other
       # バリアフリー
       t.string :barrier_free
+      t.string :barrier_free_other
       
       t.references :company, foreign_key: true
 

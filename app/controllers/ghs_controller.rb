@@ -17,6 +17,7 @@ class GhsController < ApplicationController
     else
       render :new
     end
+    
   end
 
   def edit
@@ -25,9 +26,8 @@ class GhsController < ApplicationController
   
   def update
     @gh = Gh.find(params[:id])
-
-    @gh.valid?
-    if @gh.update(gh_params)
+    if @gh.valid?
+      @gh.update(gh_params)
       redirect_to index_all_companies_path, flash: {success: "編集が完了しました"}
     else
       render :edit
@@ -93,10 +93,14 @@ class GhsController < ApplicationController
       :availability,
       :station,
       :from_station,
-      :gender,
       :residential_style,
+      :residential_style_other,
       :staff_weekdaytime,
+      :staff_weekdaytime_other,
       :barrier_free,
+      :barrier_free_other,
+      :valid_disability_other,
+      gender: [],
       disability: [],
       valid_disability: [],
       staff_holidaytime: [],

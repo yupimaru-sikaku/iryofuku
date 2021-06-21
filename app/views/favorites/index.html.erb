@@ -1,47 +1,59 @@
 <%= render partial: "shared/company_menu" %>
 
 <%#お気入りリスト%>
-<div class="sagaseru_favorite_content">
+<div class="iryo_favorite_content">
 
   <div class="module-spacer--large"></div>
 
-  <div class="sagaseru_favorite_title">
+  <div class="iryo_favorite_title">
     <p>希望利用者の申請状況</p>
   </div>
 
   <div class="module-spacer--medium"></div>
 
   <%#お気入りリスト一覧%>
-  <div class="sagaseru_indexes">
+  <div class="iryo_indexes">
     <table>
       <thead>
         <tr>
           <th>都道府県</th>
-          <th>市町村</th>
           <th>ご希望の</br>サービス種別</th>
           <th>障がいの種別</th>
           <th>性別</th>
           <th>ご年齢</th>
           <th>申請日</th>
           <th>申請ボタン</th>
+          <th>商談状況</th>
         </tr>
       </thead>
       <tbody>
-        <% if @sagaseru_favorite_lists %>
-        <% @sagaseru_favorite_lists.each do |sagaseru| %>
+        <% if @iryo_favorite_lists %>
+        <% @iryo_favorite_lists.each do |iryo| %>
         <tr>
-          <td><%= sagaseru.prefecture.name %></td>
-          <td><%= sagaseru.osaka_city.name %></td>
-          <td><%= sagaseru.service_type.name %></td>
-          <td><%= sagaseru.disability_type.name %></td>
-          <td><%= sagaseru.sex.name %></td>
-          <td><%= "#{sagaseru.age}歳" %></td>
-          <td><%= Favorite.find_by(sagaseru_id: sagaseru.id).updated_at.strftime("%Y.%m.%d ") %></td>
+          <td><%= iryo.prefecture.name %></td>
+          <td><%= iryo.service_type.name %></td>
+          <td><%= iryo.disability_type.name %></td>
+          <td><%= iryo.sex.name %></td>
+          <td><%= iryo.age %></td>
+          <td><%= iryo.updated_at.strftime("%Y.%m.%d ") %></td>
           <td>
-            <div id="favorites_button-<%= sagaseru.id %>">
-              <%= render partial: "favorites/favorites", locals: { sagaseru: sagaseru } %>
+            <% if iryo.is_contracted == "未" %>
+            <div id="favorites_button-<%= iryo.id %>">
+              <%= render partial: "favorites/favorites", locals: { iryo: iryo } %>
             </div>
+            <% elsif iryo.is_contracted == "商談中" %>
+            <% if Favorite.find_by(iryo_id: iryo.id, company_id: current_company.id) %>
+            <p>-------</p>
+            <% else %>
+            <div id="favorites_button-<%= iryo.id %>">
+              <%= render partial: "favorites/favorites", locals: { iryo: iryo } %>
+            </div>
+            <% end %>
+            <% elsif iryo.is_contracted == "成約済み" %>
+            <p>-------</p>
+            <% end %>
           </td>
+          <td><%= iryo.is_contracted %></td>
         </tr>
         <% end %>
         <% end %>

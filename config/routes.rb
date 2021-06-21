@@ -29,16 +29,16 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :fukushis, only: [:index, :new, :create] do
-    resource :favorites, only: [:create, :destroy]
-    resources :favorites, only: [:index]
+  resources :fukushis, only: [:index] do
     collection do
       get 'contact'
       get 'contact_message'
     end
   end
   
-  resources :iryoes, only: [:index] do
+  resources :iryos, only: [:new, :create, :index] do
+    resource :favorites, only: [:create, :destroy]
+    resources :favorites, only: [:index]
     collection do
       get 'contact'
       get 'contact_message'

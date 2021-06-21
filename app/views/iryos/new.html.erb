@@ -1,0 +1,139 @@
+<%= render partial: 'shared/header' %>
+<div class="module-spacer--large"></div>
+
+<%#大枠%>
+<section class="iryo_new_content">
+
+  <%#タイトル%>
+  <p class="sageseru_new_title">ご利用希望者様申請フォーム</p>
+  <%#//タイトル%>
+
+  <div class="module-spacer--medium"></div>
+
+  <%#新規作成フォーム%>
+  <%= form_with model: @iryo, class: 'iryo_new_forms', local: true do |f| %>
+
+  <div class="iryo_new_form_activehash">
+    <%= f.label :prefecutre_id do%>
+    <p>ご利用を希望する都道府県<span>（必須）</span></p>
+    <% end %>
+    <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, selected: "27" %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%# 各都道府県の選択項目 %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "大阪府", prefecture_to_s: "osaka", cities: @osaka_city} %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "兵庫県", prefecture_to_s: "hyogo", cities: @hyogo_city} %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "京都府", prefecture_to_s: "kyoto", cities: @kyoto_city} %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "滋賀県", prefecture_to_s: "shiga", cities: @shiga_city} %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "奈良県", prefecture_to_s: "nara", cities: @nara_city} %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "和歌山県", prefecture_to_s: "wakayama", cities: @wakayama_city} %>
+  <%= render partial: 'shared/city', locals: {f: f, prefecture_name: "三重県", prefecture_to_s: "mie", cities: @mie_city} %>
+  <%#// 各都道府県の %>
+
+  <%# 各市の選択項目 %>
+  <%= render partial: 'shared/ward', locals: {f: f, city_name: "大阪市", city_to_s: "osaka", city_wards: @osaka_city_ward} %>
+  <%= render partial: 'shared/ward', locals: {f: f, city_name: "堺市", city_to_s: "sakai", city_wards: @sakai_city_ward} %>
+  <%= render partial: 'shared/ward', locals: {f: f, city_name: "神戸市", city_to_s: "kobe", city_wards: @kobe_city_ward} %>
+  <%= render partial: 'shared/ward', locals: {f: f, city_name: "京都市", city_to_s: "kyoto", city_wards: @kyoto_city_ward} %>
+  <%#// 各市の選択項目 %>
+
+  <div class="iryo_new_form_activehash">
+    <%= f.label :service_type_id do%>
+    <p>サービスの種別<span>（必須）</span></p>
+    <% end %>
+    <%= f.collection_select :service_type_id, ServiceType.all, :id, :name %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="iryo_new_form_activehash">
+
+    <% if @iryo.errors.include?(:disability_type_id) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @iryo.errors.full_messages_for(:disability_type_id).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
+    <%= f.label :disability_type_id do%>
+    <p>障がい種別<span>（必須）</span></p>
+    <% end %>
+    <% DisabilityType.all.each do |disability_type| %>
+    <div class="iryo_new_form_activehash2">
+      <%= f.radio_button :disability_type_id, disability_type.id, id: "disability_type#{disability_type.id}" %>
+      <%= f.label :disability_type_id, disability_type.name, for: "disability_type#{disability_type.id}", class: "radio" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="iryo_new_form_activehash">
+
+    <% if @iryo.errors.include?(:classification_id) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @iryo.errors.full_messages_for(:classification_id).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
+    <%= f.label :classification_id do%>
+    <p>障がい区分<span>（必須）</span></p>
+    <% end %>
+    <% Classification.all.each do |classification| %>
+    <div class="iryo_new_form_activehash2">
+      <%= f.radio_button :classification_id, classification.id, id: "classification#{classification.id}" %>
+      <%= f.label :classification_id, classification.name, for: "classification#{classification.id}", class: "radio" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="iryo_new_form_activehash">
+
+    <% if @iryo.errors.include?(:sex_id) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @iryo.errors.full_messages_for(:sex_id).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
+    <%= f.label :sex_id do%>
+    <p>性別<span>（必須）</span></p>
+    <% end %>
+    <% Sex.all.each do |sex| %>
+    <div class="iryo_new_form_activehash2">
+      <%= f.radio_button :sex_id, sex.id, id: "sex#{sex.id}" %>
+      <%= f.label :sex_id, sex.name, for: "sex#{sex.id}", class: "radio" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="iryo_new_form">
+
+    <% if @iryo.errors.include?(:age) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @iryo.errors.full_messages_for(:age).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
+    <%= f.label :age, 'ご年齢' %>
+    <span></span>
+    <%= f.text_field :age, type: 'number', placeholder: '例）28' %>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%= f.submit '申請する', class: 'iryo_new_submit_btn' %>
+
+  <% end %>
+  <%#//新規作成フォーム%>
+
+</section>
+<%#//大枠%>
+
+<%= javascript_pack_tag "iryos/new" %>
+
+<%= render partial: 'shared/footer' %>

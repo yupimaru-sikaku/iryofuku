@@ -1,19 +1,19 @@
 @charset "UTF-8";
-.fukushi-index-content {
+.iryo-index-content {
   overflow: auto;
   height: 100vh;
   margin-left: 260px;
   background-color: #eee;
 }
 
-.fukushi-index-content .sageseru-index-title {
+.iryo-index-content .iryo-index-title {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
   width: 500px;
 }
 
-.fukushi-index-content .fukushi-search-forms {
+.iryo-index-content .iryo_search_forms {
   width: 50%;
   text-align: center;
   margin: 0 auto;
@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-form {
+.iryo-index-content .iryo_search_forms .iryo_search_form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,14 +38,14 @@
           align-items: center;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-form label {
+.iryo-index-content .iryo_search_forms .iryo_search_form label {
   width: 150px;
   display: block;
   text-align: right;
   margin-right: 20px;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-form input {
+.iryo-index-content .iryo_search_forms .iryo_search_form input {
   display: block;
   padding: 0 20px;
   height: 35px;
@@ -54,11 +54,11 @@
   outline: none;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-form input#search_age_from, .fukushi-index-content .fukushi-search-forms .fukushi-search-form input#search_age_to {
+.iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_from, .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_to {
   width: 100px;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-form select {
+.iryo-index-content .iryo_search_forms .iryo_search_form select {
   display: block;
   position: relative;
   padding: 0 20px;
@@ -68,7 +68,13 @@
   outline: none;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-btn input {
+.iryo-index-content .iryo_search_forms .hidden_field select {
+  border-bottom: 1px solid #979797;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.iryo-index-content .iryo_search_forms .iryo-search-btn input {
   padding: 10px 20px;
   background-color: blue;
   color: white;
@@ -78,11 +84,11 @@
   right: 5%;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-search-btn input:hover {
+.iryo-index-content .iryo_search_forms .iryo-search-btn input:hover {
   opacity: 0.5;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-index-reset a {
+.iryo-index-content .iryo_search_forms .iryo-index-reset a {
   padding: 10px 20px;
   background-color: gray;
   color: white;
@@ -93,11 +99,11 @@
   text-decoration: none;
 }
 
-.fukushi-index-content .fukushi-search-forms .fukushi-index-reset a:hover {
+.iryo-index-content .iryo_search_forms .iryo-index-reset a:hover {
   opacity: 0.5;
 }
 
-.fukushi-index-content .fukushi-indexes {
+.iryo-index-content .iryo-indexes {
   width: 95%;
   padding: 20px;
   margin: 0 auto;
@@ -109,19 +115,19 @@
   border-radius: 10px;
 }
 
-.fukushi-index-content .fukushi-indexes table {
+.iryo-index-content .iryo-indexes table {
   margin: 0 auto;
   border-collapse: collapse;
   border-bottom: 1px solid black;
 }
 
-.fukushi-index-content .fukushi-indexes table th {
+.iryo-index-content .iryo-indexes table th {
   border-bottom: 1px solid black;
   /**/
   padding: 10px;
 }
 
-.fukushi-index-content .fukushi-indexes table td {
+.iryo-index-content .iryo-indexes table td {
   padding: 20px;
   border-bottom: 1px dashed black;
   /**/
@@ -129,7 +135,7 @@
   /*破線 1px オレンジ*/
 }
 
-.fukushi-index-content .fukushi-indexes table a {
+.iryo-index-content .iryo-indexes table a {
   display: block;
   -webkit-box-shadow: 3px 3px 5px #a78b90;
           box-shadow: 3px 3px 5px #a78b90;

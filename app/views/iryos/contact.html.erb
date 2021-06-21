@@ -10,7 +10,7 @@
   <p><%= current_user.main_company_name %>でログインしています</p>
   <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
   <%= link_to '（仮置）編集画面はこちら', edit_user_registration_path %>
-  <%= link_to '（仮置き）希望利用者の新規作成', new_sagaseru_path %>
+  <%= link_to '（仮置き）希望利用者の新規作成', new_iryo_path %>
   <% else %>
   <%= link_to '（仮置）パスワードのnew', new_user_password_path %>
   <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
@@ -72,7 +72,7 @@
   <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
-  <%= render partial: 'shared/contact_form', locals: {path: contact_message_iryoes_path} %>
+  <%= render partial: 'shared/contact_form', locals: {path: contact_message_iryos_path} %>
   <%#// コンタクトフォーム %>
 
 </section>

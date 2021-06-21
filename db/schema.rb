@@ -53,26 +53,18 @@ ActiveRecord::Schema.define(version: 2021_04_10_235832) do
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "fukushi_id", null: false
+    t.bigint "iryo_id", null: false
     t.bigint "company_id", null: false
+    t.string "is_contracted", default: "未", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_favorites_on_company_id"
-    t.index ["fukushi_id"], name: "index_favorites_on_fukushi_id"
+    t.index ["iryo_id"], name: "index_favorites_on_iryo_id"
   end
 
   create_table "fukushis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "age", null: false
-    t.string "classification_id", null: false
-    t.string "disability_type_id", null: false
-    t.string "osaka_city_id", null: false
-    t.string "prefecture_id", null: false
-    t.string "service_type_id", null: false
-    t.string "sex_id", null: false
-    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_fukushis_on_user_id"
   end
 
   create_table "ghs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -110,19 +102,34 @@ ActiveRecord::Schema.define(version: 2021_04_10_235832) do
     t.string "gender"
     t.string "disability"
     t.string "valid_disability"
+    t.string "valid_disability_other"
     t.string "residential_style"
+    t.string "residential_style_other"
     t.string "staff_weekdaytime"
     t.string "staff_holidaytime"
+    t.string "staff_weekdaytime_other"
     t.string "barrier_free"
+    t.string "barrier_free_other"
     t.bigint "company_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_ghs_on_company_id"
   end
 
-  create_table "iryoes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "iryos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "age", null: false
+    t.string "classification_id", null: false
+    t.string "disability_type_id", null: false
+    t.string "prefecture_id", null: false
+    t.text "city_ids"
+    t.string "ward_id"
+    t.string "service_type_id", null: false
+    t.string "sex_id", null: false
+    t.bigint "user_id"
+    t.string "is_contracted", default: "未", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_iryos_on_user_id"
   end
 
   create_table "services", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -134,6 +141,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_235832) do
     t.string "main_company_name", null: false
     t.string "sub_company_name"
     t.string "service_type", null: false
+    t.string "service_type_other"
     t.integer "postal_code", null: false
     t.string "address_city", null: false
     t.string "address_street", null: false
@@ -153,7 +161,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_235832) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "favorites", "companies"
-  add_foreign_key "favorites", "fukushis"
-  add_foreign_key "fukushis", "users"
+  add_foreign_key "favorites", "iryos"
   add_foreign_key "ghs", "companies"
+  add_foreign_key "iryos", "users"
 end

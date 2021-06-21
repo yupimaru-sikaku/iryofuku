@@ -2,16 +2,16 @@
 
 <div class="module-spacer--medium"></div>
 
-<div class="registration-edit-content">
-  <h2 class="registration-edit-title">編集画面<span> - 病院・相談所 -</span></h2>
+<div class="registration-edit-user-content">
+  <h2 class="registration-edit-user-title">編集画面<span> - 病院・相談所 -</span></h2>
 
   <div class="module-spacer--medium"></div>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'registration-edit-fields' }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'registration-edit-user-fields' }) do |f| %>
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:main_company_name) %>
     <p class="alert_danger" style=" color: red;">
@@ -19,19 +19,19 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :main_company_name, "病院名・もしくは法人名" %>
       <span>（必須）</span>
     </div>
-    <div class="registration-edit-field-2">
+    <div class="registration-edit-user-field-2">
       <%= f.text_field :main_company_name, autofocus: true %>
     </div>
   </div>
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
-    <div class="registration-edit-field-2">
+  <div class="registration-edit-user-field">
+    <div class="registration-edit-user-field-2">
       <%= f.label :sub_company_name, "事業所名" %>
       <span>（任意）</span>
     </div>
@@ -40,7 +40,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field-check">
+  <div class="registration-edit-user-field-check">
 
     <% if @user.errors.include?(:service_type) %>
     <p class="alert_danger" style=" color: red;">
@@ -48,11 +48,11 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-check-1">
+    <div class="registration-edit-user-field-check-1">
       <%= f.label :service_type, '病院・もしくは法人が提供しているサービスの種別' %>
       <span>（必須、複数選択可）</span>
     </div>
-    <div class="registration-edit-field-check-2">
+    <div class="registration-edit-user-field-check-2">
       <% [
       "病院・クリニック",
       "計画相談支援",
@@ -84,22 +84,34 @@
       "福祉型障害児入所施設",
       "医療型障害児入所施設",
       ].each do |service_type| %>
-      <div class="registration-edit-field-check-3">
-        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type'}, service_type %>
+      <div class="registration-edit-user-field-check-3">
+        <%= f.check_box :service_type, { id: "service_type#{service_type}", multiple: true, include_hidden: false, class: 'service_type', checked: is_checked_edit?(current_user, :service_type, service_type)}, service_type %>
         <%= f.label :service_type, service_type, for: "service_type#{service_type}" %>
       </div>
       <% end %>
-      <div class="registration-edit-field-check-3">
-        <%= f.check_box :service_type, { id: "service_typeその他", multiple: true, include_hidden: false }, 'その他' %>
+      <div class="registration-edit-user-field-check-3">
+        <%= f.check_box :service_type, { id: "service_typeその他", multiple: true, include_hidden: false, checked: is_checked_edit?(current_user, :service_type, 'その他') }, 'その他' %>
         <%= f.label :service_type, 'その他', for: "service_typeその他" %>
-        <%= f.text_field :service_type, class: 'service_type_textfield', placeholder: '例）○○サービス', multiple: true, disabled: true %>
       </div>
     </div>
   </div>
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
+
+    <div class="hidden_field">
+      <div class="registration-edit-user-field-2">
+        <%= f.label :service_type_other, "上記でその他を選択された方はサービス名を入力下さい" %>
+        <span>（任意）</span>
+      </div>
+      <%= f.text_field :service_type_other, class: 'service_type_textfield', placeholder: "例）○○サービス" %>
+      <div class="module-spacer--medium"></div>
+    </div>
+
+  </div>
+
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:postal_code) %>
     <p class="alert_danger" style=" color: red;">
@@ -107,7 +119,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :postal_code, "郵便番号（半角）「病院もしくは法人」" %>
       <span>（必須）</span>
     </div>
@@ -116,7 +128,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:address_city) %>
     <p class="alert_danger" style=" color: red;">
@@ -124,7 +136,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :address_city, "住所（市区町村）「病院もしくは法人」" %>
       <span>（必須）</span>
     </div>
@@ -133,7 +145,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:address_street) %>
     <p class="alert_danger" style=" color: red;">
@@ -141,7 +153,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :address_street, " ー 住所（番地）" %>
       <span>（必須）</span>
     </div>
@@ -150,7 +162,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:address_building) %>
     <p class="alert_danger" style=" color: red;">
@@ -158,7 +170,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-2">
+    <div class="registration-edit-user-field-2">
       <%= f.label :address_building, " ー 住所（建物名、部屋番号）" %>
       <span>（任意）</span>
     </div>
@@ -167,7 +179,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:human_name) %>
     <p class="alert_danger" style=" color: red;">
@@ -175,7 +187,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :human_name, "ご担当者名" %>
       <span>（必須）</span>
     </div>
@@ -184,7 +196,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:phone_number) %>
     <p class="alert_danger" style=" color: red;">
@@ -192,7 +204,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :phone_number, "ご担当者の電話番号（半角、ハイフン無し）" %>
       <span>（必須）</span>
     </div>
@@ -201,7 +213,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-user-field">
 
     <% if @user.errors.include?(:email) %>
     <p class="alert_danger" style=" color: red;">
@@ -209,7 +221,7 @@
     <div class="module-spacer--small"></div>
     <% end %>
 
-    <div class="registration-edit-field-1">
+    <div class="registration-edit-user-field-1">
       <%= f.label :email %>
       <span>（必須）</span>
     </div>
@@ -218,7 +230,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field-button">
+  <div class="registration-edit-user-field-button">
     <%= f.submit "情報変更" %>
   </div>
 
@@ -228,3 +240,5 @@
 </div>
 
 <%= render partial: 'shared/footer' %>
+
+<%= javascript_pack_tag "users/edit" %>

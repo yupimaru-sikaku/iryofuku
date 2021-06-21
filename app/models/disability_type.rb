@@ -1,7 +1,7 @@
 # 障害の種類
 class DisabilityType < ActiveHash::Base
   include ActiveHash::Associations
-  has_many :sagaserus
+  has_many :iryos
 
   self.data = [
     { id: 1, name: '障がい種類1' }, { id: 2, name: '障がい種類2' },

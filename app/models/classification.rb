@@ -1,7 +1,7 @@
 # 障害区分
 class Classification < ActiveHash::Base
   include ActiveHash::Associations
-  has_many :sagaserus
+  has_many :iryos
 
   self.data = [
     { id: 1, name: '区分1'},

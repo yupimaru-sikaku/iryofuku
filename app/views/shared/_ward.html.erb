@@ -1,0 +1,22 @@
+<div hidden class="hidden_<%= city_to_s %>_ward hidden">
+  <div class="iryo_new_form_activehash <%= city_to_s %>_city_ward">
+    <div class="iryo_new_form_activehash__1">
+      <%= f.label :ward_id do%>
+      <p>区（<%= city_name %>を選択された方）<span>（必須）</span></p>
+      <% end %>
+    </div>
+    <div class="active_hash_all">
+      <input type="checkbox" id="<%= city_to_s %>_city_ward_all">
+      <label for="<%= city_to_s %>_city_ward_all"><%= city_name %>全般</label>
+    </div>
+    <div class="iryo_new_form_activehash__2">
+      <% city_wards.all.each do |city_ward| %>
+      <div class="iryo_new_form_activehash_check">
+        <%= f.check_box :ward_id,  { id: "#{city_to_s}_city_ward_#{city_ward.name}", multiple: true, include_hidden: false, checked: is_checked?(:iryo, :ward_id, city_ward.id), class: "#{city_to_s}_city_ward_group" }, city_ward.name %>
+        <%= f.label :ward_id, city_ward.name, for: "#{city_to_s}_city_ward_#{city_ward.name}" %>
+      </div>
+      <% end %>
+    </div>
+    <div class="module-spacer--medium"></div>
+  </div>
+</div>

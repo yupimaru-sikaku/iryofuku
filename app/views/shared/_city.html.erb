@@ -1,0 +1,22 @@
+<div hidden class="hidden_<%= prefecture_to_s %>_city hidden">
+  <div class="iryo_new_form_activehash <%= prefecture_to_s %>_city">
+    <div class="iryo_new_form_activehash__1">
+      <%= f.label :city_ids do %>
+      <p>市町村郡（<%= prefecture_name %>を選択された方）<span>（必須）</span></p>
+      <% end %>
+      <div class="active_hash_<%= prefecture_to_s %>_city_all">
+        <input type="checkbox" id="<%= prefecture_to_s %>_city_all">
+        <label for="<%= prefecture_to_s %>_city_all"><%= prefecture_name %>全般</label>
+      </div>
+    </div>
+    <div class="iryo_new_form_activehash__2">
+      <% cities.all.each do |city| %>
+      <div class="iryo_new_form_activehash_check">
+        <%= f.check_box :city_ids,  { id: "#{prefecture_to_s}_city_#{city.name}", multiple: true, include_hidden: false, checked: is_checked?(:iryo, :city_ids, city.id), class: "#{prefecture_to_s}_city_group #{prefecture_to_s}_city_#{city.name}" }, city.name %>
+        <%= f.label :city_ids, city.name, for: "#{prefecture_to_s}_city_#{city.name}" %>
+      </div>
+      <% end %>
+    </div>
+    <div class="module-spacer--medium"></div>
+  </div>
+</div>
