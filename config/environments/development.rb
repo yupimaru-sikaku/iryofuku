@@ -65,7 +65,7 @@ Rails.application.configure do
 
   # action_mailer用
   mail = ENV['gmail_address']
-  pass = ENV['gmail_application_password']   
+  pass = ENV['gmail_password']   
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
