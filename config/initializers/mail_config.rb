@@ -12,9 +12,9 @@
 
 mail = ENV['gmail_address']
 pass = ENV['gmail_application_password']   
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.raise_delivery_errors = true
-ActionMailer::Base.smtp_settings = {
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.smtp_settings = {
   address: "smtp.gmail.com",
   port: 587,
   domain: "smtp.gmail.com",
