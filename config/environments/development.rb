@@ -71,7 +71,7 @@ Rails.application.configure do
     port: 587,
     domain: 'gmail.com',
     user_name: ENV['gmail_address'],
-    password: ENV['gmail_password'],
+    password: ENV['gmail_application_password'],
     authentication: 'plain',
     enable_starttls_auto: true
   }
