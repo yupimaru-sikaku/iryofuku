@@ -14,9 +14,7 @@
   <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
   <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
   <% end %>
-
   <%#//仮置%>
-
 
   <%#サガセルの説明%>
   <div class="fukushi-description">
@@ -25,19 +23,16 @@
       <p>障害福祉サービスを利用したい方をご紹介致します。<br><br>まずは下記のお問い合わせフォームから<br>必要事項をご記入の上、送信ボタンを押して下さい。<br><br>追って、ご連絡致します。</p>
     </div>
     <div class="fukushi-description-img">
-      <%= image_tag "5 - RECRUITING.svg" %>
+      <%= image_tag "fukushi_contact.svg" %>
     </div>
   </div>
   <%#//サガセルの説明%>
 
   <div class="module-spacer--large"></div>
-  <div class="module-spacer--large"></div>
 
   <%# コンタクトフォーム %>
   <%= render partial: 'shared/contact_form', locals: {path: contact_message_fukushis_path} %>
   <%#// コンタクトフォーム %>
-
-  <div class="module-spacer--large"></div>
 
 </section>
 <%#//大枠%>

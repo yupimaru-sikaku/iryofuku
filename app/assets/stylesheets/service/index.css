@@ -14,7 +14,7 @@
 
 .service-container .select-service .service-iryo {
   border: 1px solid #eee;
-  border-radius: 5px;
+  border-radius: 50px;
   width: 45%;
   -webkit-box-shadow: 1px 1px 3px #bbafaf;
           box-shadow: 1px 1px 3px #bbafaf;
@@ -62,7 +62,7 @@
 
 .service-container .select-service .service-sagaseru {
   border: 1px solid #eee;
-  border-radius: 5px;
+  border-radius: 50px;
   width: 45%;
   -webkit-box-shadow: 1px 1px 3px #bbafaf;
           box-shadow: 1px 1px 3px #bbafaf;
