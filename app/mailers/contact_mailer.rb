@@ -10,7 +10,7 @@ class ContactMailer < ApplicationMailer
   def iryo_gh_mail(gh, registered_address)
     @registered_address = registered_address
     @gh = gh
-    mail(subject: "事業所をお探しの方がいらっしゃいます", to: @gh.pluck(:email))
+    mail(subject: "事業所をお探しの方がいらっしゃいます", to: @gh.pluck(:human_email))
   end
 
 

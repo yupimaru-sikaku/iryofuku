@@ -34,17 +34,17 @@ module IryosHelper
           gh_new = gh_all.select do |i|
             i.address.include?(registered_address)
           end
-          ContactMailer.iryo_gh_mail(gh_new, registered_address).deliver
+          ContactMailer.iryo_gh_mail(gh_new, registered_address).deliver if gh_new.present?
         end
-      # 区がある市を選択した場合（例：堺市を選択した場合）
+        # 区がある市を選択した場合（例：堺市を選択した場合）
       elsif gh_city_name == city_name_2
         iryo_params[:ward_id].each do |ward_name|
-          gh_ward_name = Ward.find(ward_name).name
+          gh_ward_name = ward_name
           registered_address = gh_prefecture_name + gh_city_name + gh_ward_name
           gh_new = gh_all.select do |i|
             i.address.include?(registered_address)
           end
-          ContactMailer.iryo_gh_mail(gh_new, registered_address).deliver
+          ContactMailer.iryo_gh_mail(gh_new, registered_address).deliver if gh_new.present?
         end
       # それ以外の市町村を選択した場合
       else
