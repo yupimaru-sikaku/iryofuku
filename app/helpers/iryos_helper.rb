@@ -52,7 +52,7 @@ module IryosHelper
         gh_new = gh_all.select do |i|
           i.address.include?(registered_address)
         end
-        ContactMailer.iryo_gh_mail(gh_new, registered_address).deliver if gh_new.exists?
+        ContactMailer.iryo_gh_mail(gh_new, registered_address).deliver if gh_new.present?
       end
     end
   end
