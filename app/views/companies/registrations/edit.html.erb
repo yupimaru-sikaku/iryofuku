@@ -66,7 +66,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-field address_field">
 
     <% if @company.errors.include?(:address_street) %>
     <p class="alert_danger" style=" color: red;">
@@ -83,7 +83,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-edit-field">
+  <div class="registration-edit-field address_field">
 
     <% if @company.errors.include?(:address_building) %>
     <p class="alert_danger" style=" color: red;">
@@ -160,8 +160,7 @@
     <% end %>
 
     <div class="registration-edit-field-2">
-      <%= f.label :password, "パスワード（変更する場合は入力して下さい）
-" %>
+      <%= f.label :password, "パスワード（変更する場合は入力して下さい）" %>
       <span>（任意）</span>
     </div>
     <%= f.password_field :password %>
@@ -187,7 +186,7 @@
   <div class="module-spacer--medium"></div>
 
   <div class="registration-edit-field-button">
-    <%= f.submit "情報変更" %>
+    <%= f.submit "情報変更", class: "edit_btn" %>
   </div>
 
   <div class="module-spacer--small"></div>
@@ -197,3 +196,4 @@
 </div>
 
 <%= javascript_pack_tag "shared/address" %>
+<%= javascript_pack_tag "shared/password" %>

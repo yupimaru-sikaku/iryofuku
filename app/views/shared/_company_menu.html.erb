@@ -48,12 +48,16 @@
         <span>事業所情報一覧</span>
         <% end %>
       </li>
+      <%
+=begin%>
       <li class="<%= 'selected_menu' if current_page?(company_password_path) %>">
         <%= link_to company_password_path, class: "registration-img", method: :put do %>
         <i class="fas fa-key"></i>
         <span>パスワードの変更</span>
         <% end %>
       </li>
+      <%
+=end%>
       <li class="<%= 'selected_menu' if current_page?(destroy_company_session_path) %>">
         <%= link_to destroy_company_session_path, class: "registration-img", method: :delete do %>
         <i class="fas fa-sign-out-alt"></i>

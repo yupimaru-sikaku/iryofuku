@@ -14,7 +14,7 @@
 }
 
 .registration-new-content .registration-new-fields {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@
   width: 80px;
   height: 30px;
   text-align: center;
-  background-color: gray;
+  background-color: #3414e6;
   border-radius: 5px;
   color: white;
 }

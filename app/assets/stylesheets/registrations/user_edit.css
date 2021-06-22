@@ -15,7 +15,7 @@
 }
 
 .registration-edit-user-content .registration-edit-user-fields {
-  width: 60%;
+  width: 45%;
   margin: 0 auto;
   padding: 20px;
   margin: 0 auto;
@@ -52,7 +52,7 @@
   width: 80px;
   height: 30px;
   text-align: center;
-  background-color: gray;
+  background-color: #3414e6;
   border-radius: 5px;
   color: white;
 }
@@ -144,6 +144,10 @@
 .registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field-button input:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.registration-edit-user-content .registration-edit-user-fields .address_field {
+  margin-left: 50px;
 }
 
 .registration-edit-user-content a {

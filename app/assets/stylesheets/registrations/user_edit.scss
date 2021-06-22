@@ -28,7 +28,7 @@ $span-font-size: 16px;
   }
   
   .registration-edit-user-fields{
-    width: 60%;
+    width: 45%;
     margin: 0 auto;
     padding: 20px;
     margin: 0 auto;
@@ -62,7 +62,7 @@ $span-font-size: 16px;
           width: 80px;
           height: 30px;
           text-align: center;
-          background-color: gray;
+          background-color: rgb(52, 20, 230);
           border-radius: 5px;
           color: white;
         }
@@ -154,6 +154,9 @@ $span-font-size: 16px;
           cursor: pointer;
         }
       }
+    }
+    .address_field{
+      margin-left: 50px;
     }
   }
   a{
