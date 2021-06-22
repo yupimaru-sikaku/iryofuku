@@ -76,7 +76,6 @@ Rails.application.configure do
     user_name: mail,
     password: pass,
     enable_starttls_auto: true
-
   }
 
 end

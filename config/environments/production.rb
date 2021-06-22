@@ -93,15 +93,17 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost:3000'}
 
   # action_mailer用
-  config.action_mailer.raise_delivery_errors = true
+  mail = ENV['gmail_address']
+  pass = ENV['gmail_application_password']   
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: "smtp.gmail.com",
     port: 587,
-    domain: 'gmail.com',
-    user_name: ENV['gmail_address'],
-    password: ENV['gmail_password'],
-    authentication: 'plain',
+    domain: "smtp.gmail.com",
+    authentication: "plain",
+    user_name: mail,
+    password: pass,
     enable_starttls_auto: true
   }
 
