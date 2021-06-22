@@ -106,7 +106,7 @@
       <span>（必須）</span>
     </div>
     <div class="gh-new-field-2">
-      <%= f.text_field :phone_number, placeholder: '例）08072831647', maxlength: '11' %>
+      <%= f.text_field :phone_number, maxlength: 11, placeholder: '例）08072831647', maxlength: '11' %>
       <span></span>
     </div>
   </div>
@@ -157,7 +157,7 @@
       <span>（必須）</span>
     </div>
     <div class="gh-new-field-2 short_input">
-      <%= f.text_field :price_main, placeholder: '例）90000', class: 'price_0_end' %>
+      <%= f.text_field :price_main, maxlength: 6, placeholder: '例）90000', class: 'price_0_end' %>
       <span>円</span>
     </div>
   </div>
@@ -185,7 +185,7 @@
       <span>（任意）</span>
     </div>
     <div class="gh-new-field-4 short_input">
-      <%= f.text_field :price_sub_cost1, placeholder: '例）30000' , class: 'price_1_end' %>
+      <%= f.text_field :price_sub_cost1, maxlength: 6, placeholder: '例）30000' , class: 'price_1_end' %>
       <span>円</span>
     </div>
   </div>
@@ -213,7 +213,7 @@
       <span>（任意）</span>
     </div>
     <div class="gh-new-field-4 short_input">
-      <%= f.text_field :price_sub_cost2, placeholder: '例）20000', class: 'price_2_end' %>
+      <%= f.text_field :price_sub_cost2, maxlength: 6, placeholder: '例）20000', class: 'price_2_end' %>
       <span>円</span>
     </div>
   </div>
@@ -241,7 +241,7 @@
       <span>（任意）</span>
     </div>
     <div class="gh-new-field-4 short_input">
-      <%= f.text_field :price_sub_cost3, placeholder: '例）10000', class: 'price_3_end' %>
+      <%= f.text_field :price_sub_cost3, maxlength: 6, placeholder: '例）10000', class: 'price_3_end' %>
       <span>円</span>
     </div>
   </div>
@@ -269,7 +269,7 @@
       <span>（任意）</span>
     </div>
     <div class="gh-new-field-4 short_input">
-      <%= f.text_field :price_sub_cost4, placeholder: '例）20000', class: 'price_4_end' %>
+      <%= f.text_field :price_sub_cost4, maxlength: 6, placeholder: '例）20000', class: 'price_4_end' %>
       <span>円</span>
     </div>
   </div>
@@ -297,7 +297,7 @@
       <span>（任意）</span>
     </div>
     <div class="gh-new-field-4 short_input">
-      <%= f.text_field :price_sub_cost5, placeholder: '例）10000', class: 'price_5_end' %>
+      <%= f.text_field :price_sub_cost5, maxlength: 6, placeholder: '例）10000', class: 'price_5_end' %>
       <span>円</span>
     </div>
   </div>
@@ -388,7 +388,7 @@
       <span>（必須）</span>
     </div>
     <div class="gh-new-field-2">
-      <%= f.text_field :human_phone_number, placeholder: '例）08072831647', value: current_company.phone_number %>
+      <%= f.text_field :human_phone_number, maxlength: 11, placeholder: '例）08072831647', value: current_company.phone_number %>
       <span></span>
     </div>
   </div>

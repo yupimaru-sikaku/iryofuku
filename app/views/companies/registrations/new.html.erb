@@ -64,7 +64,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-new-field">
+  <div class="registration-new-field address_field">
 
     <% if @company.errors.include?(:address_street) %>
     <p class="alert_danger" style=" color: red;">
@@ -81,7 +81,7 @@
 
   <div class="module-spacer--medium"></div>
 
-  <div class="registration-new-field">
+  <div class="registration-new-field address_field">
 
     <% if @company.errors.include?(:address_building) %>
     <p class="alert_danger" style=" color: red;">
@@ -127,7 +127,7 @@
       <%= f.label :phone_number, "ご担当者の電話番号（半角、ハイフン無し）" %>
       <span>（必須）</span>
     </div>
-    <%= f.text_field :phone_number, placeholder: "例）08072831647" %>
+    <%= f.text_field :phone_number, maxlength: 11, placeholder: "例）08072831647" %>
   </div>
 
   <div class="module-spacer--medium"></div>

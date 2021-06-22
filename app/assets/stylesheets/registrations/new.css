@@ -162,6 +162,10 @@
   cursor: pointer;
 }
 
+.registration-new-content .registration-new-fields .address_field {
+  margin-left: 50px;
+}
+
 .registration-new-content a {
   color: black;
   display: block;
