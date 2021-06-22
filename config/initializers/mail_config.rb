@@ -9,7 +9,6 @@
 #   enable_starttls_auto: true
 # }
 
-
 mail = ENV['gmail_address']
 pass = ENV['gmail_application_password']   
 config.action_mailer.delivery_method = :smtp
