@@ -41,20 +41,20 @@ class IryosController < ApplicationController
       # mail_to_gh("三重県", iryo_params, iryo_params[:city_id], "区がある市１", iryo_params[:ward_id], "区がある市２")区が無い場合はダミー
       # IryosHelper
       case @iryo.prefecture.name
-      when "三重県" then
-        mail_to_gh("三重県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
-      when "滋賀県" then
-        mail_to_gh("滋賀県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
-      when "京都府" then
-        mail_to_gh("京都府", iryo_params, iryo_params[:city_id], "京都市", iryo_params[:ward_id], "ダミー")
-      when "大阪府" then
-        mail_to_gh("大阪府", iryo_params, iryo_params[:city_id], "大阪市", iryo_params[:ward_id], "堺市")
-      when "兵庫県" then
-        mail_to_gh("兵庫県", iryo_params, iryo_params[:city_id], "神戸市", iryo_params[:ward_id], "ダミー")
-      when "奈良県" then
-        mail_to_gh("奈良県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
-      when "和歌山県" then
-        mail_to_gh("和歌山県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
+        when "三重県" then
+          mail_to_gh("三重県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
+        when "滋賀県" then
+          mail_to_gh("滋賀県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
+        when "京都府" then
+          mail_to_gh("京都府", iryo_params, iryo_params[:city_id], "京都市", iryo_params[:ward_id], "ダミー")
+        when "大阪府" then
+          mail_to_gh("大阪府", iryo_params, iryo_params[:city_id], "大阪市", iryo_params[:ward_id], "堺市")
+        when "兵庫県" then
+          mail_to_gh("兵庫県", iryo_params, iryo_params[:city_id], "神戸市", iryo_params[:ward_id], "ダミー")
+        when "奈良県" then
+          mail_to_gh("奈良県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
+        when "和歌山県" then
+          mail_to_gh("和歌山県", iryo_params, iryo_params[:city_id], "ダミー", iryo_params[:ward_id], "ダミー")
       end
 
       redirect_to root_path, flash: {success: "登録が完了しました"}
