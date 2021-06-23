@@ -1,6 +1,6 @@
 <%= render partial: "shared/company_menu" %>
 
-<%#お気入りリスト%>
+<%#お気入りリスト項目%>
 <div class="iryo_favorite_content">
 
   <div class="module-spacer--large"></div>
@@ -27,8 +27,8 @@
         </tr>
       </thead>
       <tbody>
-        <% if @iryo_favorite_lists %>
-        <% @iryo_favorite_lists.each do |iryo| %>
+        <% if @iryo_favorites_lists_uncontracted %>
+        <% @iryo_favorites_lists_uncontracted.each do |iryo| %>
         <tr>
           <td><%= iryo.prefecture.name %></td>
           <td><%= iryo.service_type.name %></td>
@@ -49,7 +49,7 @@
               <%= render partial: "favorites/favorites", locals: { iryo: iryo } %>
             </div>
             <% end %>
-            <% elsif iryo.is_contracted == "成約済み" %>
+            <% elsif iryo.is_contracted == "成約済" %>
             <p>-------</p>
             <% end %>
           </td>
@@ -60,8 +60,56 @@
       </tbody>
     </table>
   </div>
-  <%#//登録者一覧%>
   <%#//お気入りリスト一覧%>
+  <%#//お気入りリスト項目%>
+
+  <div class="module-spacer--medium"></div>
+
+  <%#//成約された方項目%>
+  <div class="iryo_favorite_title">
+    <p>ご成約された方</p>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <%#//成約された方一覧%>
+  <div class="iryo_indexes">
+    <table>
+      <thead>
+        <tr>
+          <th>都道府県</th>
+          <th>ご希望の</br>サービス種別</th>
+          <th>障がいの種別</th>
+          <th>性別</th>
+          <th>ご年齢</th>
+          <th>申請日</th>
+          <th>申請ボタン</th>
+          <th>商談状況</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @iryo_favorites_lists_contracted %>
+        <% @iryo_favorites_lists_contracted.each do |iryo| %>
+        <tr>
+          <td><%= iryo.prefecture.name %></td>
+          <td><%= iryo.service_type.name %></td>
+          <td><%= iryo.disability_type.name %></td>
+          <td><%= iryo.sex.name %></td>
+          <td><%= iryo.age %></td>
+          <td><%= iryo.updated_at.strftime("%Y.%m.%d ") %></td>
+          <td>
+            <p>-------</p>
+          </td>
+          <td><%= iryo.is_contracted %></td>
+        </tr>
+        <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%#//成約された方一覧%>
+  <%#//成約された項目%>
+
 
   <div class="module-spacer--large"></div>
 </div>

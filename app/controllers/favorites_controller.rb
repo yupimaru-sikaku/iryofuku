@@ -31,6 +31,15 @@ class FavoritesController < ApplicationController
   def index
     favorites = current_company.favorites.pluck(:iryo_id)
     @iryo_favorite_lists = Iryo.find(favorites)
+
+    @iryo_favorites_lists_uncontracted = @iryo_favorite_lists.select do |i|
+      i.is_contracted != "成約済"
+    end
+
+    @iryo_favorites_lists_contracted = @iryo_favorite_lists.select do |i|
+      i.is_contracted == "成約済"
+    end
+
   end
 
   private

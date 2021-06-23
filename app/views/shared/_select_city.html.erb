@@ -1,4 +1,4 @@
-<div class="hidden_field <%= class_name %>">
+<div hidden class="hidden_field <%= class_name %>">
   <%= f.label :city_ids, '市町村' %>
   <%= f.collection_select :city_ids, cities, :name, :name, { selected: @search_params[:city_ids], include_blank: '指定なし' }, id: "search_#{class_name}_id" %>
 </div>

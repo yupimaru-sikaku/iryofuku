@@ -79,7 +79,7 @@ li {
   width: 70px;
   height: 30px;
   text-align: center;
-  background-color: gray;
+  background-color: blue;
   border-radius: 5px;
   color: white;
 }
@@ -355,26 +355,41 @@ li {
   height: 80px;
 }
 
-.gh-edit-content .gh-edit-fields .gh-edit-form-2-image .image-lists .image-list p {
-  color: blue;
-  border-bottom: 1px solid;
+.gh-edit-content .gh-edit-fields .gh-edit-form-2-image .image-lists .image-list p.image_title {
+  color: black;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.gh-edit-content .gh-edit-fields .gh-edit-form-2-image .image-lists .image-list p.delete_btn {
+  color: black;
   width: 50px;
   margin: 0 auto;
+  background-color: #dcdcdc;
+  padding: 10px;
 }
 
 .gh-edit-content .gh-edit-fields .gh-edit-form-2-image input {
   display: none;
 }
 
-.gh-edit-content .gh-edit-fields .gh-edit-form-2-image label {
+.gh-edit-content .gh-edit-fields .gh-edit-form-2-image label.gh_image_label {
   display: block;
-  background-color: #dcdada;
+  background-color: gray;
+  color: white;
   padding: 10px;
   text-align: center;
 }
 
-.gh-edit-content .gh-edit-fields .gh-edit-form-2-image label .fa-camera {
+.gh-edit-content .gh-edit-fields .gh-edit-form-2-image label.gh_image_label .fa-camera {
   font-size: 15px;
+}
+
+.gh-edit-content .gh-edit-fields p.delete_btn {
+  background-color: #dcdcdc;
+  padding: 10px;
+  width: 20%;
+  margin: auto;
 }
 
 .gh-edit-content .gh-edit-fields .gh-edit-form-submit input {

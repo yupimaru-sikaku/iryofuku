@@ -195,11 +195,18 @@ li {
   height: 80px;
 }
 
-.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list p {
-  color: blue;
-  border-bottom: 1px solid;
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list p.image_title {
+  color: black;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list p.delete_btn {
+  color: black;
   width: 50px;
   margin: 0 auto;
+  background-color: #dcdcdc;
+  padding: 10px;
 }
 
 .gh-new-content .gh-new-fields .gh-new-form-2-image input {

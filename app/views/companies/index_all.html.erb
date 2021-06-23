@@ -29,9 +29,9 @@
             </tr>
           </thead>
           <tbody>
-            <% @ghs.each do |gh| %>
+            <% @ghs.each_with_index do |gh, i| %>
             <tr>
-              <td><%= gh.id %></td>
+              <td><%= i+1 %></td>
               <td><%= link_to "#{gh.sub_company_name}", gh_path(gh) %></td>
               <td><%= gh.main_company_name %></td>
               <td><%= link_to '編集', edit_gh_path(gh) %></td>

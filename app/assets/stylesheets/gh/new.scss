@@ -178,11 +178,18 @@ li{
             height: 80px;
           }
 
-          p{
-            color: blue;
-            border-bottom: 1px solid;
+          p.image_title{
+            color: black;
+            margin: 0 auto;
+            padding: 10px;
+          }
+
+          p.delete_btn{
+            color: black;
             width: 50px;
             margin: 0 auto;
+            background-color: #dcdcdc;
+            padding: 10px;
           }
         }
       }

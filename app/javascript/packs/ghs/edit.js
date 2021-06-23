@@ -72,9 +72,11 @@ setInterval(() => {
     barrierFreeTimeTextField.value = '';
   }
   
-}, 500);
+}, 100);
 
-// パンフレットのプレビュー
+
+
+// パンフレットのプレビューと追加で添付したいとき
 document.addEventListener('DOMContentLoaded', function(){
   const fileField = document.querySelector('#gh_image');
   const imageLists = document.querySelector('.image-lists');
@@ -85,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function(){
     file = e.target.files[0];
     blob = window.URL.createObjectURL(file);
     dataBox.items.add(file);
-    
+
     fileField.files = dataBox.files
     
-    if (fileField.files.length == 6){
+    if (fileField.files.length == 1){
       inputLabel.style.display = 'none';
     }
     
@@ -102,10 +104,17 @@ document.addEventListener('DOMContentLoaded', function(){
     const blobImage = document.createElement('iframe');
     blobImage.setAttribute('src', blob);
     
+    // 画像の削除ボタンを追加
     const deleteButton = document.createElement('p')
-    deleteButton.setAttribute('class', 'delete');
+    deleteButton.setAttribute('class', 'delete_btn');
     deleteButton.innerHTML = '削除';
+    // 画像のタイトルを追加
+    const title = file.name
+    const imageTitle = document.createElement('p')
+    imageTitle.setAttribute('class', 'image_title');
+    imageTitle.innerHTML = title;
     
+    blobDiv.appendChild(imageTitle);
     blobDiv.appendChild(blobImage);
     blobDiv.appendChild(deleteButton);
     imageLists.appendChild(blobDiv);
@@ -129,8 +138,8 @@ document.addEventListener('DOMContentLoaded', function(){
         });
       }
       deleteDiv.remove();
-
-      if (fileField.files.length < 6){
+  
+      if (fileField.files.length == 0){
         inputLabel.style.display = 'block';
       }
     })
@@ -138,21 +147,20 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-// 既存の画像を削除したいとき
-// imagesの枚数を取得して
-const ghEditImagesArray = [];
 
-for(i=0;i<2;i++){
-  let ghImagesDelete = document.querySelector(`.gh_images_delete_${i}`);
-  let ghEditImages= document.querySelector(`.gh_edit_images_${i}`);
-  ghEditImagesArray.push(ghEditImages)
-}
-  
-for(i=0; i<ghEditImagesArray.length; i++){
-  let ghImagesDelete = document.querySelector(`.gh_images_delete_${i}`);
-  let ghEditImages_= document.querySelector(`.gh_edit_images_${i}`);
+// 既存の画像を削除したいとき(削除したい画像を非表示にするだけ。削除自体はviewとcontrollerに任せる)
 
-  ghImagesDelete.addEventListener('click', () => {
-    ghEditImages_.remove();
-  })
-}
+// const ghEditImagesArray = [];
+
+// // imagesの枚数を取得して
+// const ghEditImages = document.getElementsByClassName('image_list')
+
+// // 削除ボタンが押されたら削除される
+// for(i=0;i<ghEditImages.length;i++){
+//   let ghImagesDelete = document.querySelector(`.delete_btn_${i}`);
+//   let ghEditImage = document.querySelector(`.gh_edit_images_${i}`);
+
+//   ghImagesDelete.addEventListener('click', () => {
+//     ghEditImage.hidden = true;
+//   })
+// }

@@ -69,7 +69,7 @@ li{
           width: 70px;
           height: 30px;
           text-align: center;
-          background-color: gray;
+          background-color: blue;
           border-radius: 5px;
           color: white;
 
@@ -189,11 +189,18 @@ li{
             height: 80px;
           }
 
-          p{
-            color: blue;
-            border-bottom: 1px solid;
+          p.image_title{
+            color: black;
+            margin: 0 auto;
+            padding: 10px;
+          }
+
+          p.delete_btn{
+            color: black;
             width: 50px;
             margin: 0 auto;
+            background-color: #dcdcdc;
+            padding: 10px;
           }
         }
       }
@@ -202,9 +209,10 @@ li{
         display: none;
       }
       
-      label{
+      label.gh_image_label{
         display: block;
-        background-color: #dcdada;
+        background-color: gray;
+        color: white;
         padding: 10px;
         text-align: center;
         
@@ -212,6 +220,13 @@ li{
           font-size: 15px;
         }
       }        
+    }
+
+    p.delete_btn{
+      background-color: #dcdcdc;
+      padding: 10px;
+      width: 20%;
+      margin: auto;
     }
     
     .gh-edit-form-submit{

@@ -31,6 +31,8 @@ const cityArray = [osakaCity, hyogoCity, kyotoCity, shigaCity, naraCity, wakayam
 // 指定された都道府県の市町村郡のセレクトボックスを表示させ、それ以外は非表示にする
 const hiddenCity = (existCity, existSelectCity) => {
   
+  existCity.hidden = false
+  
   let newCityArray = cityArray.filter(elements => {
     return elements !== existCity
   })

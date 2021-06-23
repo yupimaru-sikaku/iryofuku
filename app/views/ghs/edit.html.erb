@@ -700,20 +700,26 @@
       <span>（任意）</span>
     </div>
     <div class="module-spacer--small"></div>
-    <% if @gh.images.attached? %>
-    <% @gh.images.each_with_index do |image, index| %>
-    <div class="gh_edit_images_<%=index%>">
-      <%= link_to image.filename, rails_blob_url(image, disposition: "attachment"), class:"gh_image_#{index}"%>
-      <iframe src=<%=rails_blob_url(image)%>></iframe>
-      <a class="gh_images_delete_<%=index%> images_delete_btn">削除
-      </a>
-    </div>
-    <% end %>
-    <% end %>
     <div class=" gh-edit-form-2-image">
       <div class="image-lists">
+        <% if @gh.images.attached? %>
+        <% @gh.images.each_with_index do |image, i| %>
+        <div class="gh_edit_images_<%=i%> image_list">
+          <p>現在のファイル</p>
+          <%= link_to image.filename, rails_blob_url(image, disposition: "attachment"), class:"gh_image_#{i}"%>
+          <iframe src=<%=rails_blob_url(image)%>></iframe>
+          <div class="module-spacer--small"></div>
+          <p>変更後のファイル</p>
+          <p>変更する場合はファイルを選択してください</p>
+          <div class="module-spacer--small"></div>
+        </div>
+        <% end %>
+        <% end %>
       </div>
-      <%= f.label :images, name: 'gh[images][]', class: "gh_image_label", for: "gh_image" do %> <%= f.file_field :images, name: 'gh[images][]', id: "gh_image", accept: ".pdf" %> <i class="fas fa-camera">クリック！！</i>
+      <div class="module-spacer--medium"></div>
+      <%= f.label :images, name: 'gh[images][]', class: "gh_image_label", for: "gh_image" do %>
+      <%= f.file_field :images, name: 'gh[images][]', id: "gh_image", accept: ".pdf" %>
+      <i class=" fas fa-camera">クリック！！</i>
       <% end%>
     </div>
   </div>

@@ -26,6 +26,14 @@ class GhsController < ApplicationController
   
   def update
     @gh = Gh.find(params[:id])
+
+    if params[:gh][:image_ids]
+      params[:gh][:image_ids].each do |image_id|
+        image = @gh.images.find(image_id)
+        image.purge
+      end
+    end
+
     if @gh.valid?
       @gh.update(gh_params)
       redirect_to index_all_companies_path, flash: {success: "編集が完了しました"}

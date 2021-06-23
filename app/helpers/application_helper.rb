@@ -9,8 +9,9 @@ module ApplicationHelper
   end
 
   def is_checked_edit?(model, column, content)
-    return true if model[column].include?(content)
+    if model[column] != nil
+      return true if model[column].include?(content)
+    end
   end
-
-
+  
 end
