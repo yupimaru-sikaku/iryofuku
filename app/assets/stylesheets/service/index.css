@@ -223,6 +223,10 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .service-container .select-service .service-iryo a .service-iryo-text span {
     display: block;
@@ -263,7 +267,17 @@
     text-decoration: none;
   }
   .service-container .select-service .service-fukushi a .service-fukushi-text {
-    padding-top: 30px;
+    padding-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .service-container .select-service .service-fukushi a .service-fukushi-text span {
     display: block;
@@ -277,6 +291,10 @@
   .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(2) {
     font-size: 20px;
     color: #00ff2a;
+  }
+  .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(3) {
+    font-size: 10px;
+    color: #949393;
   }
   .service-container .about-us {
     position: relative;

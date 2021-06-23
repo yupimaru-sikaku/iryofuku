@@ -54,3 +54,62 @@
   }
 }
 
+
+@media screen and (max-width: 750px) {
+  .contact{
+    
+    padding: 0 25px;
+  
+    p{
+      text-align: center;
+      font-size: 10px;
+      
+      &:nth-child(1){
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        border-bottom: 1px solid rgb(73, 69, 69);
+        width: 150px;
+      }
+    }
+  
+    .contact-forms{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .contact-form{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+  
+        &:hover{
+          background-color: rgb(204, 243, 245);
+        }
+  
+        a{
+          display: block;
+          text-decoration: none;
+          color: rgb(94, 94, 94);
+  
+          span{
+            display: block;
+          }
+          
+          img{
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

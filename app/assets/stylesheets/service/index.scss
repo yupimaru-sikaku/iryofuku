@@ -208,7 +208,8 @@ $svg_sm_size: 150px;
           .service-iryo-text{
             display: flex;
             flex-direction: column;
-            
+            padding-top: 0px;
+            justify-content: center;
             span{
               display: block;
               color: rgb(148, 147, 147);
@@ -251,7 +252,10 @@ $svg_sm_size: 150px;
           text-decoration: none;
           
           .service-fukushi-text{
-            padding-top: 30px;
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             
             span{
               display: block;
@@ -266,6 +270,10 @@ $svg_sm_size: 150px;
               &:nth-child(2){
                 font-size: $main-sm-font-size;
                 color: rgb(0, 255, 42);
+              }
+              &:nth-child(3){
+                font-size:10px;
+                color: rgb(148, 147, 147);
               }
             }
           }
@@ -297,7 +305,6 @@ $svg_sm_size: 150px;
         p{
           padding: 20px;
           font-size: 14px;
-          // letter-spacing: 1px;
           
         }
       }
