@@ -45,7 +45,7 @@
 }
 
 .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 span > button#address_btn {
-  width: 80px;
+  width: 60px;
   height: 30px;
   text-align: center;
   background-color: #3414e6;
@@ -175,5 +175,178 @@
 .registration-new-content a:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .field_with_errors {
+    display: contents;
+  }
+  .registration-new-content .registration-new-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .registration-new-content .registration-new-title span {
+    font-size: 14px;
+    display: block;
+    color: #b6b8bf;
+  }
+  .registration-new-content .registration-new-fields {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field {
+    border-radius: 10px;
+    text-align: center;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .alert_danger {
+    background-color: #fff1f1;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-1 label {
+    font-size: 14px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-1 span {
+    color: red;
+    font-size: 12px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field input {
+    font-size: 14px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 span > button#address_btn {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    background-color: #3414e6;
+    border-radius: 5px;
+    color: white;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field input, .registration-new-content .registration-new-fields .registration-new-field select {
+    display: block;
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #979797;
+    outline: none;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 span {
+    color: green;
+    font-size: 12px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 label {
+    font-size: 14px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-hidden-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-hidden-field span {
+    color: green;
+    font-size: 12px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field .registration-new-hidden-field input {
+    display: block;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .alert_danger {
+    background-color: #fff1f1;
+    text-align: center;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-1 span {
+    color: red;
+    font-size: 12px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-1 label {
+    font-size: 14px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 {
+    margin-top: 10px;
+    word-break: break-all;
+    height: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 {
+    padding: 10px;
+    padding-left: 20px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 label {
+    font-size: 12px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 .service_type_textfield {
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #979797;
+    outline: none;
+    margin-left: 20px;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-button input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #666ad6;
+    padding: 10px 50px;
+    border-radius: 5px;
+    color: white;
+  }
+  .registration-new-content .registration-new-fields .registration-new-field-button input:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .registration-new-content .registration-new-fields .address_field {
+    margin-left: 50px;
+  }
+  .registration-new-content a {
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+  .registration-new-content a:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=new.css.map */
