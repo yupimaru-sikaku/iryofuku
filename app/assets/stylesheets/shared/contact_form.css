@@ -66,12 +66,8 @@
 }
 
 @media screen and (max-width: 750px) {
-  .contact {
-    padding: 0 25px;
-  }
   .contact p {
     text-align: center;
-    font-size: 10px;
   }
   .contact p:nth-child(1) {
     font-size: 14px;
@@ -79,6 +75,11 @@
     margin: 0 auto;
     border-bottom: 1px solid #494545;
     width: 150px;
+  }
+  .contact p.contact_title {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
   }
   .contact .contact-forms {
     display: -webkit-box;
@@ -93,10 +94,11 @@
             justify-content: center;
   }
   .contact .contact-forms .contact-form {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 1px solid #eee;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
