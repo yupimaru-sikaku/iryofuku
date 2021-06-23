@@ -7,6 +7,7 @@
 
   <%#サービスの選択（クラセル or サガセル）%>
   <main class="select-service">
+
     <div class="service-iryo">
       <%= link_to contact_iryos_path do %>
       <div class="service-iryo-img">
@@ -20,12 +21,14 @@
       <% end %>
     </div>
 
-    <div class="service-sagaseru">
+    <div class="module-spacer--large"></div>
+
+    <div class="service-fukushi">
       <%= link_to contact_fukushis_path do %>
-      <div class="service-sagaseru-img">
-        <%= image_tag "fukushi.svg", :width => "400", :height => "400"  %>
+      <div class="service-fukushi-img">
+        <%= image_tag "fukushi.svg", :width => "400", :height => "400" %>
       </div>
-      <div class="service-sagaseru-text">
+      <div class="service-fukushi-text">
         <span>障害福祉事業所の</span>
         <span>経営者</span>
         <span>の方はこちら</span>

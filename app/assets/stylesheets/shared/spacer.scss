@@ -1,0 +1,23 @@
+.module-spacer--small {
+  height: 25px
+}
+.module-spacer--medium {
+  height: 50px
+}
+.module-spacer--large {
+  height: 100px
+}
+
+@media screen and (max-width: 750px) {
+
+  .module-spacer--small {
+    height: 12.5px
+  }
+  .module-spacer--medium {
+    height: 25px
+  }
+  .module-spacer--large {
+    height: 50px
+  }
+  
+}
