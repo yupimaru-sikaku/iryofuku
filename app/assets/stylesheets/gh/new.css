@@ -195,6 +195,11 @@ li {
   height: 80px;
 }
 
+.gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list iframe {
+  width: 160px;
+  height: 160px;
+}
+
 .gh-new-content .gh-new-fields .gh-new-form-2-image .image-lists .image-list p.image_title {
   color: black;
   margin: 0 auto;
@@ -420,16 +425,14 @@ li {
     width: 100%;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: block;
+    text-align: start;
+  }
+  .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 label {
+    display: inline;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 span {
+    display: inline;
     color: green;
     font-size: 14px;
   }

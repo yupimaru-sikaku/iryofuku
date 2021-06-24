@@ -179,6 +179,10 @@ li{
             width: 80px;
             height: 80px;
           }
+          iframe{
+            width: 160px;
+            height: 160px;
+          }
 
           p.image_title{
             color: black;
@@ -396,11 +400,14 @@ li{
       
       
       .gh-new-field-3{
-        display: flex;
-        justify-content: left;
-        flex-wrap: wrap;
+        display: block;
+        text-align: start;
 
+        label{
+          display: inline;
+        }
         span{
+          display: inline;
           color: green;
           font-size: $span-sm-font-size;
         }
