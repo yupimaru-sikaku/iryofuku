@@ -190,7 +190,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .iryo-index-content .iryo_search_forms .iryo_search_form label {
     width: 130px;
@@ -277,9 +277,9 @@
     opacity: 0.5;
   }
   .iryo-index-content .iryo-indexes {
-    width: 95%;
+    width: 960px;
     padding: 20px;
-    margin: 0 auto;
+    margin: 0px 20px;
     background-color: #ffffff;
     border: 1px solid #eee;
     -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;

@@ -87,7 +87,7 @@
       <span>（必須）</span>
     </div>
     <div class="gh-new-field-2">
-      <%= f.text_field :address, id: 'address_city' %>
+      <%= f.text_field :address, id: 'address_city', class: 'long_input' %>
       <span></span>
     </div>
   </div>
@@ -119,12 +119,12 @@
   <div class="module-spacer--small"></div>
   <% end %>
 
-  <div class="gh-new-field middle_input">
+  <div class="gh-new-field">
     <div class="gh-new-field-3">
       <%= f.label :fax_number, '事業所のFAX番号（半角）' %>
       <span>（任意）</span>
     </div>
-    <div class="gh-new-field-4">
+    <div class="gh-new-field-4 middle_input">
       <%= f.text_field :fax_number, placeholder: '例）08072831647', maxlength: '11' %>
       <span></span>
     </div>
@@ -365,7 +365,7 @@
 
   <div class="gh-new-field">
     <div class="gh-new-field-1">
-      <%= f.label :human_name, 'ご担当者名  ※ご担当者に変更がある場合は変更してください。'%>
+      <%= f.label :human_name, 'ご担当者名'%>
       <span>（必須）</span>
     </div>
     <div class="gh-new-field-2">
@@ -590,7 +590,7 @@
       <% ["一軒家", "マンション・アパート(1K)", "マンション・アパート（2K以上）"].each do |residential_style| %>
       <div class="gh-new-field-radio-1">
         <%= f.radio_button :residential_style, residential_style, id: "residential_style#{residential_style}", class: "residential_style" %>
-        <%= f.label :residential_style, residential_style, for: "residential_style#{residential_style}" %>
+        <%= f.label :residential_style, residential_style, for: "residential_style#{residential_style}", class: 'residential_style_label' %>
       </div>
       <% end %>
       <div class="gh-new-field-radio-1">
