@@ -114,21 +114,32 @@
     width: 30px;
     height: 2px;
     left: 6px;
-    background: #555;
+    background: white;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
   }
   .hamburger span:nth-child(1) {
-    top: 10px;
+    top: -5px;
+    left: -4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(70, 84, 81, 0.5);
   }
   .hamburger span:nth-child(2) {
-    top: 20px;
+    top: 10px;
   }
   .hamburger span:nth-child(3) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(4) {
     top: 30px;
   }
   /* ナビ開いてる時のボタン */
   .hamburger.active span:nth-child(1) {
+    display: none;
+  }
+  .hamburger.active span:nth-child(2) {
     top: 16px;
     left: 6px;
     width: 24px;
@@ -136,7 +147,7 @@
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  .hamburger.active span:nth-child(2) {
+  .hamburger.active span:nth-child(3) {
     left: 60%;
     opacity: 0;
     -webkit-animation: active-btn17-bar02 .8s forwards;
@@ -152,7 +163,7 @@
       height: 0;
     }
   }
-  .hamburger.active span:nth-child(3) {
+  .hamburger.active span:nth-child(4) {
     top: 16px;
     width: 24px;
     background: #fff;
