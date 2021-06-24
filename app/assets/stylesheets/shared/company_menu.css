@@ -90,11 +90,11 @@
 }
 
 @media screen and (max-width: 750px) {
-  .sm_hamburger {
-    display: block;
-  }
   .menu_content {
     display: none;
+  }
+  .sm_hamburger {
+    display: block;
   }
   /*　ハンバーガーボタン */
   .hamburger {
@@ -177,6 +177,7 @@
     border: 2px solid #fff;
   }
   nav.globalMenuSp {
+    display: none;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -216,6 +217,7 @@
   }
   /* このクラスを、jQueryで付与・削除する */
   nav.globalMenuSp.active {
+    display: block;
     opacity: 100;
   }
 }
