@@ -53,3 +53,63 @@
 
   }
 }
+
+@media screen and (max-width: 750px){
+
+  .company_index_all_content{
+    margin-left: 0px;
+    background-color: #eee;
+    height: 100vh;
+    overflow: auto;
+  
+    .company_index_all_fields{
+      
+      .company_index_all_title{
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      .company_index_all_field{
+        width: 95%;
+        padding: 5px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #eee;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        font-size: 14px;
+        border-radius: 10px;
+  
+  
+        .company_index_all_table{
+          table{
+            margin: 0 auto;
+            border-collapse: collapse;
+            border-bottom: 1px solid #b7b7b7;
+            
+            th{
+              border-bottom: 1px solid#b7b7b7;/**/
+              padding: 5px;
+              width: 100px;
+            }
+            
+            td {
+              padding: 5px;
+              text-align: center;
+              font-size: 12px;
+              /*破線 1px オレンジ*/
+            }
+            a{
+              text-decoration: none;
+              margin: 0 auto;
+              color: blue;
+              :hover{
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+  
+    }
+  }  
+}

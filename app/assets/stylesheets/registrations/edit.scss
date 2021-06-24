@@ -4,6 +4,8 @@ $input-border-radius: 5px;
 $input-padding-left: 10px;
 $span-font-size: 16px;
 
+$span-sm-font-size: 14px;
+
 // 登録エラー時のスタイル崩れを防ぐ
 .field_with_errors {
   display: contents;
@@ -154,9 +156,6 @@ $span-font-size: 16px;
         }
       }
     }
-    .address_field{
-      margin-left: 50px;
-    }
   }
   a{
     color: black;
@@ -170,8 +169,7 @@ $span-font-size: 16px;
   }
 }
 
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px){
 
   // 登録エラー時のスタイル崩れを防ぐ
 .field_with_errors {
@@ -183,7 +181,7 @@ $span-font-size: 16px;
   background-color: #eee;
   height: 100vh;
   overflow: auto;
-  margin-left: 260px;
+  margin-left: 0px;
   
   .registration-edit-title{
     font-size: 24px;
@@ -199,7 +197,7 @@ $span-font-size: 16px;
   .registration-edit-fields{
     width: 90%;
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 20px 10px;
     margin: 0 auto;
     background-color: #ffffff;
     border: 1px solid #eee;
@@ -217,17 +215,16 @@ $span-font-size: 16px;
       
       .registration-edit-field-1{
         display: flex;
-        align-items: center;
-        justify-content: left;
+        flex-wrap: wrap;
         
         span{
           color: red;
-          font-size: $span-font-size;
+          font-size: $span-sm-font-size;
         }
       }
       .registration-edit-field-2{
         span > button#address_btn{
-          width: 50px;
+          width: 80px;
           height: 30px;
           text-align: center;
           background-color: rgb(52, 20, 230);
@@ -248,13 +245,9 @@ $span-font-size: 16px;
       }
       
       .registration-edit-field-2{
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        
         span{
           color: green;
-          font-size: $span-font-size;
+          font-size: $span-sm-font-size;
         }
         
       }
@@ -271,7 +264,7 @@ $span-font-size: 16px;
         
         span{
           color: red;
-          font-size: $span-font-size;
+          font-size: $span-sm-font-size;
         }
         
       }
@@ -285,8 +278,8 @@ $span-font-size: 16px;
         width: 100%;
 
         .registration-edit-field-check-3{
-          padding: 10px;
-          padding-left: 20px;
+          padding: 5px;
+          padding-left: 10px;
 
           .service_type_textfield{
             margin-top: $input-margin-top;
@@ -295,7 +288,7 @@ $span-font-size: 16px;
             border: none;
             border-bottom: $input-border;
             outline: none;
-            margin-left: 20px;
+            margin-left: 10px;
             display: none;
           }
       
@@ -313,7 +306,7 @@ $span-font-size: 16px;
         margin: 0 auto;
         text-align: center;
         background-color: #666ad6;
-        padding: 15px 50px;
+        padding: 10px 50px;
         border-radius: 5px;
         color: white;
   
@@ -322,9 +315,6 @@ $span-font-size: 16px;
           cursor: pointer;
         }
       }
-    }
-    .address_field{
-      margin-left: 50px;
     }
   }
   a{
@@ -337,6 +327,5 @@ $span-font-size: 16px;
       cursor: pointer;
     }
   }
-}
-
+} 
 }

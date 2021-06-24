@@ -4,6 +4,8 @@ $input-border-radius: 5px;
 $input-padding-left: 10px;
 $span-font-size: 16px;
 
+$span-font-sm-size: 14px;
+
 // 登録エラー時のスタイル崩れを防ぐ
 .field_with_errors {
   display: contents;
@@ -314,4 +316,322 @@ li{
 
 .middle_input{
   width: 100px;
+}
+
+@media screen and (max-width: 750px) {
+
+    // 登録エラー時のスタイル崩れを防ぐ
+  .field_with_errors {
+    display: contents;
+  }
+
+  li{
+    list-style: none;
+  }
+
+  // 新規登録画面
+  .gh-edit-content{
+    background-color: #eee;
+    margin-left: 2px;
+    height: 100vh;
+    overflow: auto;
+    
+    .gh-edit-title{
+      font-size: 24px;
+      text-align: center;
+      
+      span{
+        font-size: 14px;
+        display: block;
+        color: #b6b8bf;
+      }
+    }
+
+    .gh-edit-fields{
+      width: 90%;
+      margin: 0 auto;
+      padding: 10px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 1px solid #eee;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      font-size: 14px;
+      border-radius: 10px;
+      
+      .gh-edit-field{
+        text-align: center;
+        
+        .gh-edit-field-1{
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          width: 100%;
+          flex-wrap: wrap;
+          
+          span{
+            color: red;
+            font-size: $span-font-sm-size;
+          }
+        }
+
+        .gh-edit-field-2{
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          width: 100%;
+          
+          span{
+            font-size: $span-font-sm-size;
+          }
+
+          span > button#address_btn{
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+
+            :hover{
+              opacity: 0.5;
+            }
+          }
+
+          ul{
+            li{
+              label{
+                display: flex;
+              }
+            }
+          }
+
+          input, select{
+            display: block;
+            margin-top: $input-margin-top;
+            padding-left: $input-padding-left;
+            width: 200px;
+            border: none;
+            border-bottom: $input-border;
+            outline: none;
+            margin-left: 10px;
+          }
+
+          .long_input{
+            width: 100%;
+          }
+        }
+        
+        
+        .gh-edit-field-3{
+          display: block;
+          text-align: start;
+
+          label{
+            display: inline;
+          }
+          span{
+            display: inline;
+            color: green;
+            font-size: $span-font-sm-size;
+          }
+
+        }
+
+        .gh-edit-field-4{
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          
+          span{
+            font-size: $span-font-sm-size;
+          }
+          
+          ul{
+            li{
+              label{
+                display: flex;
+              }
+            }
+          }
+          input, select{
+            display: block;
+            margin-top: $input-margin-top;
+            padding-left: $input-padding-left;
+            width: 200px;
+            border: none;
+            border-bottom: $input-border;
+            outline: none;
+            margin-left: 10px;
+          }
+          #gh_construction_year{
+            width: 160px;
+          }
+        }
+
+        .hidden{
+          input, select{
+            display: block;
+            margin-top: $input-margin-top;
+            padding-left: $input-padding-left;
+            width: 90%;
+            border: none;
+            border-bottom: $input-border;
+            outline: none;
+            margin-left: 10px;
+          }
+        }
+
+        .short_input{
+          input{
+            width: 100px;
+          }
+        }
+      }
+
+      // パンフレットの写真
+      .gh-edit-form-2-image{
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 10px;
+
+        .image-lists{
+
+          display: flex;
+          flex-wrap: wrap;
+
+          .image-list{
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 10px;
+
+            img{
+              width: 80px;
+              height: 80px;
+            }
+
+            p.image_title{
+              color: black;
+              margin: 0 auto;
+              padding: 10px;
+            }
+
+            p.delete_btn{
+              color: black;
+              width: 50px;
+              margin: 0 auto;
+              background-color: #dcdcdc;
+              padding: 10px;
+            }
+          }
+        }
+
+        input{
+          display: none;
+        }
+        
+        label{
+          display: block;
+          background-color: #dcdada;
+          padding: 10px;
+          text-align: center;
+          
+          .fa-camera{
+            font-size: 15px;
+          }
+        }        
+      }
+      
+      .gh-edit-form-submit{
+        input{
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          background-color: #666ad6;
+          padding: 10px 50px;
+          border-radius: 5px;
+          color: white;
+          
+          &:hover{
+            opacity: 0.5;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    a{
+      color: black;
+      display: block;
+      text-align: center; 
+      
+      &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    
+    // ラジオボタン、チェックボタン
+    .gh-edit-field-radio-1, .gh-edit-field-check-1{
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      flex-wrap: wrap;
+      
+      label{
+        padding-left: 10px;
+        display: block;
+        width: 55px;
+      }
+
+      label.residential_style_label{
+        width: 250px;
+        text-align: start;
+      }
+      
+      .residential_style_textfield, .staff_weekdaytime_textfield, .barrier_free_textfield{
+        margin-top: $input-margin-top;
+        padding-left: $input-padding-left;
+        width: 100%;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+        margin-left: 10px;
+      }
+      
+      .valid_disability_textfield{
+        margin-top: $input-margin-top;
+        padding-left: $input-padding-left;
+        width: 100%;
+        border: none;
+        border-bottom: $input-border;
+        outline: none;
+        margin-left: 10px;
+        display: none;
+      }
+
+      #valid_disabilityその他:checked ~ .valid_disability_textfield{
+          display: block;
+      }
+      #valid_disabilityその他:checked ~ label{
+        width: 70px;
+      }
+      
+    }
+  }
+  iframe{
+    width: 160px;
+    height: 160px;
+  }
+
+  @for $i from 1 through 5 {
+    .price_#{$i}{
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+  }
+
+  .residential_style_label{
+    width: 300px;
+    display: block;
+  }
+
 }
