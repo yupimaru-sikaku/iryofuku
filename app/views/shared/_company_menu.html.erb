@@ -48,16 +48,6 @@
         <span>事業所情報一覧</span>
         <% end %>
       </li>
-      <%
-=begin%>
-      <li class="<%= 'selected_menu' if current_page?(company_password_path) %>">
-        <%= link_to company_password_path, class: "registration-img", method: :put do %>
-        <i class="fas fa-key"></i>
-        <span>パスワードの変更</span>
-        <% end %>
-      </li>
-      <%
-=end%>
       <li class="<%= 'selected_menu' if current_page?(destroy_company_session_path) %>">
         <%= link_to destroy_company_session_path, class: "registration-img", method: :delete do %>
         <i class="fas fa-sign-out-alt"></i>
@@ -68,4 +58,24 @@
   </div>
   <%#//ハンバーガーメニュークリック後に表示されるコンテンツ%>
 
+</div>
+
+<%#//スマホ用%>
+<div class="sm_hamburger">
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="globalMenuSp">
+    <ul>
+      <li><a href="#">Menu1</a></li>
+      <li><a href="#">Menu2</a></li>
+      <li><a href="#">Menu3</a></li>
+      <li><a href="#">Menu4</a></li>
+      <li><a href="#">Menu5</a></li>
+    </ul>
+  </nav>
+  <%#//スマホ用%>
 </div>

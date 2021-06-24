@@ -11,6 +11,7 @@
   <div class="module-spacer--medium"></div>
 
   <%#検索項目%>
+
   <div class="iryo_search_forms">
     <%= form_with(scope: :search, url: iryos_path, method: :get, local: true) do |f| %>
 
@@ -50,12 +51,23 @@
     <div class="iryo-search-btn">
       <%= f.submit '検索' %>
     </div>
+
+    <div class="sm_btn">
+      <div class="iryo-search-sm-btn">
+        <%= f.submit '検索' %>
+      </div>
+      <div class="iryo-index-sm-reset">
+        <%= link_to 'リセット', iryos_path %>
+      </div>
+    </div>
+
     <% end %>
 
     <%#検索初期化%>
     <div class="iryo-index-reset">
       <%= link_to 'リセット', iryos_path %>
     </div>
+
     <%#//検索初期化%>
 
   </div>

@@ -9,7 +9,7 @@
     <p>管理者情報</p>
   </div>
 
-  <div class="module-spacer--medium"></div>
+  <div class="module-spacer--large"></div>
 
   <div class="company_show_fields">
 
@@ -28,21 +28,21 @@
     <div class="module-spacer--small"></div>
 
     <div class="company_show_field">
-      <p>法人の住所（市区町村）</p>
+      <p>法人の住所<br />（市区町村）</p>
       <p><%= current_company.address_city %></p>
     </div>
 
     <div class="module-spacer--small"></div>
 
     <div class="company_show_field">
-      <p>法人の住所（番地）</p>
+      <p>法人の住所<br />（番地）</p>
       <p><%= current_company.address_street %></p>
     </div>
 
     <div class="module-spacer--small"></div>
 
     <div class="company_show_field">
-      <p>法人の住所（建物名、部屋番号）</p>
+      <p>法人の住所<br />（建物名、部屋番号）</p>
       <p><%= current_company.address_building %></p>
     </div>
 
@@ -65,4 +65,9 @@
     </div>
 
   </div>
+
+  <div class="company_show_edit_button_sm">
+    <%= link_to "編集", edit_company_registration_path %>
+  </div>
+
 </section>

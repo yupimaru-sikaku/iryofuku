@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.sm_btn {
+  display: none;
+}
+
 .iryo-index-content {
   overflow: auto;
   height: 100vh;
@@ -145,5 +149,170 @@
   text-decoration: none;
   font-size: 12px;
   text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .iryo-search-btn, .iryo-index-reset {
+    display: none;
+  }
+  .iryo-index-content {
+    overflow: auto;
+    height: 100vh;
+    margin-left: 0px;
+    background-color: #eee;
+  }
+  .iryo-index-content .iryo-index-title {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .iryo-index-content .iryo_search_forms {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 0px 80px 0px;
+    position: relative;
+  }
+  .iryo-index-content .iryo_search_forms .iryo_search_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .iryo-index-content .iryo_search_forms .iryo_search_form label {
+    width: 130px;
+    display: block;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .iryo-index-content .iryo_search_forms .iryo_search_form input {
+    display: block;
+    padding: 0 10px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #979797;
+    outline: none;
+    font-size: 14px;
+  }
+  .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_from, .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_to {
+    width: 50px;
+  }
+  .iryo-index-content .iryo_search_forms .iryo_search_form select {
+    display: block;
+    position: relative;
+    padding: 0 20px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #979797;
+    outline: none;
+    font-size: 14px;
+  }
+  .iryo-index-content .iryo_search_forms .hidden_field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .iryo-index-content .iryo_search_forms .hidden_field label {
+    width: 130px;
+    display: block;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .iryo-index-content .iryo_search_forms .hidden_field select {
+    display: block;
+    position: relative;
+    padding: 0 20px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #979797;
+    outline: none;
+    font-size: 14px;
+  }
+  .iryo-index-content .iryo_search_forms .sm_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .iryo-index-content .iryo_search_forms .sm_btn .iryo-search-sm-btn input {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+  }
+  .iryo-index-content .iryo_search_forms .sm_btn .iryo-search-sm-btn input:hover {
+    opacity: 0.5;
+  }
+  .iryo-index-content .iryo_search_forms .sm_btn .iryo-index-sm-reset a {
+    position: absolute;
+    bottom: 20px;
+    left: 180px;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .iryo-index-content .iryo_search_forms .sm_btn .iryo-index-sm-reset a:hover {
+    opacity: 0.5;
+  }
+  .iryo-index-content .iryo-indexes {
+    width: 95%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  .iryo-index-content .iryo-indexes table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+  }
+  .iryo-index-content .iryo-indexes table th {
+    border-bottom: 1px solid black;
+    /**/
+    padding: 10px;
+  }
+  .iryo-index-content .iryo-indexes table td {
+    padding: 20px;
+    border-bottom: 1px dashed black;
+    /**/
+    text-align: center;
+    /*破線 1px オレンジ*/
+  }
+  .iryo-index-content .iryo-indexes table a {
+    display: block;
+    -webkit-box-shadow: 3px 3px 5px #a78b90;
+            box-shadow: 3px 3px 5px #a78b90;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

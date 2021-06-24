@@ -3,6 +3,10 @@ $input-margin-top: 10px;
 $input-border-radius: 5px;
 $input-padding-left: 10px;
 
+.sm_btn{
+  display: none;
+}
+
 // 全体
 .iryo-index-content{
   overflow: auto;
@@ -152,3 +156,183 @@ $input-padding-left: 10px;
   }
 }
 
+
+@media screen and (max-width: 750px) {
+
+  .iryo-search-btn, .iryo-index-reset{
+    display: none;
+  }
+
+    // 全体
+  .iryo-index-content{
+    overflow: auto;
+    height: 100vh;
+    margin-left: 0px;
+    background-color: #eee;
+    
+    // タイトル
+    .iryo-index-title{
+      font-size: 24px;
+      text-align: center;
+      margin: 0 auto;
+      width: 90%;
+    } 
+    
+    // 検索フォーム
+    .iryo_search_forms{
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid #eee;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      padding: 10px;
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px 0px 80px 0px;
+      position: relative;
+
+      .iryo_search_form{
+        display: flex;
+        align-items: center;
+        
+        label{
+          width: 130px;
+          display: block;
+          text-align: right;
+          margin-right: 10px;
+          font-size: 14px;
+        }
+        
+        input{
+          display: block;
+          padding: 0 10px;
+          height: 35px;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          font-size: 14px;
+        }
+        
+        input#search_age_from, input#search_age_to{
+          width: 50px;
+        }
+        
+        select{
+          display: block;
+          position: relative;
+          padding: 0 20px;
+          height: 35px;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          font-size: 14px;
+        }
+      }
+      
+      .hidden_field{
+        display: flex;
+        align-items: center;
+
+        label{
+          width: 130px;
+          display: block;
+          text-align: right;
+          margin-right: 10px;
+          font-size: 14px;
+        }
+
+        select{
+          display: block;
+          position: relative;
+          padding: 0 20px;
+          height: 35px;
+          border: none;
+          border-bottom: $input-border;
+          outline: none;
+          font-size: 14px;
+        }
+      }
+
+      .sm_btn{
+        display: flex;
+
+        .iryo-search-sm-btn{
+          input{
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+  
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+        }
+        // 検索初期化
+        .iryo-index-sm-reset{
+          a{
+            position: absolute;
+            bottom: 20px;
+            left: 180px;
+            padding: 10px 20px;
+            background-color: gray;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+  
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+        }
+    
+      }
+      
+    }
+    
+    // 登録者一覧
+    .iryo-indexes{
+      width: 95%;
+      padding: 20px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 1px solid #eee;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      font-size: 14px;
+      border-radius: 10px;
+
+
+      table{
+        margin: 0 auto;
+        border-collapse: collapse;
+        border-bottom: 1px solid black;
+        
+        th{
+          border-bottom: 1px solid black;/**/
+          padding: 10px;
+        }
+        
+        td {
+          padding: 20px;
+          border-bottom: 1px dashed black;/**/
+          text-align: center;
+          /*破線 1px オレンジ*/
+        }
+        a{
+          display: block;
+          box-shadow: 3px 3px 5px #a78b90;
+          padding: 10px;
+          width: 100px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
