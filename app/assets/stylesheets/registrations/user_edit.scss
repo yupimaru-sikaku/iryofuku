@@ -36,7 +36,7 @@ $select-sm-font-size: 14px;
   .registration-edit-user-fields{
     width: 45%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
     margin: 0 auto;
     background-color: #ffffff;
     // border: 1px solid #eee;
@@ -202,7 +202,7 @@ $select-sm-font-size: 14px;
   .registration-edit-user-fields{
     width: 90%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
     margin: 0 auto;
     background-color: #ffffff;
     
@@ -218,13 +218,16 @@ $select-sm-font-size: 14px;
       
       
       .registration-edit-user-field-1{
-        display: flex;
-        align-items: center;
-        justify-content: left;
+        display: block;
+        text-align: start;
         
         span{
           color: red;
-          font-size: $span-font-size;
+          font-size: $span-sm-font-size;
+        }
+
+        label{
+          font-size: $label-sm-font-size;
         }
       }
       
@@ -233,6 +236,8 @@ $select-sm-font-size: 14px;
       }
 
       .registration-edit-user-field-2{
+        text-align: start;
+
         span > button#address_btn{
           width: 50px;
           height: 30px;
@@ -240,6 +245,10 @@ $select-sm-font-size: 14px;
           background-color: rgb(52, 20, 230);
           border-radius: 5px;
           color: white;
+        }
+
+        label, span{
+          font-size: $span-sm-font-size;
         }
       }
 
@@ -252,18 +261,11 @@ $select-sm-font-size: 14px;
         border: none;
         border-bottom: $input-border;
         outline: none;
+        font-size: $label-sm-font-size;
       }
-      
-      .registration-edit-user-field-2{
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        
-        span{
-          color: green;
-          font-size: $span-sm-font-size;
-        }
-        
+
+      label{
+        font-size: $label-sm-font-size;
       }
     }
 
@@ -280,6 +282,10 @@ $select-sm-font-size: 14px;
           color: red;
           font-size: $span-sm-font-size;
         }
+
+        label{
+          font-size: $label-sm-font-size;
+        }
         
       }
       .registration-edit-user-field-check-2{
@@ -293,7 +299,14 @@ $select-sm-font-size: 14px;
 
         .registration-edit-user-field-check-3{
           padding: 10px;
-          padding-left: 20px;
+          padding-left: 10px;
+
+          label{
+            font-size: 12px;
+          }
+          input{
+            width: 12px;
+          }
 
           .service_type_textfield{
             margin-top: $input-margin-top;

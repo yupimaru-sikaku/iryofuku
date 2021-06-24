@@ -1,0 +1,22 @@
+.alert_danger {
+  text-align: center;
+  color: red;
+  background-color: #fff1f1;
+}
+
+.alert_danger li {
+  padding: 5px;
+}
+
+@media screen and (max-width: 750px) {
+  .alert_danger {
+    text-align: center;
+    color: red;
+    background-color: #fff1f1;
+    font-size: 12px;
+  }
+  .alert_danger li {
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=error.css.map */

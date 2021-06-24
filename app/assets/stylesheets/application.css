@@ -20,26 +20,6 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.alert {
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #f8ffd3;
-  width: 50%;
-  margin: 0px auto;
-  margin-bottom: -30px;
-}
-
-.alert_danger {
-  text-align: center;
-  color: red;
-  background-color: #fff1f1;
-}
-
-.alert_danger li {
-  padding: 5px;
-}
-
 /*!
  * ress.css • v1.2.2
  * MIT License
