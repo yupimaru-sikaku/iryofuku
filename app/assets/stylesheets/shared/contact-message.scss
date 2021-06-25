@@ -85,3 +85,83 @@ $input-padding-left: 10px;
     }
   }
 }
+
+@media screen and (max-width: 599px){
+
+  .contact-message-content{
+
+    padding: 0 10px;
+    margin: 0 auto;
+  
+    .contact-message-title{
+      font-size: 24px;
+      text-align: center;
+      margin: 0 auto;
+      width: 90%;
+    }
+    
+    .contact-message-fields{
+
+      .contact-message-field{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+  
+        span{
+          color: red;
+          font-size: 12px;
+        }
+
+        label{
+          font-size: 14px;
+        }
+  
+        textarea{
+          margin-top: $input-margin-top;
+          border: $input-border;
+          border-radius: $input-border-radius;
+          padding: 10px;
+          outline: none;
+          resize: none;
+        }
+        
+        .contact-message-field-checkbox{
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          
+  
+          input{
+            margin-top: 0px;
+            width: 15px;
+            height: 15px;
+          }
+          
+          label{
+            color: black;
+            font-size: 14px;
+            padding-left: 5px;
+          }
+        }
+      }
+  
+      .contact-message-button{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #666ad6;
+        padding: 10px 50px;
+        border-radius: 5px;
+        color: white;
+        width: 230px;
+  
+        &:hover{
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}

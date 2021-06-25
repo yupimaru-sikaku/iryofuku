@@ -25,4 +25,32 @@
   top: 250px;
   left: 150px;
 }
+
+@media (max-width: 599px) {
+  .contact-done-content {
+    text-align: center;
+    min-height: 85vh;
+  }
+  .contact-done-content h2 {
+    font-size: 20px;
+  }
+  .contact-done-content a {
+    background-color: #666ad6;
+    padding: 10px 50px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+  }
+  .contact-done-content a:hover {
+    opacity: 0.5;
+  }
+  .contact-done-content img {
+    position: absolute;
+    z-index: -1;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+  }
+}
 /*# sourceMappingURL=contact_done.css.map */

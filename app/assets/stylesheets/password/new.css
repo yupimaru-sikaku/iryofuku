@@ -157,7 +157,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
   .field_with_errors {
     display: contents;
   }

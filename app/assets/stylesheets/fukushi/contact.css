@@ -30,7 +30,7 @@
   width: 500px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
   .fukushi-container {
     padding: 0px 10px;
   }

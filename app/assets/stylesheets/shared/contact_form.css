@@ -65,7 +65,7 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
   .contact p {
     text-align: center;
   }

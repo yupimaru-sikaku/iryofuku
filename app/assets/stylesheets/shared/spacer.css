@@ -10,7 +10,7 @@
   height: 100px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
   .module-spacer--small {
     height: 12.5px;
   }

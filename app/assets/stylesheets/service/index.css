@@ -176,7 +176,7 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
   .service-container .select-service {
     display: -webkit-box;
     display: -ms-flexbox;

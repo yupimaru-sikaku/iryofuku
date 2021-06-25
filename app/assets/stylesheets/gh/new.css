@@ -325,7 +325,7 @@ li {
   margin-left: 40px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
   .field_with_errors {
     display: contents;
   }
