@@ -32,8 +32,53 @@
   }
 }
 
+@media (max-width: 1024px) {
 
-@media screen and (max-width: 599px) {
+  .fukushi-container{
+    padding: 0px 10px;
+
+    .fukushi_test{
+      width: 100%;
+      font-size: 16px;
+      a{
+        display: block;
+      }
+    }
+    
+    .fukushi-description{
+      display: flex;
+      justify-content: space-evenly;
+      
+      .fukushi-description-text{
+  
+        span{
+          font-size: 24px;
+          width: 230px;
+          padding-top: 0px;
+          margin-bottom: 5px;
+        }
+  
+        p{
+          font-size: 16px;
+        }
+  
+      }
+  
+      .fukushi-description-img{
+        display: flex;
+        align-items: center;
+        
+        img{
+          display: block;
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
 
   .fukushi-container{
     padding: 0px 10px;
@@ -53,11 +98,7 @@
       .fukushi-description-text{
   
         span{
-          display: block;
-          text-align: center;
           font-size: 14px;
-          color: rgb(0, 255, 42);
-          border-bottom: 1px solid rgb(0, 255, 42);
           width: 130px;
           padding-top: 0px;
           margin-bottom: 5px;

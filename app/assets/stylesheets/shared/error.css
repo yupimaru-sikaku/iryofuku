@@ -8,7 +8,7 @@
   padding: 5px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .alert_danger {
     text-align: center;
     color: red;

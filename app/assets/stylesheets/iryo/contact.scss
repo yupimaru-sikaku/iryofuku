@@ -127,32 +127,124 @@
     }
 }
 
-
-@media screen and (max-width: 599px) {
+@media (max-width: 1024px) {
 
   .iryo-container{
     padding: 0px 10px;
 
     .iryo_test{
       width: 100%;
-      font-size: 12px;
+      font-size: 16px;
       a{
         display: block;
       }
     }
     
     .iryo-description{
-      display: flex;
-      justify-content: space-evenly;
       
       .iryo-description-text{
   
         span{
+          font-size: 24px;
+          width: 230px;
+          padding-top: 0px;
+          margin-bottom: 5px;
+        }
+  
+        p{
+          font-size: 16px;
+        }
+  
+      }
+  
+      .iryo-description-img{
+        display: flex;
+        align-items: center;
+
+        img{
           display: block;
-          text-align: center;
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+  
+    // サービスのフロー
+    .service-flow{
+  
+      .about-us-title{
+        font-size: 24px;
+        width: 200px;
+      }
+  
+      ul {
+        padding: 0px 5%;
+      }
+      dd {
+        font-size: 14px;
+      }
+      
+      .flow > li:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      .flow > li:not(:first-child)::before {
+        height: 30px;
+        top: -20px;
+        left: -webkit-calc(5% + 15px - 1px);
+        left: calc(5% + 15px - 1px);
+      }
+      .flow > li dl {
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+      .flow > li:not(:last-child) dl::before,
+      .flow > li:not(:last-child) dl::after {
+        -webkit-transform: translateX(-25%);
+        transform: translateX(-25%);
+      }
+      .flow > li:not(:last-child) dl::before {
+        border-width: 11px;
+      }
+      .flow > li:not(:last-child) dl::after {
+        border-width: 10px;
+      }
+      .flow > li dl dt {
+        font-size: 8px;
+        font-weight: 300;
+        -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+        margin-right: 1vw;
+      }
+      .flow > li dl dt .icon {
+        font-size: 6px;
+        padding: 2.5px 5px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+      }
+  }
+}
+    
+
+@media (max-width: 750px) {
+
+  .iryo-container{
+    padding: 0px 10px;
+
+    .iryo_test{
+      width: 100%;
+      font-size: 14px;
+      a{
+        display: block;
+      }
+    }
+    
+    .iryo-description{
+      
+      .iryo-description-text{
+  
+        span{
           font-size: 14px;
-          color: blue;
-          border-bottom: 1px solid blue;
           width: 130px;
           padding-top: 25px;
           margin-bottom: 5px;
@@ -182,94 +274,52 @@
   
       .about-us-title{
         font-size: 14px;
-        text-align: center;
-        margin: 0 auto;
-        border-bottom: 1px solid rgb(73, 69, 69);
         width: 200px;
       }
   
       ul {
         padding: 0px 5%;
       }
-      li {
-        list-style-type: none;
-      }
       dd {
-        margin-left: 0;
         font-size: 12px;
       }
       
-      .flow > li {
-        position: relative;
-      }
       .flow > li:not(:last-child) {
         margin-bottom: 20px;
       }
       .flow > li:not(:first-child)::before {
-        content: "";
         height: 30px;
-        display: block;
-        border-left: 4px dotted #e5e5e5;
-        position: absolute;
         top: -20px;
         left: -webkit-calc(5% + 15px - 1px);
         left: calc(5% + 15px - 1px);
-        z-index: 10;
       }
       .flow > li dl {
-        width: 100%;
         padding: 10px 15px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border: 2px solid rgb(107,144,219);
         border-radius: 5px;
-        position: relative;
       }
       .flow > li:not(:last-child) dl::before,
       .flow > li:not(:last-child) dl::after {
-        content: "";
-        border: solid transparent;
-        position: absolute;
-        top: 100%;
-        left: 50%;
         -webkit-transform: translateX(-25%);
         transform: translateX(-25%);
       }
       .flow > li:not(:last-child) dl::before {
         border-width: 11px;
-        border-top-color: rgb(107,144,219);
       }
       .flow > li:not(:last-child) dl::after {
         border-width: 10px;
-        border-top-color: #fff;
       }
       .flow > li dl dt {
         font-size: 8px;
         font-weight: 300;
-        color: rgb(107,144,219);
         -ms-flex-preferred-size: 10%;
         flex-basis: 10%;
         margin-right: 1vw;
-        text-align: center;
       }
       .flow > li dl dt .icon {
         font-size: 6px;
-        color: #fff;
-        background: rgb(107,144,219);
-        background: -moz-linear-gradient(left, rgba(107,144,219,1) 0%, rgba(102,213,233,1) 100%);
-        background: -webkit-linear-gradient(left, rgba(107,144,219,1) 0%,rgba(102,213,233,1) 100%);
-        background: linear-gradient(to right, rgba(107,144,219,1) 0%,rgba(102,213,233,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b90db', endColorstr='#66d5e9',GradientType=1 );
         padding: 2.5px 5px;
         margin-bottom: 5px;
-        display: block;
         border-radius: 10px;
-        position: relative;
-        z-index: 100;
       }
   }
 }

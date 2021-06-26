@@ -84,7 +84,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .contact-message-content {
     padding: 0 10px;
     margin: 0 auto;

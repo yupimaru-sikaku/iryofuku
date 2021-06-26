@@ -49,9 +49,20 @@
 }
 
 .contact .contact-forms .contact-form a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
   color: #5e5e5e;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact .contact-forms .contact-form a span {
@@ -65,7 +76,7 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .contact p {
     text-align: center;
   }
@@ -92,6 +103,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contact .contact-forms .contact-form {
     width: 250px;
@@ -118,9 +132,20 @@
     background-color: #ccf3f5;
   }
   .contact .contact-forms .contact-form a {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     text-decoration: none;
     color: #5e5e5e;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contact .contact-forms .contact-form a span {
     display: block;

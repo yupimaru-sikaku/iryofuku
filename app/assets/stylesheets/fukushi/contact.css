@@ -30,7 +30,50 @@
   width: 500px;
 }
 
-@media screen and (max-width: 599px) {
+@media (max-width: 1024px) {
+  .fukushi-container {
+    padding: 0px 10px;
+  }
+  .fukushi-container .fukushi_test {
+    width: 100%;
+    font-size: 16px;
+  }
+  .fukushi-container .fukushi_test a {
+    display: block;
+  }
+  .fukushi-container .fukushi-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .fukushi-container .fukushi-description .fukushi-description-text span {
+    font-size: 24px;
+    width: 230px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+  }
+  .fukushi-container .fukushi-description .fukushi-description-text p {
+    font-size: 16px;
+  }
+  .fukushi-container .fukushi-description .fukushi-description-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fukushi-container .fukushi-description .fukushi-description-img img {
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .fukushi-container {
     padding: 0px 10px;
   }
@@ -50,11 +93,7 @@
             justify-content: space-evenly;
   }
   .fukushi-container .fukushi-description .fukushi-description-text span {
-    display: block;
-    text-align: center;
     font-size: 14px;
-    color: #00ff2a;
-    border-bottom: 1px solid #00ff2a;
     width: 130px;
     padding-top: 0px;
     margin-bottom: 5px;

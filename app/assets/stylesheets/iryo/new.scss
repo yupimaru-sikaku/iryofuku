@@ -19,7 +19,7 @@ $input-padding-left: 10px;
   // 新規作成フォーム
   .iryo_new_forms{
 
-    .iryo_new_form_activehash, .iryo_new_form, .iryo_new_submit_btn{
+    .iryo_new_form_activehash, .iryo_new_form{
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -116,7 +116,6 @@ $input-padding-left: 10px;
     padding: 15px 50px;
     border-radius: 5px;
     color: white;
-    width: auto;
 
     &:hover{
       opacity: 0.5;
@@ -125,28 +124,22 @@ $input-padding-left: 10px;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
 
   // 大枠
 .iryo_new_content{
   padding: 0px;
-  margin: 0 auto;
   
   // タイトル
   .sageseru_new_title{
     font-size: 24px;
-    text-align: center;
-    margin: 0 auto;
     width: 90%;
   }
 
   // 新規作成フォーム
   .iryo_new_forms{
 
-    .iryo_new_form_activehash, .iryo_new_form, .iryo_new_submit_btn{
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
+    .iryo_new_form_activehash, .iryo_new_form{
       width: 90%;
 
       label, input, select{
@@ -155,104 +148,67 @@ $input-padding-left: 10px;
 
 
       span{
-        color: red;
         font-size: 12px;
       }
 
       select{
-        position: relative;
-        margin-top: $input-margin-top;
-        padding-left: $input-padding-left;
-        height: 35px;
-        border: none;
-        border-bottom: $input-border;
-        outline: none;
 
         .triangle{
           width: 10px;
           height: 10px;
-          background-color: black;
         }
 
       }
-
-      input{
-        margin-top: $input-margin-top;
-        padding-left: $input-padding-left;
-        height: 35px;
-        border: none;
-        border-bottom: $input-border;
-        outline: none;
-      }
-      
-      .iryo_new_form_activehash2{
-        display: flex;
-        align-items: center;
-        padding-left: 20px;
-
-        input{
-          margin-top: 0px;
-        }
-
-        label{
-          padding-left: 10px;
-        }
-      }
-
-      .iryo_new_form_activehash_check{
-        display: flex;
-      }
-
-      .iryo_new_form_activehash__2{
-        display: flex;
-        flex-wrap: wrap;
-
-        .iryo_new_form_activehash_check{
-          display: flex;
-          align-items: center;
-          padding: 10px;
-
-          input{
-            margin-top: 0px;
-          }
-          
-          label{
-            margin-left: 10px;
-          }
-        }
-      }
-      .active_hash_all{
-        display: flex;
-        align-items: center;
-        
-        input{
-          margin-top: 0px;
-        }
-
-        label{
-          margin-left: 10px;
-        }
-      }
-
-
     }
 
-   .iryo_new_submit_btn{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #666ad6;
+  .iryo_new_submit_btn{
     padding: 10px 50px;
-    border-radius: 5px;
-    color: white;
-    width: auto;
-
-    &:hover{
-      opacity: 0.5;
-    }
-   } 
+  } 
   }
 }
+}
+
+@media screen and (max-width: 750px) {
+
+    // 大枠
+  .iryo_new_content{
+    padding: 0px;
+    
+    // タイトル
+    .sageseru_new_title{
+      font-size: 24px;
+      width: 90%;
+    }
+
+    // 新規作成フォーム
+    .iryo_new_forms{
+
+      .iryo_new_form_activehash, .iryo_new_form{
+        width: 90%;
+
+        label, input, select{
+          font-size: 14px;
+        }
 
 
+        span{
+          font-size: 12px;
+        }
+
+        select{
+
+          .triangle{
+            width: 10px;
+            height: 10px;
+          }
+
+        }
+      }
+
+    .iryo_new_submit_btn{
+      padding: 10px 50px;
+      text-align: center;
+    } 
+    }
+  }
 }

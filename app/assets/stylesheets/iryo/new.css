@@ -10,7 +10,7 @@
   width: 500px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash, .iryo_new_content .iryo_new_forms .iryo_new_form, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash, .iryo_new_content .iryo_new_forms .iryo_new_form {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,12 +22,12 @@
   width: 50%;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash span, .iryo_new_content .iryo_new_forms .iryo_new_form span, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn span {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash span, .iryo_new_content .iryo_new_forms .iryo_new_form span {
   color: red;
   font-size: 12px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form select, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn select {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form select {
   position: relative;
   margin-top: 10px;
   padding-left: 10px;
@@ -37,13 +37,13 @@
   outline: none;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_form select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn select .triangle {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_form select .triangle {
   width: 100px;
   height: 100px;
   background-color: black;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn input {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form input {
   margin-top: 10px;
   padding-left: 10px;
   height: 35px;
@@ -52,7 +52,7 @@
   outline: none;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash2 {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,21 +62,21 @@
   padding-left: 20px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash2 input {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 input {
   margin-top: 0px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash2 label {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 label {
   padding-left: 10px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash_check {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash_check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +84,7 @@
       flex-wrap: wrap;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 .iryo_new_form_activehash_check {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,15 +94,15 @@
   padding: 10px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input {
   margin-top: 0px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label {
   margin-left: 10px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .active_hash_all {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,11 +111,11 @@
           align-items: center;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all input, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .active_hash_all input {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all input, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all input {
   margin-top: 0px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all label, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .active_hash_all label {
+.iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all label, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all label {
   margin-left: 10px;
 }
 
@@ -127,132 +127,62 @@
   padding: 15px 50px;
   border-radius: 5px;
   color: white;
-  width: auto;
 }
 
 .iryo_new_content .iryo_new_forms .iryo_new_submit_btn:hover {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   .iryo_new_content {
     padding: 0px;
-    margin: 0 auto;
   }
   .iryo_new_content .sageseru_new_title {
     font-size: 24px;
-    text-align: center;
-    margin: 0 auto;
     width: 90%;
   }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash, .iryo_new_content .iryo_new_forms .iryo_new_form, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn {
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash, .iryo_new_content .iryo_new_forms .iryo_new_form {
     width: 90%;
   }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash label, .iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form label, .iryo_new_content .iryo_new_forms .iryo_new_form input, .iryo_new_content .iryo_new_forms .iryo_new_form select, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn select {
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash label, .iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form label, .iryo_new_content .iryo_new_forms .iryo_new_form input, .iryo_new_content .iryo_new_forms .iryo_new_form select {
     font-size: 14px;
   }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash span, .iryo_new_content .iryo_new_forms .iryo_new_form span, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn span {
-    color: red;
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash span, .iryo_new_content .iryo_new_forms .iryo_new_form span {
     font-size: 12px;
   }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form select, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn select {
-    position: relative;
-    margin-top: 10px;
-    padding-left: 10px;
-    height: 35px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    outline: none;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_form select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn select .triangle {
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_form select .triangle {
     width: 10px;
     height: 10px;
-    background-color: black;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn input {
-    margin-top: 10px;
-    padding-left: 10px;
-    height: 35px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    outline: none;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-left: 20px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash2 input {
-    margin-top: 0px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash2 label {
-    padding-left: 10px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash_check {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 .iryo_new_form_activehash_check {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 10px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 .iryo_new_form_activehash_check input {
-    margin-top: 0px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .iryo_new_form_activehash__2 .iryo_new_form_activehash_check label {
-    margin-left: 10px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .active_hash_all {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all input, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all input, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .active_hash_all input {
-    margin-top: 0px;
-  }
-  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .active_hash_all label, .iryo_new_content .iryo_new_forms .iryo_new_form .active_hash_all label, .iryo_new_content .iryo_new_forms .iryo_new_submit_btn .active_hash_all label {
-    margin-left: 10px;
   }
   .iryo_new_content .iryo_new_forms .iryo_new_submit_btn {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #666ad6;
     padding: 10px 50px;
-    border-radius: 5px;
-    color: white;
-    width: auto;
   }
-  .iryo_new_content .iryo_new_forms .iryo_new_submit_btn:hover {
-    opacity: 0.5;
+}
+
+@media screen and (max-width: 750px) {
+  .iryo_new_content {
+    padding: 0px;
+  }
+  .iryo_new_content .sageseru_new_title {
+    font-size: 24px;
+    width: 90%;
+  }
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash, .iryo_new_content .iryo_new_forms .iryo_new_form {
+    width: 90%;
+  }
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash label, .iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form label, .iryo_new_content .iryo_new_forms .iryo_new_form input, .iryo_new_content .iryo_new_forms .iryo_new_form select {
+    font-size: 14px;
+  }
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash span, .iryo_new_content .iryo_new_forms .iryo_new_form span {
+    font-size: 12px;
+  }
+  .iryo_new_content .iryo_new_forms .iryo_new_form_activehash select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_form select .triangle {
+    width: 10px;
+    height: 10px;
+  }
+  .iryo_new_content .iryo_new_forms .iryo_new_submit_btn {
+    padding: 10px 50px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=new.css.map */

@@ -129,31 +129,100 @@
   z-index: 100;
 }
 
-@media screen and (max-width: 599px) {
+@media (max-width: 1024px) {
   .iryo-container {
     padding: 0px 10px;
   }
   .iryo-container .iryo_test {
     width: 100%;
-    font-size: 12px;
+    font-size: 16px;
   }
   .iryo-container .iryo_test a {
     display: block;
   }
-  .iryo-container .iryo-description {
+  .iryo-container .iryo-description .iryo-description-text span {
+    font-size: 24px;
+    width: 230px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+  }
+  .iryo-container .iryo-description .iryo-description-text p {
+    font-size: 16px;
+  }
+  .iryo-container .iryo-description .iryo-description-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .iryo-container .iryo-description .iryo-description-img img {
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+  .service-flow .about-us-title {
+    font-size: 24px;
+    width: 200px;
+  }
+  .service-flow ul {
+    padding: 0px 5%;
+  }
+  .service-flow dd {
+    font-size: 14px;
+  }
+  .service-flow .flow > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .service-flow .flow > li:not(:first-child)::before {
+    height: 30px;
+    top: -20px;
+    left: calc(5% + 15px - 1px);
+  }
+  .service-flow .flow > li dl {
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .service-flow .flow > li:not(:last-child) dl::before,
+  .service-flow .flow > li:not(:last-child) dl::after {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+  .service-flow .flow > li:not(:last-child) dl::before {
+    border-width: 11px;
+  }
+  .service-flow .flow > li:not(:last-child) dl::after {
+    border-width: 10px;
+  }
+  .service-flow .flow > li dl dt {
+    font-size: 8px;
+    font-weight: 300;
+    -ms-flex-preferred-size: 10%;
+    flex-basis: 10%;
+    margin-right: 1vw;
+  }
+  .service-flow .flow > li dl dt .icon {
+    font-size: 6px;
+    padding: 2.5px 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .iryo-container {
+    padding: 0px 10px;
+  }
+  .iryo-container .iryo_test {
+    width: 100%;
+    font-size: 14px;
+  }
+  .iryo-container .iryo_test a {
+    display: block;
   }
   .iryo-container .iryo-description .iryo-description-text span {
-    display: block;
-    text-align: center;
     font-size: 14px;
-    color: blue;
-    border-bottom: 1px solid blue;
     width: 130px;
     padding-top: 25px;
     margin-bottom: 5px;
@@ -176,90 +245,49 @@
   }
   .service-flow .about-us-title {
     font-size: 14px;
-    text-align: center;
-    margin: 0 auto;
-    border-bottom: 1px solid #494545;
     width: 200px;
   }
   .service-flow ul {
     padding: 0px 5%;
   }
-  .service-flow li {
-    list-style-type: none;
-  }
   .service-flow dd {
-    margin-left: 0;
     font-size: 12px;
-  }
-  .service-flow .flow > li {
-    position: relative;
   }
   .service-flow .flow > li:not(:last-child) {
     margin-bottom: 20px;
   }
   .service-flow .flow > li:not(:first-child)::before {
-    content: "";
     height: 30px;
-    display: block;
-    border-left: 4px dotted #e5e5e5;
-    position: absolute;
     top: -20px;
     left: calc(5% + 15px - 1px);
-    z-index: 10;
   }
   .service-flow .flow > li dl {
-    width: 100%;
     padding: 10px 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border: 2px solid #6b90db;
     border-radius: 5px;
-    position: relative;
   }
   .service-flow .flow > li:not(:last-child) dl::before,
   .service-flow .flow > li:not(:last-child) dl::after {
-    content: "";
-    border: solid transparent;
-    position: absolute;
-    top: 100%;
-    left: 50%;
     -webkit-transform: translateX(-25%);
     transform: translateX(-25%);
   }
   .service-flow .flow > li:not(:last-child) dl::before {
     border-width: 11px;
-    border-top-color: #6b90db;
   }
   .service-flow .flow > li:not(:last-child) dl::after {
     border-width: 10px;
-    border-top-color: #fff;
   }
   .service-flow .flow > li dl dt {
     font-size: 8px;
     font-weight: 300;
-    color: #6b90db;
     -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
     margin-right: 1vw;
-    text-align: center;
   }
   .service-flow .flow > li dl dt .icon {
     font-size: 6px;
-    color: #fff;
-    background: #6b90db;
-    background: -webkit-gradient(linear, left top, right top, from(#6b90db), to(#66d5e9));
-    background: linear-gradient(to right, #6b90db 0%, #66d5e9 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b90db', endColorstr='#66d5e9',GradientType=1 );
     padding: 2.5px 5px;
     margin-bottom: 5px;
-    display: block;
     border-radius: 10px;
-    position: relative;
-    z-index: 100;
   }
 }
 /*# sourceMappingURL=contact.css.map */

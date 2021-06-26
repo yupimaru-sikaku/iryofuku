@@ -33,6 +33,8 @@ $svg_sm_size: 150px;
       a{
         display: flex;
         text-decoration: none;
+        width: 100%;
+        justify-content: center;
 
         img{
           width: 300px;
@@ -74,6 +76,9 @@ $svg_sm_size: 150px;
       a{
         display: flex;
         text-decoration: none;
+        width: 100%;
+        justify-content: center;
+
         
         img{
           width: 300px;
@@ -167,28 +172,16 @@ $svg_sm_size: 150px;
   }
 }
 
+@media screen and (max-width: 1024px) {
 
-
-
-
-
-@media screen and (max-width: 599px) {
   .service-container{
     
     // サービスの選択（クラセル or サガセル）
     .select-service{
-      display: flex;
       flex-direction: column;
       align-items: center;
-  
       
       .service-iryo{
-        border: $list-border;
-        border-radius: $list-border-radius;
-        width: $list-sm-width;
-        box-shadow: $list-box-shadow;
-        display: flex;
-        justify-content: center;
 
         .service-iryo-img{
           img{
@@ -197,13 +190,7 @@ $svg_sm_size: 150px;
           }
         }
         
-        &:hover{
-          background-color: #a6b5ef52;
-        }
-        
         a{
-          display: flex;
-          text-decoration: none;
   
           .service-iryo-text{
             display: flex;
@@ -211,13 +198,10 @@ $svg_sm_size: 150px;
             padding-top: 0px;
             justify-content: center;
             span{
-              display: block;
-              color: rgb(148, 147, 147);
               font-size: 10px;
               
               &:nth-child(1){
                 font-size: $main-sm-font-size;
-                color: blue;
               }
               
               &:nth-child(2){
@@ -229,12 +213,6 @@ $svg_sm_size: 150px;
       }
       
       .service-fukushi{
-        border: $list-border;
-        border-radius: $list-border-radius;
-        width: $list-sm-width;
-        box-shadow: $list-box-shadow;
-        display: flex;
-        justify-content: center;
 
         .service-fukushi-img{
           img{
@@ -243,13 +221,7 @@ $svg_sm_size: 150px;
           }
         }
         
-        &:hover{
-          background-color: #a6efbc52;
-        }
-        
         a{
-          display: flex;
-          text-decoration: none;
           
           .service-fukushi-text{
             padding-top: 0px;
@@ -258,22 +230,16 @@ $svg_sm_size: 150px;
             justify-content: center;
             
             span{
-              display: block;
-              color: rgb(148, 147, 147);
-              font-size: 18px;
               
               &:nth-child(1){
                 font-size: $main-sm-font-size;
-                color: rgb(0, 255, 42);
               }
               
               &:nth-child(2){
                 font-size: $main-sm-font-size;
-                color: rgb(0, 255, 42);
               }
               &:nth-child(3){
                 font-size:10px;
-                color: rgb(148, 147, 147);
               }
             }
           }
@@ -283,64 +249,29 @@ $svg_sm_size: 150px;
   
     // イリョフクについて
     .about-us{
-      position: relative;
   
       .about-us-title{
         font-size: 24px;
-        margin: 0 auto;
-        border-bottom: 1px solid rgb(73, 69, 69);
-        width: 50%;
+        width: 30%;
       }
   
       .about-us-main{
-        display: flex;
         flex-direction: column;
         align-items: center;
 
         img{
-          width: $svg_sm_size * 1.5;
-          height: $svg_sm_size * 1.5;
+          width: $svg_sm_size * 2.5;
+          height: $svg_sm_size * 2.5;
         }
   
         p{
           padding: 20px;
-          font-size: 14px;
+          font-size: 18px;
           
         }
-      }
-      .circle{
-        width: 300px;
-        height: 300px;
-        background-color: chartreuse;
-        opacity: 0.4;
-        clip-path: circle(100px at 50%);
-        position: absolute;
-        top: 24%;
-        right: 36%;
-        z-index: -1;
-      }
-      .square{
-        width: 150px;
-        height: 150px;
-        background-color: rgb(251, 255, 0);
-        opacity: 0.4;
-        position: absolute;
-        top: 52%;
-        right: 8%;
-        z-index: -1;
-      }
-      .triangle{
-        width: 0;
-        height: 0;
-        opacity: 0.2;
-        border-style: solid;
-        border-width: 0 100px 200px 100px;
-        border-color: transparent transparent #007bff transparent;
-        position: absolute;
-        top: 68%;
-        right: 25%;
-        z-index: -1;
       }
     }
   }
 }
+
+

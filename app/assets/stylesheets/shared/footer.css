@@ -43,7 +43,7 @@
   padding-left: 10px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .footer_main {
     display: none;
   }

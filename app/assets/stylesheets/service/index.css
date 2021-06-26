@@ -33,6 +33,10 @@
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .service-container .select-service .service-iryo a img {
@@ -81,6 +85,10 @@
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .service-container .select-service .service-fukushi a img {
@@ -176,11 +184,8 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   .service-container .select-service {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -189,31 +194,9 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .service-container .select-service .service-iryo {
-    border: 1px solid #eee;
-    border-radius: 50px;
-    width: 90%;
-    -webkit-box-shadow: 1px 1px 3px #bbafaf;
-            box-shadow: 1px 1px 3px #bbafaf;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .service-container .select-service .service-iryo .service-iryo-img img {
     width: 150px;
     height: 150px;
-  }
-  .service-container .select-service .service-iryo:hover {
-    background-color: #a6b5ef52;
-  }
-  .service-container .select-service .service-iryo a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-decoration: none;
   }
   .service-container .select-service .service-iryo a .service-iryo-text {
     display: -webkit-box;
@@ -229,42 +212,17 @@
             justify-content: center;
   }
   .service-container .select-service .service-iryo a .service-iryo-text span {
-    display: block;
-    color: #949393;
     font-size: 10px;
   }
   .service-container .select-service .service-iryo a .service-iryo-text span:nth-child(1) {
     font-size: 20px;
-    color: blue;
   }
   .service-container .select-service .service-iryo a .service-iryo-text span:nth-child(2) {
     font-size: 10px;
   }
-  .service-container .select-service .service-fukushi {
-    border: 1px solid #eee;
-    border-radius: 50px;
-    width: 90%;
-    -webkit-box-shadow: 1px 1px 3px #bbafaf;
-            box-shadow: 1px 1px 3px #bbafaf;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .service-container .select-service .service-fukushi .service-fukushi-img img {
     width: 150px;
     height: 150px;
-  }
-  .service-container .select-service .service-fukushi:hover {
-    background-color: #a6efbc52;
-  }
-  .service-container .select-service .service-fukushi a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-decoration: none;
   }
   .service-container .select-service .service-fukushi a .service-fukushi-text {
     padding-top: 0px;
@@ -279,36 +237,20 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .service-container .select-service .service-fukushi a .service-fukushi-text span {
-    display: block;
-    color: #949393;
-    font-size: 18px;
-  }
   .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(1) {
     font-size: 20px;
-    color: #00ff2a;
   }
   .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(2) {
     font-size: 20px;
-    color: #00ff2a;
   }
   .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(3) {
     font-size: 10px;
-    color: #949393;
-  }
-  .service-container .about-us {
-    position: relative;
   }
   .service-container .about-us .about-us-title {
     font-size: 24px;
-    margin: 0 auto;
-    border-bottom: 1px solid #494545;
-    width: 50%;
+    width: 30%;
   }
   .service-container .about-us .about-us-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -318,46 +260,12 @@
             align-items: center;
   }
   .service-container .about-us .about-us-main img {
-    width: 225px;
-    height: 225px;
+    width: 375px;
+    height: 375px;
   }
   .service-container .about-us .about-us-main p {
     padding: 20px;
-    font-size: 14px;
-  }
-  .service-container .about-us .circle {
-    width: 300px;
-    height: 300px;
-    background-color: chartreuse;
-    opacity: 0.4;
-    -webkit-clip-path: circle(100px at 50%);
-            clip-path: circle(100px at 50%);
-    position: absolute;
-    top: 24%;
-    right: 36%;
-    z-index: -1;
-  }
-  .service-container .about-us .square {
-    width: 150px;
-    height: 150px;
-    background-color: #fbff00;
-    opacity: 0.4;
-    position: absolute;
-    top: 52%;
-    right: 8%;
-    z-index: -1;
-  }
-  .service-container .about-us .triangle {
-    width: 0;
-    height: 0;
-    opacity: 0.2;
-    border-style: solid;
-    border-width: 0 100px 200px 100px;
-    border-color: transparent transparent #007bff transparent;
-    position: absolute;
-    top: 68%;
-    right: 25%;
-    z-index: -1;
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=index.css.map */
