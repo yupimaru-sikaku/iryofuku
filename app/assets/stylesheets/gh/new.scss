@@ -531,10 +531,11 @@ li{
   }
   // ラジオボタン、チェックボタン
   .gh-new-field-radio-1, .gh-new-field-check-1{
+
     flex-wrap: wrap;
     
     label{
-      width: 65px;
+      width: 100px;
       text-align: start;
       margin-left: 10px;
     }
