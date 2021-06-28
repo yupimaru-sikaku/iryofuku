@@ -360,11 +360,14 @@ li {
     width: 200px;
     margin-left: 10px;
   }
-  .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 short_input input {
+  .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 .short_input input {
     width: 100px;
   }
-  .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 short_input .long_input {
-    width: 100%;
+  .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 .short_input #gh_designated_year {
+    width: 80px;
+  }
+  .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 .long_input {
+    width: 400px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 {
     display: block;
@@ -381,7 +384,7 @@ li {
     font-size: 14px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 input, .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 select {
-    width: 100px;
+    width: 250px;
     margin-left: 10px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .hidden input, .gh-new-content .gh-new-fields .gh-new-field .hidden select {
@@ -447,7 +450,7 @@ li {
     margin-left: 10px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-2 .long_input {
-    width: 100%;
+    width: 400px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-3 {
     display: block;
@@ -464,7 +467,7 @@ li {
     font-size: 14px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 input, .gh-new-content .gh-new-fields .gh-new-field .gh-new-field-4 select {
-    width: 200px;
+    width: 250px;
     margin-left: 10px;
   }
   .gh-new-content .gh-new-fields .gh-new-field .hidden input, .gh-new-content .gh-new-fields .gh-new-field .hidden select {
@@ -473,6 +476,12 @@ li {
   .gh-new-content .gh-new-fields .gh-new-form-submit input {
     padding: 10px 50px;
     border-radius: 5px;
+  }
+  .gh-new-content .gh-new-fields .middle_input {
+    width: 300px;
+  }
+  .gh-new-content .gh-new-fields .middle_input input {
+    width: 100%;
   }
   .gh-new-content .gh-new-field-radio-1, .gh-new-content .gh-new-field-check-1 {
     -ms-flex-wrap: wrap;
@@ -515,5 +524,29 @@ li {
     width: 300px;
     display: block;
   }
+}
+
+#gh_construction_year {
+  width: 100px;
+}
+
+#gh_construction_month {
+  width: 100px;
+}
+
+#gh_designated_year {
+  width: 100px;
+}
+
+#gh_designated_month {
+  width: 100px;
+}
+
+#gh_capacity {
+  width: 100px;
+}
+
+#gh_availability {
+  width: 100px;
 }
 /*# sourceMappingURL=new.css.map */

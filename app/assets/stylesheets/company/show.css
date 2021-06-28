@@ -86,6 +86,8 @@
   .company_show_content .company_show_fields .company_show_field p:nth-child(2) {
     margin-left: 10px;
     text-align: start;
+    width: 90%;
+    word-break: break-all;
   }
   .company_show_content .company_show_edit_button_sm {
     display: block;
@@ -116,6 +118,7 @@
     width: 90%;
   }
   .company_show_content .company_show_fields {
+    width: clamp(350px, 90%, 500px);
     padding: 20px 10px;
     font-size: 12px;
   }
@@ -125,6 +128,8 @@
   }
   .company_show_content .company_show_fields .company_show_field p:nth-child(2) {
     margin-left: 10px;
+    width: 90%;
+    word-break: break-all;
     text-align: start;
   }
   .company_show_content .company_show_edit_button_sm {

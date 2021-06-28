@@ -156,7 +156,7 @@
       <%= f.label :price_main, '預り金総額（半角）'%>
       <span>（必須）</span>
     </div>
-    <div class="gh-new-field-2 short_input">
+    <div class="gh-new-field-2">
       <%= f.text_field :price_main, maxlength: 6, placeholder: '例）90000', class: 'price_0_end' %>
       <span>円</span>
     </div>
@@ -179,7 +179,7 @@
   <div class="module-spacer--small"></div>
   <% end %>
 
-  <div hidden class="gh-new-field price_1">
+  <div hidden class="gh-new-field price_1 ">
     <div class="gh-new-field-3">
       <%= f.label :price_sub_cost1, 'ー 預り金内訳1(値段)（半角）' %>
       <span>（任意）</span>

@@ -340,16 +340,16 @@ li{
             width: 200px;
             margin-left: 10px;
           }
-  
-          short_input{
+          .short_input{
             input{
               width: 100px;
-            }
-
-          .long_input{
-            width: 100%;
           }
-
+          #gh_designated_year{
+            width: 80px;
+          }
+        }
+        .long_input{
+          width: 400px;
         }
       }
       
@@ -377,7 +377,7 @@ li{
           }
           
           input, select{
-            width: 100px;
+            width: 250px;
             margin-left: 10px;
           }
         }
@@ -473,7 +473,7 @@ li{
         }
 
         .long_input{
-          width: 100%;
+          width: 400px;
         }
       }
       
@@ -501,7 +501,7 @@ li{
         }
         
         input, select{
-          width: 200px;
+          width: 250px;
           margin-left: 10px;
         }
       }
@@ -520,6 +520,12 @@ li{
         padding: 10px 50px;
         border-radius: 5px;
         
+      }
+    }
+    .middle_input{
+      width: 300px;
+      input{
+        width: 100%;
       }
     }
   }
@@ -559,4 +565,25 @@ li{
   display: block;
 }
 
+}
+
+#gh_construction_year{
+  width: 100px;
+}
+#gh_construction_month{
+  width: 100px;
+}
+#gh_designated_year{
+  width: 100px;
+}
+#gh_designated_month{
+  width: 100px;
+}
+
+#gh_capacity{
+  width: 100px;
+}
+
+#gh_availability{
+  width: 100px;
 }

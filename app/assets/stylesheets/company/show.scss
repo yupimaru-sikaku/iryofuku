@@ -90,6 +90,8 @@
         p:nth-child(2){
           margin-left: 10px;
           text-align: start;
+          width: 90%;
+          word-break: break-all;
         }
       }
     }
@@ -130,6 +132,7 @@
     } 
   
     .company_show_fields{
+      width: clamp(350px, 90%, 500px);
       padding: 20px 10px;
       font-size: 12px;
       
@@ -142,6 +145,8 @@
   
         p:nth-child(2){
           margin-left: 10px;
+          width: 90%;
+          word-break: break-all;
           text-align: start;
         }
       }

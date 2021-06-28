@@ -256,7 +256,7 @@
     width: 90%;
   }
   .iryo-index-content .iryo_search_forms {
-    width: 80%;
+    width: clamp(300px, 80%, 450px);
     padding: 10px;
     padding: 20px 0px 20px 0px;
     -webkit-box-pack: center;
