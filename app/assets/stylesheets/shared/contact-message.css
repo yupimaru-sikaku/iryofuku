@@ -65,7 +65,7 @@
 .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox label {
   color: black;
   font-size: 16px;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .contact-message-content .contact-message-fields .contact-message-button {
@@ -104,7 +104,6 @@
   }
   .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox label {
     font-size: 14px;
-    padding-left: 5px;
   }
   .contact-message-content .contact-message-fields .contact-message-button {
     padding: 10px 50px;
@@ -130,7 +129,6 @@
   }
   .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox label {
     font-size: 14px;
-    padding-left: 5px;
   }
   .contact-message-content .contact-message-fields .contact-message-button {
     padding: 10px 50px;
