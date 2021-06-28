@@ -262,11 +262,10 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .gh-new-content .gh-new-field-radio-1 label, .gh-new-content .gh-new-field-check-1 label {
-  padding-left: 10px;
   display: block;
 }
 
@@ -399,7 +398,9 @@ li {
         flex-wrap: wrap;
   }
   .gh-new-content .gh-new-field-radio-1 label, .gh-new-content .gh-new-field-check-1 label {
-    width: 55px;
+    width: 100px;
+    text-align: start;
+    margin-left: 10px;
   }
   .gh-new-content .gh-new-field-radio-1 label.residential_style_label, .gh-new-content .gh-new-field-check-1 label.residential_style_label {
     width: 250px;
@@ -488,7 +489,9 @@ li {
         flex-wrap: wrap;
   }
   .gh-new-content .gh-new-field-radio-1 label, .gh-new-content .gh-new-field-check-1 label {
-    width: 55px;
+    width: 100px;
+    text-align: start;
+    margin-left: 10px;
   }
   .gh-new-content .gh-new-field-radio-1 label.residential_style_label, .gh-new-content .gh-new-field-check-1 label.residential_style_label {
     width: 250px;

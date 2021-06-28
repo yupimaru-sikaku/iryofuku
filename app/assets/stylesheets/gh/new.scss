@@ -248,11 +248,10 @@ li{
     display: flex;
     align-items: center;
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
 
     
     label{
-      padding-left: 10px;
       display: block;
     }
     
@@ -404,7 +403,9 @@ li{
       flex-wrap: wrap;
       
       label{
-        width: 55px;
+        width: 100px;
+        text-align: start;
+        margin-left: 10px;
       }
   
       label.residential_style_label{
@@ -419,7 +420,6 @@ li{
       .valid_disability_textfield{
         margin-left: 10px;
       }
-  
     }
   }
 }
@@ -534,7 +534,9 @@ li{
     flex-wrap: wrap;
     
     label{
-      width: 55px;
+      width: 100px;
+      text-align: start;
+      margin-left: 10px;
     }
 
     label.residential_style_label{
