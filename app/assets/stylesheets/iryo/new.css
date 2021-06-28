@@ -59,7 +59,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
+  padding: 10px;
 }
 
 .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 input, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 input {
@@ -67,7 +67,7 @@
 }
 
 .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash2 label, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash2 label {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash_check {
