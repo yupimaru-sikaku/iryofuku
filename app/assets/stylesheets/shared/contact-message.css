@@ -1,5 +1,5 @@
 .contact-message-content {
-  padding: 0 100px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -84,75 +84,56 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1024px) {
   .contact-message-content {
     padding: 0 10px;
-    margin: 0 auto;
+    width: clamp(600px, 90%, 670px);
   }
   .contact-message-content .contact-message-title {
     font-size: 24px;
-    text-align: center;
-    margin: 0 auto;
     width: 90%;
   }
   .contact-message-content .contact-message-fields .contact-message-field {
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     width: 90%;
-  }
-  .contact-message-content .contact-message-fields .contact-message-field span {
-    color: red;
-    font-size: 12px;
   }
   .contact-message-content .contact-message-fields .contact-message-field label {
     font-size: 14px;
   }
   .contact-message-content .contact-message-fields .contact-message-field textarea {
-    margin-top: 10px;
-    border: 1px solid #979797;
-    border-radius: 5px;
     padding: 10px;
-    outline: none;
-    resize: none;
-  }
-  .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 10px;
-  }
-  .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox input {
-    margin-top: 0px;
-    width: 15px;
-    height: 15px;
   }
   .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox label {
-    color: black;
     font-size: 14px;
     padding-left: 5px;
   }
   .contact-message-content .contact-message-fields .contact-message-button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #666ad6;
     padding: 10px 50px;
-    border-radius: 5px;
-    color: white;
-    width: 230px;
   }
-  .contact-message-content .contact-message-fields .contact-message-button:hover {
-    opacity: 0.5;
-    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .contact-message-content {
+    padding: 0 10px;
+  }
+  .contact-message-content .contact-message-title {
+    font-size: 24px;
+    width: 90%;
+  }
+  .contact-message-content .contact-message-fields .contact-message-field {
+    width: 90%;
+  }
+  .contact-message-content .contact-message-fields .contact-message-field label {
+    font-size: 14px;
+  }
+  .contact-message-content .contact-message-fields .contact-message-field textarea {
+    padding: 10px;
+  }
+  .contact-message-content .contact-message-fields .contact-message-field .contact-message-field-checkbox label {
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  .contact-message-content .contact-message-fields .contact-message-button {
+    padding: 10px 50px;
   }
 }
 /*# sourceMappingURL=contact-message.css.map */
