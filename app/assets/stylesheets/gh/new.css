@@ -489,7 +489,7 @@ li {
         flex-wrap: wrap;
   }
   .gh-new-content .gh-new-field-radio-1 label, .gh-new-content .gh-new-field-check-1 label {
-    width: 100px;
+    width: 65px;
     text-align: start;
     margin-left: 10px;
   }
