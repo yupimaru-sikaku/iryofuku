@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # deviseのパスワード変更時に使用（パスワードをお忘れの方）
-  config.action_mailer.default_url_options = { host: 'https://iryofuku.herokuapp.com/'}
+  config.action_mailer.default_url_options = { host: 'iryofuku.herokuapp.com', :protocol => 'https' }
 
   # action_mailer用
   # mail = ENV['gmail_address']
