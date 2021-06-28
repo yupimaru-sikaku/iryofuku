@@ -194,6 +194,9 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .service-container .select-service .service-iryo {
+    width: 500px;
+  }
   .service-container .select-service .service-iryo .service-iryo-img img {
     width: 150px;
     height: 150px;
@@ -220,6 +223,9 @@
   .service-container .select-service .service-iryo a .service-iryo-text span:nth-child(2) {
     font-size: 10px;
   }
+  .service-container .select-service .service-fukushi {
+    width: 500px;
+  }
   .service-container .select-service .service-fukushi .service-fukushi-img img {
     width: 150px;
     height: 150px;
@@ -245,6 +251,97 @@
   }
   .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(3) {
     font-size: 10px;
+  }
+  .service-container .about-us .about-us-title {
+    font-size: 24px;
+    width: 30%;
+  }
+  .service-container .about-us .about-us-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .service-container .about-us .about-us-main img {
+    width: 375px;
+    height: 375px;
+  }
+  .service-container .about-us .about-us-main p {
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .service-container .select-service {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .service-container .select-service .service-iryo {
+    width: clamp(300px, 90%, 400px);
+  }
+  .service-container .select-service .service-iryo .service-iryo-img img {
+    width: 150px;
+    height: 150px;
+  }
+  .service-container .select-service .service-iryo a .service-iryo-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .service-container .select-service .service-iryo a .service-iryo-text span {
+    font-size: 12px;
+  }
+  .service-container .select-service .service-iryo a .service-iryo-text span:nth-child(1) {
+    font-size: 20px;
+  }
+  .service-container .select-service .service-iryo a .service-iryo-text span:nth-child(2) {
+    font-size: 10px;
+  }
+  .service-container .select-service .service-fukushi {
+    width: clamp(300px, 90%, 400px);
+  }
+  .service-container .select-service .service-fukushi .service-fukushi-img img {
+    width: 150px;
+    height: 150px;
+  }
+  .service-container .select-service .service-fukushi a .service-fukushi-text {
+    padding-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(1) {
+    font-size: 20px;
+  }
+  .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(2) {
+    font-size: 20px;
+  }
+  .service-container .select-service .service-fukushi a .service-fukushi-text span:nth-child(3) {
+    font-size: 12px;
   }
   .service-container .about-us .about-us-title {
     font-size: 24px;

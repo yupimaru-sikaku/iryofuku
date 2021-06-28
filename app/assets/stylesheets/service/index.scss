@@ -182,6 +182,7 @@ $svg_sm_size: 150px;
       align-items: center;
       
       .service-iryo{
+        width: 500px;
 
         .service-iryo-img{
           img{
@@ -213,6 +214,7 @@ $svg_sm_size: 150px;
       }
       
       .service-fukushi{
+        width: 500px;
 
         .service-fukushi-img{
           img{
@@ -273,5 +275,110 @@ $svg_sm_size: 150px;
     }
   }
 }
+
+@media screen and (max-width: 750px) {
+
+  .service-container{
+    
+    // サービスの選択（クラセル or サガセル）
+    .select-service{
+      flex-direction: column;
+      align-items: center;
+      
+      .service-iryo{
+        width: clamp(300px, 90%,400px);
+
+        .service-iryo-img{
+          img{
+            width: $svg_sm_size;
+            height: $svg_sm_size;
+          }
+        }
+        
+        a{
+  
+          .service-iryo-text{
+            display: flex;
+            flex-direction: column;
+            padding-top: 0px;
+            justify-content: center;
+            span{
+              font-size: 12px;
+              
+              &:nth-child(1){
+                font-size: $main-sm-font-size;
+              }
+              
+              &:nth-child(2){
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+      
+      .service-fukushi{
+        width: clamp(300px, 90%,400px);
+
+        .service-fukushi-img{
+          img{
+            width: $svg_sm_size;
+            height: $svg_sm_size;
+          }
+        }
+        
+        a{
+          
+          .service-fukushi-text{
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            span{
+              
+              &:nth-child(1){
+                font-size: $main-sm-font-size;
+              }
+              
+              &:nth-child(2){
+                font-size: $main-sm-font-size;
+              }
+              &:nth-child(3){
+                font-size:12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    // イリョフクについて
+    .about-us{
+  
+      .about-us-title{
+        font-size: 24px;
+        width: 30%;
+      }
+  
+      .about-us-main{
+        flex-direction: column;
+        align-items: center;
+
+        img{
+          width: $svg_sm_size * 2.5;
+          height: $svg_sm_size * 2.5;
+        }
+  
+        p{
+          padding: 20px;
+          font-size: 18px;
+          
+        }
+      }
+    }
+  }
+}
+
 
 

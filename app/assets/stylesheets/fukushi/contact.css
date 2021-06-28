@@ -93,13 +93,13 @@
             justify-content: space-evenly;
   }
   .fukushi-container .fukushi-description .fukushi-description-text span {
-    font-size: 14px;
-    width: 130px;
+    font-size: 16px;
+    width: 150px;
     padding-top: 0px;
     margin-bottom: 5px;
   }
   .fukushi-container .fukushi-description .fukushi-description-text p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .fukushi-container .fukushi-description .fukushi-description-img {
     display: -webkit-box;
