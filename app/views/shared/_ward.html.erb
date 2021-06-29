@@ -4,11 +4,13 @@
       <%= f.label :ward_id do%>
       <p>区（<%= city_name %>を選択された方）<span>（必須）</span></p>
       <% end %>
+      <div class="module-spacer--small"></div>
     </div>
     <div class="active_hash_all">
       <input type="checkbox" id="<%= city_to_s %>_city_ward_all">
       <label for="<%= city_to_s %>_city_ward_all"><%= city_name %>全般</label>
     </div>
+    <div class="module-spacer--small"></div>
     <div class="iryo_new_form_activehash__2">
       <% city_wards.all.each do |city_ward| %>
       <div class="iryo_new_form_activehash_check">
