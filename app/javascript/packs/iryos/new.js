@@ -232,13 +232,3 @@ setInterval(() => {
       break;
       }
 }, 100);
-
-// 市町村郡のセレクトボックスにチェックが入ってなかったらバリデ
-const selectCityIds = document.getElementsByClassName("iryo[city_ids][]")
-const submitButton = document.querySelector('.iryo_new_submit_btn')
-
-
-submitButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  console.log(e);
-})
