@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # deviseのパスワード変更時に使用（パスワードをお忘れの方）
-  config.action_mailer.default_url_options = { host: 'iryofuku.herokuapp.com', protocol: 'https'}
+  config.action_mailer.default_url_options = { host: 'iryofuku.herokuapp.com', protocol: 'https' }
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector

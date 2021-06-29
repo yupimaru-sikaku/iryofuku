@@ -43,7 +43,7 @@
   <div class="module-spacer--large"></div>
 
   <div class="password-new-field-button">
-    <%= f.submit "送信" %>
+    <%= f.submit "送信", class: "edit_btn" %>
   </div>
 
   <div class="module-spacer--medium"></div>
@@ -57,3 +57,5 @@
 </div>
 
 <%= render partial: 'shared/footer' %>
+
+<%= javascript_pack_tag "companies/password" %>
