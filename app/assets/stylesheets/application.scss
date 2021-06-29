@@ -14,10 +14,9 @@
  *= require_self
  */
 
- * {
+@import "reset"; 
+
+* {
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
 }
-
-
-@import "reset";
