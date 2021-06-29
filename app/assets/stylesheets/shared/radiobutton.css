@@ -39,7 +39,7 @@ input[type="radio"]:checked + label::after {
   position: absolute;
   display: block;
   margin-top: auto;
-  top: 7px;
+  top: 35%;
   left: 3px;
   border-bottom: 10px solid;
   border-left: 10px solid;
