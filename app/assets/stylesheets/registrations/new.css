@@ -213,9 +213,6 @@
   .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 {
     height: 700px;
   }
-  .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 {
-    padding-left: 10px;
-  }
   .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 label {
     font-size: 16px;
   }
@@ -265,7 +262,7 @@
     height: 700px;
   }
   .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 {
-    padding-left: 10px;
+    padding-left: 0px;
   }
   .registration-new-content .registration-new-fields .registration-new-field-check .registration-new-field-check-2 .registration-new-field-check-3 label {
     font-size: 12px;
