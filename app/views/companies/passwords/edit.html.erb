@@ -1,17 +1,6 @@
 <%= render partial: 'shared/header' %>
 <%= render partial: 'shared/flash' %>
 
-<% if @company.errors.include?(:password) %>
-<p class="alert_danger" style=" color: red;">
-  <%= @company.errors.full_messages_for(:password).first %>
-<div class="module-spacer--small"></div>
-<% end %>
-<% if @company.errors.include?(:password_confirmation) %>
-<p class="alert_danger" style=" color: red;">
-  <%= @company.errors.full_messages_for(:password_confirmation).first %>
-<div class="module-spacer--small"></div>
-<% end %>
-
 <div class="module-spacer--large"></div>
 
 <div class="password-new-content">
@@ -31,6 +20,13 @@
   <%= f.hidden_field :reset_password_token %>
 
   <div class="password-new-field">
+
+    <% if @company.errors.include?(:password) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @company.errors.full_messages_for(:password).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
     <div class="password-new-field-1">
       <%= f.label :password, "新規パスワード" %>
       <span>（必須）</span>
@@ -42,7 +38,15 @@
 
   <div class="module-spacer--large"></div>
 
+
   <div class="password-new-field">
+
+    <% if @company.errors.include?(:password_confirmation) %>
+    <p class="alert_danger" style=" color: red;">
+      <%= @company.errors.full_messages_for(:password_confirmation).first %>
+    <div class="module-spacer--small"></div>
+    <% end %>
+
     <div class="password-new-field-1">
       <%= f.label :password_confirmation, "新規パスワード（確認用）" %>
       <span>（必須）</span>
