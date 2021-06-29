@@ -248,6 +248,7 @@
     font-size: 14px;
   }
   .registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-2 {
+    display: block;
     text-align: start;
   }
   .registration-edit-user-content .registration-edit-user-fields .registration-edit-user-field .registration-edit-user-field-2 span > button#address_btn {

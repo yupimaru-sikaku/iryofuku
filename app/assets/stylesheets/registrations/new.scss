@@ -81,6 +81,16 @@ $input-sm-font-size: 14px;
           color: green;
           font-size: $span-font-size;
         }
+
+        #postal_code{
+          width: 200px;
+          display: inline;
+        }
+
+        span > button#address_btn{
+          width: 80px;
+          margin-left: 20px;
+        }
         
       }
       .registration-new-hidden-field{
@@ -219,7 +229,7 @@ $input-sm-font-size: 14px;
           label{
             font-size: $label-sm-font-size;
           }
-          
+
         }
 
         .registration-new-hidden-field{
@@ -244,7 +254,7 @@ $input-sm-font-size: 14px;
           
         }
         .registration-new-field-check-2{
-          height: 700px;
+          height: 670px;
 
           .registration-new-field-check-3{
 
@@ -300,9 +310,8 @@ $input-sm-font-size: 14px;
         }
 
         .registration-new-field-2{
-          span > button#address_btn{
-            width: 80px;
-          }
+          display: block;
+          text-align: start;
         }
 
         .registration-new-field-2{
@@ -339,7 +348,7 @@ $input-sm-font-size: 14px;
           
         }
         .registration-new-field-check-2{
-          height: 700px;
+          height: 670px;
 
           .registration-new-field-check-3{
             padding-left: 0px;

@@ -85,6 +85,7 @@
 }
 
 .iryo_new_content .iryo_new_forms .iryo_new_form_activehash .iryo_new_form_activehash__2 .iryo_new_form_activehash_check, .iryo_new_content .iryo_new_forms .iryo_new_form .iryo_new_form_activehash__2 .iryo_new_form_activehash_check {
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

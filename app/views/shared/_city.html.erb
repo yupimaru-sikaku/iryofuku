@@ -4,6 +4,7 @@
       <%= f.label :city_ids do %>
       <p>市町村郡（<%= prefecture_name %>を選択された方）<span>（必須）</span></p>
       <% end %>
+      <div class="module-spacer--small"></div>
       <div class="active_hash_<%= prefecture_to_s %>_city_all">
         <input type="checkbox" id="<%= prefecture_to_s %>_city_all">
         <label for="<%= prefecture_to_s %>_city_all"><%= prefecture_name %>全般</label>
