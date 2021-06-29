@@ -61,21 +61,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # deviseのパスワード変更時に使用（パスワードをお忘れの方）
-  config.action_mailer.default_url_options = { host: 'localhost:3000'}
-
-  # action_mailer用
-  # mail = ENV['gmail_address']
-  # pass = ENV['gmail_application_password']   
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.smtp_settings = {
-  #   address: "smtp.gmail.com",
-  #   port: 587,
-  #   domain: "smtp.gmail.com",
-  #   authentication: "plain",
-  #   user_name: mail,
-  #   password: pass,
-  #   enable_starttls_auto: true
-  # }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
 end

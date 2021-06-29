@@ -92,21 +92,6 @@ Rails.application.configure do
   # deviseのパスワード変更時に使用（パスワードをお忘れの方）
   config.action_mailer.default_url_options = { host: 'localhost:3000'}
 
-  # action_mailer用
-  # mail = ENV['gmail_address']
-  # pass = ENV['gmail_application_password']   
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.smtp_settings = {
-  #   address: "smtp.gmail.com",
-  #   port: 587,
-  #   domain: "smtp.gmail.com",
-  #   authentication: "plain",
-  #   user_name: mail,
-  #   password: pass,
-  #   enable_starttls_auto: true
-  # }
-
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write
