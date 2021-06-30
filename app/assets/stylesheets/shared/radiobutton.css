@@ -46,4 +46,11 @@ input[type="radio"]:checked + label::after {
   border-color: blue;
   border-radius: 100%;
 }
+
+@media (max-width: 1024px) {
+  input[type="radio"]:checked + label::after {
+    top: 30%;
+    left: 3px;
+  }
+}
 /*# sourceMappingURL=radiobutton.css.map */
