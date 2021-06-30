@@ -30,23 +30,6 @@ $input-padding-left: 10px;
         font-size: 12px;
       }
 
-      select{
-        position: relative;
-        margin-top: $input-margin-top;
-        padding-left: $input-padding-left;
-        height: 35px;
-        border: none;
-        border-bottom: $input-border;
-        outline: none;
-
-        .triangle{
-          width: 100px;
-          height: 100px;
-          background-color: black;
-        }
-
-      }
-
       input{
         margin-top: $input-margin-top;
         padding-left: $input-padding-left;

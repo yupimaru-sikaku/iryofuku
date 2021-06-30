@@ -27,22 +27,6 @@
   font-size: 12px;
 }
 
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash select, .iryo_new_content .iryo_new_forms .iryo_new_form select {
-  position: relative;
-  margin-top: 10px;
-  padding-left: 10px;
-  height: 35px;
-  border: none;
-  border-bottom: 1px solid #979797;
-  outline: none;
-}
-
-.iryo_new_content .iryo_new_forms .iryo_new_form_activehash select .triangle, .iryo_new_content .iryo_new_forms .iryo_new_form select .triangle {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-}
-
 .iryo_new_content .iryo_new_forms .iryo_new_form_activehash input, .iryo_new_content .iryo_new_forms .iryo_new_form input {
   margin-top: 10px;
   padding-left: 10px;

@@ -31,23 +31,24 @@
           justify-content: center;
 }
 
-.iryo-index-content .iryo_search_forms .iryo_search_form {
+.iryo-index-content .iryo_search_forms .iryo_search_form, .iryo-index-content .iryo_search_forms .hidden_field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 0px;
 }
 
-.iryo-index-content .iryo_search_forms .iryo_search_form label {
+.iryo-index-content .iryo_search_forms .iryo_search_form label, .iryo-index-content .iryo_search_forms .hidden_field label {
   width: 150px;
   display: block;
   text-align: right;
   margin-right: 20px;
 }
 
-.iryo-index-content .iryo_search_forms .iryo_search_form input {
+.iryo-index-content .iryo_search_forms .iryo_search_form input, .iryo-index-content .iryo_search_forms .hidden_field input {
   display: block;
   padding: 0 20px;
   height: 35px;
@@ -56,24 +57,8 @@
   outline: none;
 }
 
-.iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_from, .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_to {
+.iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_from, .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_to, .iryo-index-content .iryo_search_forms .hidden_field input#search_age_from, .iryo-index-content .iryo_search_forms .hidden_field input#search_age_to {
   width: 100px;
-}
-
-.iryo-index-content .iryo_search_forms .iryo_search_form select {
-  display: block;
-  position: relative;
-  padding: 0 20px;
-  height: 35px;
-  border: none;
-  border-bottom: 1px solid #979797;
-  outline: none;
-}
-
-.iryo-index-content .iryo_search_forms .hidden_field select {
-  border-bottom: 1px solid #979797;
-  margin: 5px 0;
-  padding: 0 10px;
 }
 
 .iryo-index-content .iryo_search_forms .iryo_search_reset_btn {
@@ -170,9 +155,6 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .iryo-index-content .iryo_search_forms .iryo_search_form {
-    margin-bottom: 10px;
-  }
   .iryo-index-content .iryo_search_forms .iryo_search_form label {
     width: 130px;
     margin-right: 10px;
@@ -184,9 +166,6 @@
   }
   .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_from, .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_to {
     width: 50px;
-  }
-  .iryo-index-content .iryo_search_forms .iryo_search_form select {
-    font-size: 14px;
   }
   .iryo-index-content .iryo_search_forms .hidden_field {
     display: -webkit-box;
@@ -201,15 +180,6 @@
     display: block;
     text-align: right;
     margin-right: 10px;
-    font-size: 14px;
-  }
-  .iryo-index-content .iryo_search_forms .hidden_field select {
-    display: block;
-    position: relative;
-    padding: 0 20px;
-    height: 35px;
-    border: none;
-    outline: none;
     font-size: 14px;
   }
   .iryo-index-content .iryo_search_forms .iryo_search_reset_btn {
@@ -263,9 +233,6 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .iryo-index-content .iryo_search_forms .iryo_search_form {
-    margin-bottom: 10px;
-  }
   .iryo-index-content .iryo_search_forms .iryo_search_form label {
     width: 130px;
     margin-right: 10px;
@@ -277,9 +244,6 @@
   }
   .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_from, .iryo-index-content .iryo_search_forms .iryo_search_form input#search_age_to {
     width: 50px;
-  }
-  .iryo-index-content .iryo_search_forms .iryo_search_form select {
-    font-size: 14px;
   }
   .iryo-index-content .iryo_search_forms .hidden_field {
     display: -webkit-box;
@@ -294,15 +258,6 @@
     display: block;
     text-align: right;
     margin-right: 10px;
-    font-size: 14px;
-  }
-  .iryo-index-content .iryo_search_forms .hidden_field select {
-    display: block;
-    position: relative;
-    padding: 0 20px;
-    height: 35px;
-    border: none;
-    outline: none;
     font-size: 14px;
   }
   .iryo-index-content .iryo_search_forms .iryo_search_reset_btn {

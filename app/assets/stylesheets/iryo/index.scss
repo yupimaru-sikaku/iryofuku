@@ -31,9 +31,10 @@ $input-padding-left: 10px;
     border-radius: 10px;
     justify-content: center;
 
-    .iryo_search_form{
+    .iryo_search_form, .hidden_field{
       display: flex;
       align-items: center;
+      margin-bottom: 0px;
       
       label{
         width: 150px;
@@ -54,27 +55,8 @@ $input-padding-left: 10px;
       input#search_age_from, input#search_age_to{
         width: 100px;
       }
-      
-      select{
-        display: block;
-        position: relative;
-        padding: 0 20px;
-        height: 35px;
-        border: none;
-        border-bottom: $input-border;
-        outline: none;
-      }
     }
     
-    .hidden_field{
-      
-      select{
-        border-bottom: $input-border;
-        margin: 5px 0;
-        padding: 0 10px;
-      }
-    }
-
     .iryo_search_reset_btn{
       display: flex;
       justify-content: space-evenly;
@@ -176,7 +158,6 @@ $input-padding-left: 10px;
     justify-content: center;
 
     .iryo_search_form{
-      margin-bottom: 10px;
       
       label{
         width: 130px;
@@ -192,10 +173,6 @@ $input-padding-left: 10px;
       input#search_age_from, input#search_age_to{
         width: 50px;
       }
-      
-      select{
-        font-size: 14px;
-      }
     }
     
     .hidden_field{
@@ -207,16 +184,6 @@ $input-padding-left: 10px;
         display: block;
         text-align: right;
         margin-right: 10px;
-        font-size: 14px;
-      }
-
-      select{
-        display: block;
-        position: relative;
-        padding: 0 20px;
-        height: 35px;
-        border: none;
-        outline: none;
         font-size: 14px;
       }
     }
@@ -290,7 +257,6 @@ $input-padding-left: 10px;
       justify-content: center;
 
       .iryo_search_form{
-        margin-bottom: 10px;
         
         label{
           width: 130px;
@@ -306,10 +272,6 @@ $input-padding-left: 10px;
         input#search_age_from, input#search_age_to{
           width: 50px;
         }
-        
-        select{
-          font-size: 14px;
-        }
       }
       
       .hidden_field{
@@ -321,16 +283,6 @@ $input-padding-left: 10px;
           display: block;
           text-align: right;
           margin-right: 10px;
-          font-size: 14px;
-        }
-
-        select{
-          display: block;
-          position: relative;
-          padding: 0 20px;
-          height: 35px;
-          border: none;
-          outline: none;
           font-size: 14px;
         }
       }
