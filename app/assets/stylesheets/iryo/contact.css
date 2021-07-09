@@ -1,5 +1,5 @@
 .iryo-container {
-  padding: 50px 200px;
+  padding: 0px 200px;
 }
 
 .iryo-container .iryo-description {
@@ -14,7 +14,7 @@
 .iryo-container .iryo-description .iryo-description-text span {
   display: block;
   text-align: center;
-  font-size: 28px;
+  font-size: 1.8rem;
   color: blue;
   border-bottom: 1px solid blue;
   width: 265px;
@@ -224,7 +224,6 @@
   .iryo-container .iryo-description .iryo-description-text span {
     font-size: 16px;
     width: 150px;
-    padding-top: 25px;
     margin-bottom: 5px;
   }
   .iryo-container .iryo-description .iryo-description-text p {
@@ -244,7 +243,7 @@
     height: 150px;
   }
   .service-flow .about-us-title {
-    font-size: 14px;
+    font-size: 16px;
     width: 200px;
   }
   .service-flow ul {

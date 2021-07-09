@@ -1,0 +1,30 @@
+  <%#仮置%>
+  <div class="iryo_test">
+    <h2>病院・相談所</h2>
+    <% if user_signed_in? %>
+    <p><%= current_user.main_company_name %>でログインしています</p>
+    <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
+    <%= link_to '（仮置）編集画面はこちら', edit_user_registration_path %>
+    <%= link_to '（仮置き）希望利用者の新規作成', new_iryo_path %>
+    <% else %>
+    <%= link_to '（仮置）パスワードのnew', new_user_password_path %>
+    <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
+    <%= link_to '（仮置）ログインはこちら', new_user_session_path %>
+    <% end %>
+  </div>
+  <%#//仮置%>
+
+  <%#仮置%>
+  <div class="fukushi_test">
+    <h2>事業所</h2>
+    <% if company_signed_in? %>
+    <p><%= current_company.company_name %>でログインしています</p>
+    <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
+    <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
+    <%= link_to '（仮置き）事業者の管理画面', company_path(current_company) %>
+    <% else %>
+    <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
+    <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
+    <% end %>
+  </div>
+  <%#//仮置%>

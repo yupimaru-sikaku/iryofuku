@@ -5,21 +5,6 @@
 <%#大枠%>
 <section class="iryo-container">
 
-  <%#仮置%>
-  <div class="iryo_test">
-    <% if user_signed_in? %>
-    <p><%= current_user.main_company_name %>でログインしています</p>
-    <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
-    <%= link_to '（仮置）編集画面はこちら', edit_user_registration_path %>
-    <%= link_to '（仮置き）希望利用者の新規作成', new_iryo_path %>
-    <% else %>
-    <%= link_to '（仮置）パスワードのnew', new_user_password_path %>
-    <%= link_to '（仮置）新規登録画面', new_user_registration_path %>
-    <%= link_to '（仮置）ログインはこちら', new_user_session_path %>
-    <% end %>
-  </div>
-  <%#//仮置%>
-
   <%#サガセルの説明%>
   <div class="iryo-description">
     <div class="iryo-description-text">

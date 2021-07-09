@@ -71,8 +71,10 @@ $bbutton: rgba(140, 243, 140, 0.651);
   
       display: flex;
       justify-content: space-between;
+      align-items: center;
   
       .contact_form_tel{
+        margin-right: 20px;
         
         a{
           padding: 5px 10px;
@@ -80,7 +82,11 @@ $bbutton: rgba(140, 243, 140, 0.651);
           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         }
       }
-  
+      a.contact_form_test{
+        padding: 5px 10px;
+        border-radius: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
     }
   }
 }

@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resource :services, only: [:index] do
     collection do
       get 'contact_done'
+      get 'index_test'
     end
   end
 

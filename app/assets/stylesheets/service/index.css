@@ -312,7 +312,7 @@
     font-size: 20px;
   }
   .service-container .select-service .service-iryo a .service-iryo-text span:nth-child(2) {
-    font-size: 10px;
+    font-size: 12px;
   }
   .service-container .select-service .service-fukushi {
     width: clamp(300px, 90%, 400px);

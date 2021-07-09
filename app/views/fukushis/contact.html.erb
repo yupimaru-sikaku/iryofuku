@@ -4,22 +4,6 @@
 <%#大枠%>
 <section class="fukushi-container">
 
-  <%#仮置%>
-  <div class="fukushi_test">
-    <% if company_signed_in? %>
-    <p><%= current_company.company_name %>でログインしています</p>
-    <%= link_to '（仮置）ログアウト', destroy_user_session_path, method: :delete %>
-    <%= link_to '（仮置き）ghの申請画面', new_gh_path %>
-    <%= link_to '（仮置き）事業者の管理画面', company_path(current_company) %>
-    <% else %>
-    <%= link_to '（仮置）ユーザーの新規登録画面だよ', new_company_registration_path %>
-    <%= link_to '（仮置）ログインはこちら', new_company_session_path %>
-    <% end %>
-  </div>
-  <%#//仮置%>
-
-  <div class="module-spacer--small"></div>
-
   <%#サガセルの説明%>
   <div class="fukushi-description">
     <div class="fukushi-description-text">

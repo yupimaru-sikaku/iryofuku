@@ -83,11 +83,11 @@
     text-align: center;
   }
   .contact p:nth-child(1) {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     margin: 0 auto;
     border-bottom: 1px solid #494545;
-    width: 150px;
+    width: 170px;
   }
   .contact p.contact_title {
     font-size: 14px;
