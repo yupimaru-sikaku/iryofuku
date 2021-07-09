@@ -12,8 +12,8 @@ class FavoritesController < ApplicationController
     @iryo.update_attributes(is_contracted: "商談中")
     
     # slackへ通知を送る
-    notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
-    notifier.ping "#{current_company.company_name}が利用希望者、id番号：#{@iryo.id}をお気に入りに追加しました。"
+    # notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
+    # notifier.ping "#{current_company.company_name}が利用希望者、id番号：#{@iryo.id}をお気に入りに追加しました。"
     
   end
   

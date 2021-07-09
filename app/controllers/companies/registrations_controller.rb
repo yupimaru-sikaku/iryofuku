@@ -20,8 +20,8 @@ class Companies::RegistrationsController < Devise::RegistrationsController
       ContactMailer.complete_mail(current_company).deliver
 
       # slackへ通知を送る
-      notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
-      notifier.ping "#{current_company.company_name}が事業所登録しました。\n 電話番号は#{current_company.phone_number}です。 \n メールアドレスは#{current_company.email}です"
+      # notifier = Slack::Notifier.new(ENV['WEBHOOK_URL'])
+      # notifier.ping "#{current_company.company_name}が事業所登録しました。\n 電話番号は#{current_company.phone_number}です。 \n メールアドレスは#{current_company.email}です"
     end
   end
 
