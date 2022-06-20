@@ -6,3 +6,5 @@ PyJWT==2.0.0
 djoser
 # API接続で必要
 django-cors-headers==3.4.0
+# 環境変数で使用
+python-decouple
