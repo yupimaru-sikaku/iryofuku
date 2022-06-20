@@ -93,5 +93,5 @@ class Service(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(verbose_name="サービス名", choices=SERVICE_SET, default=SERVICE_DEFAULT, max_length=50)
-    users = models.ManyToManyField(settings.AUTH_USER, related_name="user", blank=True)
+    users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="user", blank=True)
     
