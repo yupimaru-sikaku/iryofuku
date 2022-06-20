@@ -95,3 +95,5 @@ class Service(models.Model):
     title = models.CharField(verbose_name="サービス名", choices=SERVICE_SET, default=SERVICE_DEFAULT, max_length=50)
     users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="user", blank=True)
     
+    def __str__(self):
+        return self.title
