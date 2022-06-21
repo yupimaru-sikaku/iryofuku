@@ -7,17 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = get_user_model()
-        fields = (
-            'id',
-            'company_name',
-            'office_name',
-            'postal_code',
-            'address',
-            'representative_name',
-            'phone_number',
-            'email',
-            'password'
-        )
+        fields = '__all__'
 
         extra_kwargs = {'password': {'write_only': True} }
 
@@ -29,8 +19,4 @@ class ServiceSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Service
-        fields = (
-            'id',
-            'title',
-            'users'
-        )
+        fields = '__all__'
