@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'company_name',
-            'office_number',
+            'office_name',
             'postal_code',
             'address',
             'representative_name',

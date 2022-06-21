@@ -6,14 +6,13 @@ from django.conf import settings
 import uuid
 
 class UserManager(BaseUserManager):
-    def create_user(self, company_name, office_name, service, postal_code, address, representative_name, phone_number, email, password=None):
+    def create_user(self, company_name, office_name, postal_code, address, representative_name, phone_number, email, password=None):
 
         email = self.normalize_email(email)
 
         user = self.model(
             company_name=company_name,
             office_name=office_name,
-            service=service,
             postal_code=postal_code,
             address=address,
             representative_name=representative_name,
@@ -50,7 +49,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False) 
     company_name = models.CharField(verbose_name="病院名・もしくは法人名", max_length=50, unique=True)
     office_name = models.CharField(verbose_name="事業所名", max_length=50, unique=True)
-    # service
     postal_code = models.CharField(verbose_name="病院もしくは法人の郵便番号", max_length=7)
     address = models.CharField(verbose_name="病院もしくは法人の住所", max_length=50)
     representative_name = models.CharField(verbose_name="病院もしくは法人の担当者名", max_length=50)
@@ -65,7 +63,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = [
         'company_name',
         'office_name',
-        'service',
         'postal_code',
         'address',
         'representative_name',
