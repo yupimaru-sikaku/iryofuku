@@ -12,8 +12,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# エラーが出たときに細かく表示させるか→本番環境ではFlase必須
 DEBUG = config("DEBUG")
 
+# どのWebサーバーからアクセスを許可できるか。
+# DEBUG =Falseの場合は、何かしら入れないとNG
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -25,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
     'djoser',
     # api/appsファイル内にあるApiConfigを使用するため
@@ -50,6 +54,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000"
 ]
 
+# どのURLに最初にアクセスするか
 ROOT_URLCONF = 'ifryofuku.urls'
 
 TEMPLATES = [
