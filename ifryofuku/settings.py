@@ -93,7 +93,7 @@ SIMPLE_JWT = {
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+# ここの書き換えを忘れないように
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -144,4 +144,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# UserモデルをOverrideした場合は記載必要
 AUTH_USER_MODEL = 'api.User'
