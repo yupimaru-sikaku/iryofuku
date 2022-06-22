@@ -46,10 +46,13 @@ class UserSerializer(serializers.ModelSerializer):
                     )
                 ]
             },
+            # パスワードはクライアント側に持っていかないので
             "password": {"write_only": True }
         }
     
+    # fieldsのデータがvalidated_dataに辞書型で格納
     def create(self, validated_data):
+        # get_user_model()が現在アクティブなUserクラスを取得。
         user = get_user_model().objects.create_user(**validated_data)
         return user
 

@@ -1,5 +1,6 @@
 from rest_framework import generics
 from rest_framework import viewsets
+# settings.pyで認証済のみ許可にしているため。AllowAnyで上書きする
 from rest_framework.permissions import AllowAny
 from .models import User, UserService, Iryo, IryoAddress
 
